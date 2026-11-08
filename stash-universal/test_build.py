@@ -17,6 +17,11 @@ class OptimizerTests(unittest.TestCase):
 
 def validate_dist(dist,mihomo):
  cfg=yaml_load((dist/'通用分流_保留机场DNS.stoverride').read_text());report=json.loads((dist/'build-report.json').read_text())
+ text=(dist/'通用分流_保留机场DNS.stoverride').read_text()
+ assert text.splitlines()[0]=='#SUBSCRIBED https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride'
+ assert (dist/'universal.stoverride').read_text()==text
+ optional=Path(__file__).with_name('可选_开启IPv6.stoverride').read_text()
+ assert optional.splitlines()[0]=='#SUBSCRIBED https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/ipv6.stoverride'
  assert not {'dns','proxies','proxy-providers','hosts','listeners','port','socks-port','mixed-port','http','script'}&set(cfg)
  assert len(cfg['rules'])<500
  assert not any(p['behavior']=='classical' for p in cfg['rule-providers'].values())

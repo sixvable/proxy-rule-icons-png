@@ -3091,7 +3091,7 @@
     }
   },
   "dns_provider": "GeositeCN_Domain",
-  "version": "2026.11.08.1",
+  "version": "2026.11.08.2",
   "removed_groups": [
     "AF-Auto",
     "AF-FallBack",

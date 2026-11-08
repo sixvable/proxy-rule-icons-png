@@ -8,9 +8,13 @@
 
 1. 直接在 Stash 导入或选择机场原始订阅。
 2. 从以下地址导入覆写并启用：
-   `https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/通用分流_保留机场DNS.stoverride`
+   `https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride`
 3. 关闭其它会完整替换 DNS、策略组或分流的旧覆写。然后重新连接。
 4. 普通 Apple TV 媒体策略 `Video-AppleTV` 默认直连；若有历史选择，请确认选择 `DIRECT`。
+
+两个覆写均在首行写入 `#SUBSCRIBED`，记录各自的 GitHub 更新来源；本地 iCloud 副本也可以保留这一来源标记。标记不是普通 YAML 更新间隔字段。
+
+[一键导入通用覆写](https://link.stash.ws/install-override/raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride) · [一键导入可选 IPv6 覆写](https://link.stash.ws/install-override/raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/ipv6.stoverride)
 
 本覆写对 `proxy-groups`、`rule-providers`、`rules` 使用 `#!replace`，不累加旧机场的大型分流列表。节点由 `include-all: true` 从当前主配置动态获取，机场原有的订阅更新机制继续工作。
 
@@ -32,9 +36,9 @@
 
 ## 更新与验证
 
-`main/stash-universal` 保存通用配置生成器；`stash-release` 保存已校验的覆写和规则。GitHub Actions 每日重新读取公开上游，编译并检查后再发布。下载或校验失败时，保留上一次成功发布的规则。只有公开规则会进入仓库和工作流，不需要机场订阅凭据或额外账户密钥。
+`main/stash-universal` 保存通用配置生成器；`stash-release` 保存已校验的覆写和规则。GitHub Actions 按计划每日北京时间 06:17 重新读取公开上游，编译并检查后再发布；GitHub 调度可能延迟。下载或校验失败时，保留上一次成功发布的规则。只有公开规则会进入仓库和工作流，不需要机场订阅凭据或额外账户密钥。
 
-Stash 中的规则集合配置为每 24 小时更新，实际执行时机取决于客户端运行状态。覆写本身需通过 Stash 的远程覆写更新功能更新，尤其是生成器新增规则引用时。离线缓存可以复制到 Stash 的 `resources/ruleset/universal-stash-v1/` 目录。
+Stash 中的规则集合配置为每 24 小时更新，实际执行时机取决于客户端运行状态。覆写本身通过首行的 GitHub 来源更新，更新检查时机由 Stash 的覆写设置与运行状态控制。不要将规则集合的 `interval: 86400` 理解成覆写自身的更新间隔；iCloud 本身只负责同步文件。同步后可在覆写页手动更新一次，确认版本及来源已被识别；若旧条目仍显示为本地，使用上面的官方一键远程导入链接替换同名条目。离线缓存可以复制到 Stash 的 `resources/ruleset/universal-stash-v1/` 目录。
 
 本地和自动检查包括规则覆盖、引用关系、循环、规则文件格式和 MRS 实际解析。MRS 由 Mihomo 工具编译与检查，仅用于验证文件，不接入用户流量；这不等于 iPhone 上的 Stash 已完成加载或连接实测。
 
@@ -47,3 +51,5 @@ Stash 中的规则集合配置为每 24 小时更新，实际执行时机取决�
 Stash 官方文档：[覆写及替换语法](https://stash.wiki/configuration/override)、[规则集合与 MRS](https://stash.wiki/rules/rule-set)、[高效配置](https://stash.wiki/faq/effective-stash)、[动态引用节点](https://stash.wiki/proxy-protocols/proxy-groups)、[DNS](https://stash.wiki/features/dns-server)。
 
 注意：Stash 文档中的覆写参数和 `pre-matching` 目前标注为 3.7 Beta 功能，本配置不依赖这些功能。普通 YAML 覆写也不会自动识别机场后执行三套条件分支；跨机场通用的办法是保留原始 DNS，而非在覆写里硬编码三套 DNS。
+
+更新机制依据：[Stash 托管来源标记](https://stash.wiki/features/service-provider-subscription)、[官方远程覆写导入方式](https://stash.wiki/faq/url-schema)。当前环境已观察到已有远程 `.stoverride` 使用同样的 `#SUBSCRIBED` 首行。手机端是否已经识别，以及自动刷新是否实际执行，需要在 Stash 中确认；这里不把主配置文档的默认 12 小时间隔直接套用到覆写。

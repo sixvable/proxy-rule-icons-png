@@ -177,12 +177,14 @@ class Compiler:
   assert self.rules[-1]=='MATCH,Final'
   assert not any(r.startswith(('GEOSITE,','PROCESS-')) for r in self.rules)
   cfg={'name':'通用分流｜保留机场 DNS','desc':'直接使用机场原始订阅。替换策略组与分流，保留原配置 DNS、节点和订阅更新。适用于 Stash 3.6+；请关闭其它完整分流覆写。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
-  text=yaml_dump(cfg)
+  source_url=f'https://raw.githubusercontent.com/{self.recipe["repository"]}/stash-release/universal.stoverride'
+  text='#SUBSCRIBED '+source_url+'\n'+yaml_dump(cfg)
   for key in ('proxy-groups','rule-providers','rules'):text=re.sub('^'+key+r':\s*$',key+': #!replace',text,flags=re.M)
   assert not set(cfg)&{'dns','hosts','proxies','proxy-providers','listeners','mixed-port','port','socks-port','tun','http','script'}
   assert yaml_load(text)==cfg
   assert all(key+': #!replace' in text for key in ('proxy-groups','rule-providers','rules'))
   (self.out/'通用分流_保留机场DNS.stoverride').write_text(text)
+  (self.out/'universal.stoverride').write_text(text)
   (self.out/'config.json').write_text(json.dumps(cfg,ensure_ascii=False,indent=2)+'\n')
   report={'groups':len(cfg['proxy-groups']),'routing_rows':len(self.rules),'mrs_providers':len(self.providers),'classical_providers':0,'geosite_routing_rows':0,'expanded_public_atoms':self.expanded_count,'process_rules_removed':self.dropped_process,'residual_rule_rows':self.residual,'indexed_entries':sum(p['entries'] for p in self.stats),'text_bytes':sum(p['text_bytes'] for p in self.stats),'mrs_bytes':sum(p['mrs_bytes'] for p in self.stats),'dns_untouched':True,'node_and_subscription_fields_untouched':True,'coverage_assertions_passed':True,'ios_runtime_tested':False,'sources':{n:{k:v for k,v in x.items() if k!='payload'} for n,x in self.sources.items()},'providers':self.stats,'segments':self.coverage}
   report['source_notation_repairs']=self.repairs
