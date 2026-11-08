@@ -1,0 +1,3136 @@
+{
+  "repository": "sixvable/proxy-rule-icons-png",
+  "groups": [
+    {
+      "name": "Proxy",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Rocket.png",
+      "proxies": [
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "America",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "Final",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Final.png",
+      "proxies": [
+        "Proxy",
+        "AllServer",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "HongKong",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:港|香港|🇭🇰|\\bHK\\b|\\bHKG\\b|Hong\\s*Kong|HongKong|Hong))[\\s\\S]+$",
+      "proxies": [
+        "HK-Auto",
+        "HK-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "TaiWan",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:台|台湾|台灣|臺灣|湾|灣|🇹🇼|\\bTW\\b|\\bTWN\\b|Taiwan|Taipei|Hinet|CHT))[\\s\\S]+$",
+      "proxies": [
+        "TW-Auto",
+        "TW-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "Japan",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:日本|东京|東京|大阪|🇯🇵|\\bJP\\b|\\bJPN\\b|Japan|Tokyo|Osaka|\\bTYO\\b|\\bNRT\\b|\\bKIX\\b))[\\s\\S]+$",
+      "proxies": [
+        "JP-Auto",
+        "JP-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "Singapore",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:新加坡|坡|狮城|獅城|🇸🇬|\\bSG\\b|\\bSGP\\b|Singapore|Singa))[\\s\\S]+$",
+      "proxies": [
+        "SG-Auto",
+        "SG-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "Southeast.Asia",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/region-asean.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:东南亚|東南亞|东南亞|東南亚|新马泰|新馬泰|马来|馬來|马来西亚|馬來西亞|吉隆坡|泰国|泰國|曼谷|越南|胡志明|河内|河內|印尼|印度尼西亚|印度尼西亞|雅加达|雅加達|菲律宾|菲律賓|马尼拉|馬尼拉|柬埔寨|金边|金邊|老挝|老撾|寮国|寮國|缅甸|緬甸|仰光|文莱|汶萊|新加坡|狮城|獅城|🇸🇬|🇲🇾|🇹🇭|🇻🇳|🇮🇩|🇵🇭|🇰🇭|🇱🇦|🇲🇲|🇧🇳|\\bSG\\b|\\bSGP\\b|\\bMY\\b|\\bMYS\\b|\\bTH\\b|\\bTHA\\b|\\bVN\\b|\\bVNM\\b|\\bID\\b|\\bIDN\\b|\\bPH\\b|\\bPHL\\b|\\bKH\\b|\\bKHM\\b|\\bLAO\\b|\\bMM\\b|\\bMMR\\b|\\bBN\\b|\\bBRN\\b|Singapore|Malaysia|Kuala\\s*Lumpur|Thailand|Bangkok|Vietnam|Ho\\s*Chi\\s*Minh|Hanoi|Indonesia|Jakarta|Philippines|Manila|Cambodia|Phnom\\s*Penh|Laos|Myanmar|Burma|Yangon|Brunei|Southeast\\s*Asia|South\\s*East\\s*Asia|SE\\s*Asia))[\\s\\S]+$",
+      "proxies": [
+        "SEA-Auto",
+        "SEA-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "America",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:美|美国|美國|美西|美东|美東|🇺🇸|🇺🇲|\\bUS\\b|\\bUSA\\b|United\\s*States|America|\\bLAX\\b|\\bSJC\\b|\\bSFO\\b|\\bNYC\\b|\\bSEA\\b|\\bIAD\\b))[\\s\\S]+$",
+      "proxies": [
+        "US-Auto",
+        "US-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "UnitedKingdom",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_Kingdom.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:英国|英國|🇬🇧|\\bUK\\b|\\bGB\\b|\\bGBR\\b|United\\s*Kingdom|Britain|London|\\bLHR\\b))[\\s\\S]+$",
+      "proxies": [
+        "UK-Auto",
+        "UK-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "Germany",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Germany.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:德国|德國|🇩🇪|\\bDE\\b|\\bDEU\\b|Germany|Frankfurt|Berlin|\\bFRA\\b))[\\s\\S]+$",
+      "proxies": [
+        "DE-Auto",
+        "DE-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "Europe",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:欧洲|歐洲|欧盟|歐盟|🇪🇺|🇬🇧|🇩🇪|🇳🇱|🇫🇷|🇨🇭|🇸🇪|🇳🇴|🇫🇮|🇩🇰|🇮🇸|🇮🇪|🇪🇸|🇵🇹|🇮🇹|🇦🇹|🇧🇪|🇱🇺|🇨🇿|🇵🇱|🇭🇺|🇷🇴|🇧🇬|🇬🇷|\\bEU\\b|\\bEUR\\b|Europe|European|英国|英國|德国|德國|法国|法國|荷兰|荷蘭|瑞士|瑞典|挪威|芬兰|芬蘭|丹麦|丹麥|冰岛|冰島|爱尔兰|愛爾蘭|西班牙|葡萄牙|意大利|奥地利|奧地利|比利时|比利時|卢森堡|盧森堡|捷克|波兰|波蘭|匈牙利|罗马尼亚|羅馬尼亞|保加利亚|保加利亞|希腊|希臘|\\bUK\\b|\\bGB\\b|\\bGBR\\b|\\bDE\\b|\\bDEU\\b|\\bNL\\b|\\bNLD\\b|\\bFR\\b|\\bFRA\\b|\\bCH\\b|\\bCHE\\b|\\bSE\\b|\\bSWE\\b|\\bNO\\b|\\bNOR\\b|\\bFI\\b|\\bFIN\\b|\\bDK\\b|\\bDNK\\b|\\bIS\\b|\\bISL\\b|\\bIE\\b|\\bIRL\\b|\\bES\\b|\\bESP\\b|\\bPT\\b|\\bPRT\\b|\\bIT\\b|\\bITA\\b|\\bAT\\b|\\bAUT\\b|\\bBE\\b|\\bBEL\\b|\\bLU\\b|\\bLUX\\b|\\bCZ\\b|\\bCZE\\b|\\bPL\\b|\\bPOL\\b|\\bHU\\b|\\bHUN\\b|\\bRO\\b|\\bROU\\b|\\bBG\\b|\\bBGR\\b|\\bGR\\b|\\bGRC\\b|United\\s*Kingdom|Britain|Germany|Netherlands|Holland|France|Switzerland|Sweden|Norway|Finland|Denmark|Iceland|Ireland|Spain|Portugal|Italy|Austria|Belgium|Luxembourg|Czech|Poland|Hungary|Romania|Bulgaria|Greece|London|Frankfurt|Berlin|Amsterdam|Paris|Zurich|Stockholm|Oslo|Helsinki|Copenhagen|Dublin|Madrid|Milan|Vienna|Brussels|Warsaw|Prague|\\bLHR\\b|\\bFRA\\b|\\bAMS\\b|\\bCDG\\b|\\bZRH\\b))[\\s\\S]+$",
+      "proxies": [
+        "EU-Auto",
+        "EU-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "AllServer",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png",
+      "filter": "(?i)^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$",
+      "proxies": [
+        "All-Auto",
+        "All-FallBack",
+        "DIRECT"
+      ],
+      "include-all": true
+    },
+    {
+      "name": "HK-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:港|香港|🇭🇰|\\bHK\\b|\\bHKG\\b|Hong\\s*Kong|HongKong|Hong))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "TW-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:台|台湾|台灣|臺灣|湾|灣|🇹🇼|\\bTW\\b|\\bTWN\\b|Taiwan|Taipei|Hinet|CHT))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "JP-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:日本|东京|東京|大阪|🇯🇵|\\bJP\\b|\\bJPN\\b|Japan|Tokyo|Osaka|\\bTYO\\b|\\bNRT\\b|\\bKIX\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "SG-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:新加坡|坡|狮城|獅城|🇸🇬|\\bSG\\b|\\bSGP\\b|Singapore|Singa))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "SEA-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:东南亚|東南亞|东南亞|東南亚|新马泰|新馬泰|马来|馬來|马来西亚|馬來西亞|吉隆坡|泰国|泰國|曼谷|越南|胡志明|河内|河內|印尼|印度尼西亚|印度尼西亞|雅加达|雅加達|菲律宾|菲律賓|马尼拉|馬尼拉|柬埔寨|金边|金邊|老挝|老撾|寮国|寮國|缅甸|緬甸|仰光|文莱|汶萊|新加坡|狮城|獅城|🇸🇬|🇲🇾|🇹🇭|🇻🇳|🇮🇩|🇵🇭|🇰🇭|🇱🇦|🇲🇲|🇧🇳|\\bSG\\b|\\bSGP\\b|\\bMY\\b|\\bMYS\\b|\\bTH\\b|\\bTHA\\b|\\bVN\\b|\\bVNM\\b|\\bID\\b|\\bIDN\\b|\\bPH\\b|\\bPHL\\b|\\bKH\\b|\\bKHM\\b|\\bLAO\\b|\\bMM\\b|\\bMMR\\b|\\bBN\\b|\\bBRN\\b|Singapore|Malaysia|Kuala\\s*Lumpur|Thailand|Bangkok|Vietnam|Ho\\s*Chi\\s*Minh|Hanoi|Indonesia|Jakarta|Philippines|Manila|Cambodia|Phnom\\s*Penh|Laos|Myanmar|Burma|Yangon|Brunei|Southeast\\s*Asia|South\\s*East\\s*Asia|SE\\s*Asia))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "US-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:美|美国|美國|美西|美东|美東|🇺🇸|🇺🇲|\\bUS\\b|\\bUSA\\b|United\\s*States|America|\\bLAX\\b|\\bSJC\\b|\\bSFO\\b|\\bNYC\\b|\\bSEA\\b|\\bIAD\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "UK-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:英国|英國|🇬🇧|\\bUK\\b|\\bGB\\b|\\bGBR\\b|United\\s*Kingdom|Britain|London|\\bLHR\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "DE-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:德国|德國|🇩🇪|\\bDE\\b|\\bDEU\\b|Germany|Frankfurt|Berlin|\\bFRA\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "EU-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:欧洲|歐洲|欧盟|歐盟|🇪🇺|🇬🇧|🇩🇪|🇳🇱|🇫🇷|🇨🇭|🇸🇪|🇳🇴|🇫🇮|🇩🇰|🇮🇸|🇮🇪|🇪🇸|🇵🇹|🇮🇹|🇦🇹|🇧🇪|🇱🇺|🇨🇿|🇵🇱|🇭🇺|🇷🇴|🇧🇬|🇬🇷|\\bEU\\b|\\bEUR\\b|Europe|European|英国|英國|德国|德國|法国|法國|荷兰|荷蘭|瑞士|瑞典|挪威|芬兰|芬蘭|丹麦|丹麥|冰岛|冰島|爱尔兰|愛爾蘭|西班牙|葡萄牙|意大利|奥地利|奧地利|比利时|比利時|卢森堡|盧森堡|捷克|波兰|波蘭|匈牙利|罗马尼亚|羅馬尼亞|保加利亚|保加利亞|希腊|希臘|\\bUK\\b|\\bGB\\b|\\bGBR\\b|\\bDE\\b|\\bDEU\\b|\\bNL\\b|\\bNLD\\b|\\bFR\\b|\\bFRA\\b|\\bCH\\b|\\bCHE\\b|\\bSE\\b|\\bSWE\\b|\\bNO\\b|\\bNOR\\b|\\bFI\\b|\\bFIN\\b|\\bDK\\b|\\bDNK\\b|\\bIS\\b|\\bISL\\b|\\bIE\\b|\\bIRL\\b|\\bES\\b|\\bESP\\b|\\bPT\\b|\\bPRT\\b|\\bIT\\b|\\bITA\\b|\\bAT\\b|\\bAUT\\b|\\bBE\\b|\\bBEL\\b|\\bLU\\b|\\bLUX\\b|\\bCZ\\b|\\bCZE\\b|\\bPL\\b|\\bPOL\\b|\\bHU\\b|\\bHUN\\b|\\bRO\\b|\\bROU\\b|\\bBG\\b|\\bBGR\\b|\\bGR\\b|\\bGRC\\b|United\\s*Kingdom|Britain|Germany|Netherlands|Holland|France|Switzerland|Sweden|Norway|Finland|Denmark|Iceland|Ireland|Spain|Portugal|Italy|Austria|Belgium|Luxembourg|Czech|Poland|Hungary|Romania|Bulgaria|Greece|London|Frankfurt|Berlin|Amsterdam|Paris|Zurich|Stockholm|Oslo|Helsinki|Copenhagen|Dublin|Madrid|Milan|Vienna|Brussels|Warsaw|Prague|\\bLHR\\b|\\bFRA\\b|\\bAMS\\b|\\bCDG\\b|\\bZRH\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "All-Auto",
+      "type": "url-test",
+      "filter": "(?i)^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "HK-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:港|香港|🇭🇰|\\bHK\\b|\\bHKG\\b|Hong\\s*Kong|HongKong|Hong))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "TW-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:台|台湾|台灣|臺灣|湾|灣|🇹🇼|\\bTW\\b|\\bTWN\\b|Taiwan|Taipei|Hinet|CHT))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "JP-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:日本|东京|東京|大阪|🇯🇵|\\bJP\\b|\\bJPN\\b|Japan|Tokyo|Osaka|\\bTYO\\b|\\bNRT\\b|\\bKIX\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "SG-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:新加坡|坡|狮城|獅城|🇸🇬|\\bSG\\b|\\bSGP\\b|Singapore|Singa))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "SEA-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:东南亚|東南亞|东南亞|東南亚|新马泰|新馬泰|马来|馬來|马来西亚|馬來西亞|吉隆坡|泰国|泰國|曼谷|越南|胡志明|河内|河內|印尼|印度尼西亚|印度尼西亞|雅加达|雅加達|菲律宾|菲律賓|马尼拉|馬尼拉|柬埔寨|金边|金邊|老挝|老撾|寮国|寮國|缅甸|緬甸|仰光|文莱|汶萊|新加坡|狮城|獅城|🇸🇬|🇲🇾|🇹🇭|🇻🇳|🇮🇩|🇵🇭|🇰🇭|🇱🇦|🇲🇲|🇧🇳|\\bSG\\b|\\bSGP\\b|\\bMY\\b|\\bMYS\\b|\\bTH\\b|\\bTHA\\b|\\bVN\\b|\\bVNM\\b|\\bID\\b|\\bIDN\\b|\\bPH\\b|\\bPHL\\b|\\bKH\\b|\\bKHM\\b|\\bLAO\\b|\\bMM\\b|\\bMMR\\b|\\bBN\\b|\\bBRN\\b|Singapore|Malaysia|Kuala\\s*Lumpur|Thailand|Bangkok|Vietnam|Ho\\s*Chi\\s*Minh|Hanoi|Indonesia|Jakarta|Philippines|Manila|Cambodia|Phnom\\s*Penh|Laos|Myanmar|Burma|Yangon|Brunei|Southeast\\s*Asia|South\\s*East\\s*Asia|SE\\s*Asia))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "US-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:美|美国|美國|美西|美东|美東|🇺🇸|🇺🇲|\\bUS\\b|\\bUSA\\b|United\\s*States|America|\\bLAX\\b|\\bSJC\\b|\\bSFO\\b|\\bNYC\\b|\\bSEA\\b|\\bIAD\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "UK-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:英国|英國|🇬🇧|\\bUK\\b|\\bGB\\b|\\bGBR\\b|United\\s*Kingdom|Britain|London|\\bLHR\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "DE-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:德国|德國|🇩🇪|\\bDE\\b|\\bDEU\\b|Germany|Frankfurt|Berlin|\\bFRA\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "EU-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:欧洲|歐洲|欧盟|歐盟|🇪🇺|🇬🇧|🇩🇪|🇳🇱|🇫🇷|🇨🇭|🇸🇪|🇳🇴|🇫🇮|🇩🇰|🇮🇸|🇮🇪|🇪🇸|🇵🇹|🇮🇹|🇦🇹|🇧🇪|🇱🇺|🇨🇿|🇵🇱|🇭🇺|🇷🇴|🇧🇬|🇬🇷|\\bEU\\b|\\bEUR\\b|Europe|European|英国|英國|德国|德國|法国|法國|荷兰|荷蘭|瑞士|瑞典|挪威|芬兰|芬蘭|丹麦|丹麥|冰岛|冰島|爱尔兰|愛爾蘭|西班牙|葡萄牙|意大利|奥地利|奧地利|比利时|比利時|卢森堡|盧森堡|捷克|波兰|波蘭|匈牙利|罗马尼亚|羅馬尼亞|保加利亚|保加利亞|希腊|希臘|\\bUK\\b|\\bGB\\b|\\bGBR\\b|\\bDE\\b|\\bDEU\\b|\\bNL\\b|\\bNLD\\b|\\bFR\\b|\\bFRA\\b|\\bCH\\b|\\bCHE\\b|\\bSE\\b|\\bSWE\\b|\\bNO\\b|\\bNOR\\b|\\bFI\\b|\\bFIN\\b|\\bDK\\b|\\bDNK\\b|\\bIS\\b|\\bISL\\b|\\bIE\\b|\\bIRL\\b|\\bES\\b|\\bESP\\b|\\bPT\\b|\\bPRT\\b|\\bIT\\b|\\bITA\\b|\\bAT\\b|\\bAUT\\b|\\bBE\\b|\\bBEL\\b|\\bLU\\b|\\bLUX\\b|\\bCZ\\b|\\bCZE\\b|\\bPL\\b|\\bPOL\\b|\\bHU\\b|\\bHUN\\b|\\bRO\\b|\\bROU\\b|\\bBG\\b|\\bBGR\\b|\\bGR\\b|\\bGRC\\b|United\\s*Kingdom|Britain|Germany|Netherlands|Holland|France|Switzerland|Sweden|Norway|Finland|Denmark|Iceland|Ireland|Spain|Portugal|Italy|Austria|Belgium|Luxembourg|Czech|Poland|Hungary|Romania|Bulgaria|Greece|London|Frankfurt|Berlin|Amsterdam|Paris|Zurich|Stockholm|Oslo|Helsinki|Copenhagen|Dublin|Madrid|Milan|Vienna|Brussels|Warsaw|Prague|\\bLHR\\b|\\bFRA\\b|\\bAMS\\b|\\bCDG\\b|\\bZRH\\b))[\\s\\S]+$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "All-FallBack",
+      "type": "fallback",
+      "filter": "(?i)^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$",
+      "interval": 300,
+      "lazy": true,
+      "hidden": true,
+      "include-all": true
+    },
+    {
+      "name": "Speedtest",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "Proxy",
+        "REJECT-DROP",
+        "REJECT",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "DNS-Global-Auto",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png",
+      "type": "fallback",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:(🇭🇰|香港|Hong\\s*Kong|🇯🇵|日本|Japan|🇸🇬|新加坡|Singapore|🇺🇸|美国|美國|United\\s*States|\\bUS\\b)))[\\s\\S]+$",
+      "interval": 120,
+      "lazy": false,
+      "include-all": true
+    },
+    {
+      "name": "DNS-China",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "REJECT-DROP",
+        "REJECT",
+        "Proxy",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "America",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "NTP-Global",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "Proxy",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "NTP-China",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "REJECT-DROP",
+        "REJECT",
+        "Proxy",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "America",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Protection-HTTPDNS",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png",
+      "type": "select",
+      "proxies": [
+        "REJECT-DROP",
+        "REJECT",
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "Proxy",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Protection-Hijacking",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hijacking.png",
+      "type": "select",
+      "proxies": [
+        "REJECT-DROP",
+        "REJECT",
+        "DIRECT",
+        "Proxy",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "America",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Network-LAN",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/WiFi.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Proxy",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "America",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "NAS-Synology",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/app-synology.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Home-Aqara",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/41/94/7e/41947edf-870c-ac6a-218a-6d72b8886715/AppIcon-0-0-1x_U007emarketing-0-8-0-sRGB-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Drive-OneDrive",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/OneDrive.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Drive-Dropbox",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/drive-dropbox.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Drive-GoogleDrive",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Drive.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Drive-MEGA",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/drive-mega.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Drive-Imgur",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/drive-imgur.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Drive-InternetArchive",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/drive-internet-archive.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "P2P-PT",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "UnitedKingdom",
+        "America",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "P2P-eMule",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Download.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "UnitedKingdom",
+        "America",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Finance-PayPal",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PayPal.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Finance-Wise",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/b9/0c/1d/b90c1d16-7473-6596-8bf6-609cc4af01c4/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Crypto-Binance",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/ae/3b/3f/ae3b3f2e-d4db-4a89-fbe8-2a6fd2d8e2c6/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "Japan",
+        "America",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Crypto-OKX",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/03/aa/a0/03aaa030-4c0d-b75c-d9a3-49f4125b8331/AppIcon-0-0-1x_U007emarketing-0-8-0-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "Japan",
+        "America",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Finance-Monzo",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/53/e9/17/53e9176c-a48d-f03e-0bc9-097f225a28d4/AppIconProd-0-0-1x_U007ephone-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Finance-Revolut",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/db/e3/5a/dbe35a64-c880-15fe-46ce-81f70e920e8d/AppIcon-Production-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Protection-NoVPN",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Reject.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Shopping-eBay",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/shopping-ebay.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Shopping-Patreon",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bd/40/c6/bd40c6aa-793c-ca87-14fb-34313e30f01a/AppIcon-0-0-1x_U007epad-0-1-0-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-Xbox",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Xbox.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-PlayStation",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/PlayStation.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-Nintendo",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Nintendo.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-Steam",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Steam.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-Epic",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Epic_Games.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-GOG",
+      "icon": "https://img.icons8.com/fluency/512/gog-galaxy.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-Rockstar",
+      "icon": "https://img.icons8.com/nolan/512/rockstar-games.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-EA-Origin",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/game-ea.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Game-Ubisoft",
+      "icon": "https://img.icons8.com/doodle/512/ubisoft-connect.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-YouTube",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-Netflix",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-PrimeVideo",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-DisneyPlus",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney+.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-HBO",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/HBO.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-FOX",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/FOX.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-AppleTV",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Proxy",
+        "Japan",
+        "UnitedKingdom",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-Adult",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pornhub.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "ShortVideo-TikTok",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "ShortVideo-Kwai",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/70/4f/99704fd9-88e5-7e64-044b-4e268ccfaf5f/AppIcon-global-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "ShortVideo-Instagram",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Instagram.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Live-Twitch",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Twitch.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "TaiWan",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Audio-Spotify",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Spotify.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Audio-YouTubeMusic",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-Facebook",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-Twitter",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/X.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "TaiWan",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-Reddit",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/social-reddit.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-Telegram",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-WhatsApp",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/social-whatsapp.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-LINE",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Line.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-Discord",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Discord.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-LinkedIn",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Linkedin.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-Clubhouse",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Clubhouse.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Social-Signal",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/social-signal.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "News-Wikipedia",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/news-wikipedia.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "AI-AppleAI",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_2.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "AI-OpenAI",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/cf/c8/33/cfc83360-f210-5c47-cee1-ef9458924dfa/AppIcon-0-0-1x_U007epad-0-0-0-1-0-P3-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "TaiWan",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "AI-Grok",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/8b/4f/c6/8b4fc632-ad34-0bf5-6003-0fa5a4723145/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-P3-0-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "TaiWan",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "AI-Claude",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bd/6d/22/bd6d2240-8ddf-6cd4-f55a-fc74122c96a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "TaiWan",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "AI-Gemini",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/ai-gemini.png",
+      "type": "select",
+      "proxies": [
+        "TaiWan",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "AI-Copilot",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Copilot.png",
+      "type": "select",
+      "proxies": [
+        "TaiWan",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "AI-GlobalAI",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/AI.png",
+      "type": "select",
+      "proxies": [
+        "TaiWan",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Tool-Adobe",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/tool-adobe.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Tool-GitHub",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/GitHub.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Tool-Notion",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Notion.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Tool-Pinterest",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/tool-pinterest.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Tool-BingEdge",
+      "icon": "https://cdn.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Proxy",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Remote-RustDesk",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/remote-rustdesk.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Proxy",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Remote-Parsec",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Server.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Proxy",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Apps-Google",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "UnitedKingdom",
+        "Japan",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Apps-Microsoft",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Proxy",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Apps-Apple",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Proxy",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Apps-Amazon",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Amazon.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Country-China",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Proxy",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "America",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Global-CDN",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png",
+      "type": "select",
+      "proxies": [
+        "Final",
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    }
+  ],
+  "rules": [
+    "GEOIP,LAN,DIRECT,no-resolve",
+    "IP-CIDR,114.114.114.114/32,DIRECT,no-resolve",
+    "IP-CIDR,119.29.29.29/32,DIRECT,no-resolve",
+    "IP-CIDR,223.5.5.5/32,DIRECT,no-resolve",
+    "IP-CIDR,223.6.6.6/32,DIRECT,no-resolve",
+    "IP-CIDR,8.8.8.8/32,DNS-Global-Auto,no-resolve",
+    "IP-CIDR,1.1.1.1/32,DNS-Global-Auto,no-resolve",
+    "DOMAIN,uts-api.itunes.apple.com,Video-AppleTV",
+    "DOMAIN,hls-amt.itunes.apple.com,Video-AppleTV",
+    "GEOSITE,apple-tvplus,Video-AppleTV",
+    "RULE-SET,AppleTV_Do_Resolve,Video-AppleTV",
+    "DOMAIN,tv.g.apple.com,Video-AppleTV",
+    "DOMAIN,linear.tv.apple.com,Video-AppleTV",
+    "DOMAIN,ocvideo.apple.com,Video-AppleTV",
+    "DOMAIN,hls-svod.itunes.apple.com,Video-AppleTV",
+    "DOMAIN,hls-svod-aoc-ve.itunes.g.aaplimg.com,Video-AppleTV",
+    "DOMAIN,hls-svod-ve.itunes.g.aaplimg.com,Video-AppleTV",
+    "DOMAIN-SUFFIX,itunes.g.aaplimg.com,Video-AppleTV",
+    "AND,((OR,((DST-PORT,53),(DST-PORT,853))),(NOT,((GEOIP,CN)))),DNS-Global-Auto",
+    "RULE-SET,GlobalDNS_Domain,DNS-Global-Auto",
+    "RULE-SET,GlobalDNS_IP,DNS-Global-Auto",
+    "AND,((OR,((DST-PORT,53),(DST-PORT,853))),(GEOIP,CN)),DNS-China",
+    "RULE-SET,ChinaDNS_Domain,DNS-China",
+    "RULE-SET,ChinaDNS_IP,DNS-China",
+    "AND,((NETWORK,udp),(DST-PORT,123),(NOT,((GEOIP,CN)))),NTP-Global",
+    "AND,((NETWORK,udp),(DST-PORT,123),(GEOIP,CN)),NTP-China",
+    "GEOSITE,private,Network-LAN",
+    "RULE-SET,Lan_Do_Resolve,Network-LAN",
+    "GEOSITE,category-httpdns-cn,Protection-HTTPDNS",
+    "RULE-SET,BlockHttpDNS_Do_Resolve,Protection-HTTPDNS",
+    "RULE-SET,Hijacking_Do_Resolve,Protection-Hijacking",
+    "RULE-SET,HijackingPlus_Do_Resolve,Protection-Hijacking",
+    "RULE-SET,PreRepairEasyPrivacy_REJECT_Do_Resolve,REJECT-DROP",
+    "RULE-SET,Kwai_Domain,ShortVideo-Kwai",
+    "RULE-SET,GeositeCN_Domain,Country-China",
+    "GEOIP,CN,Country-China",
+    "GEOSITE,cloudflare-cn,Country-China",
+    "RULE-SET,CloudflareCN_Do_Resolve,Country-China",
+    "GEOSITE,amazon@cn,Country-China",
+    "RULE-SET,AmazonCN_Do_Resolve,Country-China",
+    "GEOSITE,ookla-speedtest,Speedtest",
+    "RULE-SET,Speedtest_Do_Resolve,Speedtest",
+    "DOMAIN-SUFFIX,oca.nflxvideo.net,Speedtest",
+    "GEOSITE,synology,NAS-Synology",
+    "RULE-SET,Synology_Do_Resolve,NAS-Synology",
+    "RULE-SET,AqaraGlobal_Do_Resolve,Home-Aqara",
+    "GEOSITE,onedrive,Drive-OneDrive",
+    "RULE-SET,OneDrive_Do_Resolve,Drive-OneDrive",
+    "DOMAIN-SUFFIX,onedrive.live.com,Drive-OneDrive",
+    "DOMAIN-SUFFIX,events.data.microsoft.com,Drive-OneDrive",
+    "DOMAIN-SUFFIX,ecs.office.com,Drive-OneDrive",
+    "GEOSITE,dropbox,Drive-Dropbox",
+    "RULE-SET,Dropbox_Do_Resolve,Drive-Dropbox",
+    "GEOSITE,mega,Drive-MEGA",
+    "RULE-SET,MEGA_Do_Resolve,Drive-MEGA",
+    "GEOSITE,imgur,Drive-Imgur",
+    "RULE-SET,Imgur_Do_Resolve,Drive-Imgur",
+    "RULE-SET,WaybackMachine_Domain,Drive-InternetArchive",
+    "RULE-SET,WaybackMachine_IP,Drive-InternetArchive",
+    "GEOSITE,category-pt,P2P-PT",
+    "RULE-SET,PrivateTracker_Do_Resolve,P2P-PT",
+    "RULE-SET,eMuleServer_IP,P2P-eMule",
+    "GEOSITE,paypal,Finance-PayPal",
+    "RULE-SET,Paypal_Do_Resolve,Finance-PayPal",
+    "GEOSITE,wise,Finance-Wise",
+    "RULE-SET,Wise_Do_Resolve,Finance-Wise",
+    "GEOSITE,binance,Crypto-Binance",
+    "RULE-SET,Binance_Do_Resolve,Crypto-Binance",
+    "GEOSITE,okx,Crypto-OKX",
+    "RULE-SET,OKX_Do_Resolve,Crypto-OKX",
+    "RULE-SET,Monzo_Do_Resolve,Finance-Monzo",
+    "RULE-SET,Revolut_Do_Resolve,Finance-Revolut",
+    "RULE-SET,UnsupportVPN_Do_Resolve,Protection-NoVPN",
+    "GEOSITE,ebay,Shopping-eBay",
+    "RULE-SET,eBay_Do_Resolve,Shopping-eBay",
+    "GEOSITE,patreon,Shopping-Patreon",
+    "RULE-SET,Patreon_Do_Resolve,Shopping-Patreon",
+    "GEOSITE,xbox,Game-Xbox",
+    "RULE-SET,Xbox_Do_Resolve,Game-Xbox",
+    "GEOSITE,playstation,Game-PlayStation",
+    "RULE-SET,PlayStation_Do_Resolve,Game-PlayStation",
+    "GEOSITE,nintendo,Game-Nintendo",
+    "RULE-SET,Nintendo_Do_Resolve,Game-Nintendo",
+    "GEOSITE,steam,Game-Steam",
+    "RULE-SET,Steam_Do_Resolve,Game-Steam",
+    "DOMAIN-SUFFIX,steamserver.net,Game-Steam",
+    "GEOSITE,epicgames,Game-Epic",
+    "RULE-SET,EPIC_Do_Resolve,Game-Epic",
+    "GEOSITE,gog,Game-GOG",
+    "RULE-SET,GOG_Do_Resolve,Game-GOG",
+    "GEOSITE,rockstar,Game-Rockstar",
+    "RULE-SET,RockStar_Do_Resolve,Game-Rockstar",
+    "GEOSITE,ea,Game-EA-Origin",
+    "RULE-SET,EA_Do_Resolve,Game-EA-Origin",
+    "GEOSITE,origin,Game-EA-Origin",
+    "RULE-SET,Origin_Do_Resolve,Game-EA-Origin",
+    "GEOSITE,ubisoft,Game-Ubisoft",
+    "RULE-SET,UBI_Do_Resolve,Game-Ubisoft",
+    "RULE-SET,Ubisoft_Do_Resolve,Game-Ubisoft",
+    "GEOSITE,netflix,Video-Netflix",
+    "RULE-SET,Netflix_Do_Resolve,Video-Netflix",
+    "GEOSITE,disney,Video-DisneyPlus",
+    "RULE-SET,Disney_Do_Resolve,Video-DisneyPlus",
+    "GEOSITE,primevideo,Video-PrimeVideo",
+    "RULE-SET,PrimeVideo_Do_Resolve,Video-PrimeVideo",
+    "GEOSITE,hbo,Video-HBO",
+    "RULE-SET,HBO_Do_Resolve,Video-HBO",
+    "GEOSITE,fox,Video-FOX",
+    "RULE-SET,FOXPlus_Do_Resolve,Video-FOX",
+    "RULE-SET,FOXNOW_Do_Resolve,Video-FOX",
+    "GEOSITE,pornhub,Video-Adult",
+    "RULE-SET,Pornhub_Domain,Video-Adult",
+    "GEOSITE,tiktok,ShortVideo-TikTok",
+    "RULE-SET,TikTok_Do_Resolve,ShortVideo-TikTok",
+    "GEOSITE,instagram,ShortVideo-Instagram",
+    "RULE-SET,Instagram_Do_Resolve,ShortVideo-Instagram",
+    "GEOSITE,twitch,Live-Twitch",
+    "RULE-SET,Twitch_Do_Resolve,Live-Twitch",
+    "GEOSITE,spotify,Audio-Spotify",
+    "RULE-SET,Spotify_Do_Resolve,Audio-Spotify",
+    "GEOSITE,facebook,Social-Facebook",
+    "RULE-SET,Facebook_Do_Resolve,Social-Facebook",
+    "GEOSITE,reddit,Social-Reddit",
+    "RULE-SET,Reddit_Do_Resolve,Social-Reddit",
+    "GEOSITE,telegram,Social-Telegram",
+    "RULE-SET,Telegram_Do_Resolve,Social-Telegram",
+    "GEOSITE,whatsapp,Social-WhatsApp",
+    "RULE-SET,Whatsapp_Do_Resolve,Social-WhatsApp",
+    "GEOSITE,line,Social-LINE",
+    "RULE-SET,Line_Do_Resolve,Social-LINE",
+    "GEOSITE,discord,Social-Discord",
+    "RULE-SET,Discord_Do_Resolve,Social-Discord",
+    "GEOSITE,linkedin,Social-LinkedIn",
+    "RULE-SET,LinkedIn_Do_Resolve,Social-LinkedIn",
+    "GEOSITE,clubhouse,Social-Clubhouse",
+    "RULE-SET,Clubhouse_Do_Resolve,Social-Clubhouse",
+    "RULE-SET,ClubhouseIP_Do_Resolve,Social-Clubhouse",
+    "GEOSITE,signal,Social-Signal",
+    "RULE-SET,Signal_Domain,Social-Signal",
+    "RULE-SET,Wikipedia_Do_Resolve,News-Wikipedia",
+    "GEOSITE,apple-intelligence,AI-AppleAI",
+    "RULE-SET,AppleAI_Domain,AI-AppleAI",
+    "GEOSITE,openai,AI-OpenAI",
+    "RULE-SET,OpenAI_Do_Resolve,AI-OpenAI",
+    "GEOSITE,xai,AI-Grok",
+    "RULE-SET,Grok_Domain,AI-Grok",
+    "GEOSITE,twitter,Social-Twitter",
+    "RULE-SET,Twitter_Do_Resolve,Social-Twitter",
+    "GEOSITE,anthropic,AI-Claude",
+    "RULE-SET,Claude_Do_Resolve,AI-Claude",
+    "GEOSITE,google-gemini,AI-Gemini",
+    "RULE-SET,Gemini_Domain,AI-Gemini",
+    "RULE-SET,Copilot_Domain,AI-Copilot",
+    "GEOSITE,category-ai-!cn,AI-GlobalAI",
+    "GEOSITE,adobe,Tool-Adobe",
+    "RULE-SET,Adobe_Do_Resolve,Tool-Adobe",
+    "GEOSITE,github,Tool-GitHub",
+    "RULE-SET,GitHub_Do_Resolve,Tool-GitHub",
+    "GEOSITE,bing,Tool-BingEdge",
+    "RULE-SET,Bing_Do_Resolve,Tool-BingEdge",
+    "RULE-SET,MicrosoftEdge_Do_Resolve,Tool-BingEdge",
+    "GEOSITE,notion,Tool-Notion",
+    "RULE-SET,Notion_Do_Resolve,Tool-Notion",
+    "GEOSITE,pinterest,Tool-Pinterest",
+    "RULE-SET,Pinterest_Do_Resolve,Tool-Pinterest",
+    "RULE-SET,RustDesk_Domain,Remote-RustDesk",
+    "RULE-SET,Parsec_Domain,Remote-Parsec",
+    "RULE-SET,GoogleDrive_Do_Resolve,Drive-GoogleDrive",
+    "GEOSITE,youtube,Video-YouTube",
+    "RULE-SET,YouTube_Do_Resolve,Video-YouTube",
+    "RULE-SET,YouTubeMusic_Do_Resolve,Audio-YouTubeMusic",
+    "GEOSITE,google,Apps-Google",
+    "RULE-SET,Google_Do_Resolve,Apps-Google",
+    "GEOSITE,amazon,Apps-Amazon",
+    "RULE-SET,Amazon_Do_Resolve,Apps-Amazon",
+    "RULE-SET,Apple_Domain,Apps-Apple",
+    "RULE-SET,Apple_IP,Apps-Apple",
+    "RULE-SET,MicrosoftAPPs_Domain,Apps-Microsoft",
+    "GEOSITE,cloudflare,Global-CDN",
+    "RULE-SET,Cloudflare_Do_Resolve,Global-CDN",
+    "RULE-SET,Cloudflare_IPv4_Do_Resolve,Global-CDN",
+    "RULE-SET,Cloudflare_IPv6_Do_Resolve,Global-CDN",
+    "GEOSITE,akamai,Global-CDN",
+    "RULE-SET,AkamaiCloud_Do_Resolve,Global-CDN",
+    "GEOSITE,fastly,Global-CDN",
+    "RULE-SET,Fastly_IP_Do_Resolve,Global-CDN",
+    "MATCH,Final"
+  ],
+  "providers": {
+    "GlobalDNS_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/GlobalDNS/GlobalDNS_Domain.yaml"
+    },
+    "GlobalDNS_IP": {
+      "behavior": "ipcidr",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/GlobalDNS/GlobalDNS_IP.yaml"
+    },
+    "ChinaDNS_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/ChinaDNS/ChinaDNS_Domain.yaml"
+    },
+    "ChinaDNS_IP": {
+      "behavior": "ipcidr",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/ChinaDNS/ChinaDNS_IP.yaml"
+    },
+    "Lan_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    },
+    "BlockHttpDNS_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BlockHttpDNS/BlockHttpDNS.yaml"
+    },
+    "Hijacking_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml"
+    },
+    "HijackingPlus_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/HijackingPlus/HijackingPlus.yaml"
+    },
+    "PreRepairEasyPrivacy_REJECT_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/PreRepairEasyPrivacy/PreRepairEasyPrivacy_REJECT.yaml"
+    },
+    "GeositeCN_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/GeositeCN/GeositeCN_Domain.yaml"
+    },
+    "CloudflareCN_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflarecn/Cloudflarecn.yaml"
+    },
+    "AmazonCN_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AmazonCN/AmazonCN.yaml"
+    },
+    "Speedtest_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml"
+    },
+    "Synology_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Synology/Synology.yaml"
+    },
+    "AqaraGlobal_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Aqara/AqaraGlobal.yaml"
+    },
+    "OneDrive_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml"
+    },
+    "Dropbox_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Dropbox/Dropbox.yaml"
+    },
+    "MEGA_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/MEGA/MEGA.yaml"
+    },
+    "Imgur_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Imgur/Imgur.yaml"
+    },
+    "GoogleDrive_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.yaml"
+    },
+    "WaybackMachine_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/WaybackMachine/WaybackMachine_Domain.yaml"
+    },
+    "WaybackMachine_IP": {
+      "behavior": "ipcidr",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/WaybackMachine/WaybackMachine_IP.yaml"
+    },
+    "PrivateTracker_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrivateTracker/PrivateTracker.yaml"
+    },
+    "eMuleServer_IP": {
+      "behavior": "ipcidr",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/eMuleServer/eMuleServer_IP.yaml"
+    },
+    "Paypal_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/VirtualFinance/Paypal.yaml"
+    },
+    "Wise_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/VirtualFinance/Wise.yaml"
+    },
+    "Binance_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Binance/Binance.yaml"
+    },
+    "OKX_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OKX/OKX.yaml"
+    },
+    "Monzo_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/VirtualFinance/Monzo.yaml"
+    },
+    "Revolut_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/VirtualFinance/Revolut.yaml"
+    },
+    "UnsupportVPN_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/UnsupportVPN/UnsupportVPN.yaml"
+    },
+    "eBay_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/eBay/eBay.yaml"
+    },
+    "Patreon_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Patreon/Patreon.yaml"
+    },
+    "Xbox_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Xbox/Xbox.yaml"
+    },
+    "PlayStation_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PlayStation/PlayStation.yaml"
+    },
+    "Nintendo_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.yaml"
+    },
+    "Steam_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml"
+    },
+    "EPIC_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
+    },
+    "GOG_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gog/Gog.yaml"
+    },
+    "RockStar_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Rockstar/Rockstar.yaml"
+    },
+    "EA_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EA/EA.yaml"
+    },
+    "Origin_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Origin/Origin.yaml"
+    },
+    "UBI_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/UBI/UBI.yaml"
+    },
+    "Ubisoft_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Ubisoft/Ubisoft.yaml"
+    },
+    "YouTube_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
+    },
+    "Netflix_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
+    },
+    "Disney_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml"
+    },
+    "PrimeVideo_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrimeVideo/PrimeVideo.yaml"
+    },
+    "HBO_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO.yaml"
+    },
+    "FOXPlus_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/FOXPlus/FOXPlus.yaml"
+    },
+    "FOXNOW_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/FOXNOW/FOXNOW.yaml"
+    },
+    "AppleTV_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml"
+    },
+    "Pornhub_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Pornhub/Pornhub_Domain.yaml"
+    },
+    "TikTok_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml"
+    },
+    "Kwai_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Kwai/Kwai_Domain.yaml"
+    },
+    "Instagram_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml"
+    },
+    "Twitch_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitch/Twitch.yaml"
+    },
+    "Spotify_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml"
+    },
+    "YouTubeMusic_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml"
+    },
+    "Twitter_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+    },
+    "Facebook_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml"
+    },
+    "Telegram_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    },
+    "Whatsapp_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml"
+    },
+    "Line_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Line/Line.yaml"
+    },
+    "Reddit_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml"
+    },
+    "Discord_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml"
+    },
+    "LinkedIn_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/LinkedIn/LinkedIn.yaml"
+    },
+    "Clubhouse_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Clubhouse/Clubhouse.yaml"
+    },
+    "ClubhouseIP_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ClubhouseIP/ClubhouseIP.yaml"
+    },
+    "Signal_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Signal/Signal_Domain.yaml"
+    },
+    "Wikipedia_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml"
+    },
+    "AppleAI_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/AppleAI/AppleAI_Domain.yaml"
+    },
+    "OpenAI_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
+    },
+    "Grok_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Grok/Grok_Domain.yaml"
+    },
+    "Gemini_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Gemini/Gemini_Domain.yaml"
+    },
+    "Claude_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
+    },
+    "Copilot_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Copilot/Copilot_Domain.yaml"
+    },
+    "Adobe_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Adobe/Adobe.yaml"
+    },
+    "GitHub_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
+    },
+    "Notion_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.yaml"
+    },
+    "Pinterest_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pinterest/Pinterest.yaml"
+    },
+    "Bing_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Bing/Bing.yaml"
+    },
+    "MicrosoftEdge_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/MicrosoftEdge/MicrosoftEdge.yaml"
+    },
+    "RustDesk_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/RustDesk/RustDesk_Domain.yaml"
+    },
+    "Parsec_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Parsec/Parsec_Domain.yaml"
+    },
+    "Google_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
+    },
+    "Amazon_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.yaml"
+    },
+    "MicrosoftAPPs_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/MicrosoftAPPs/MicrosoftAPPs_Domain.yaml"
+    },
+    "Apple_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Apple/Apple_Domain.yaml"
+    },
+    "Apple_IP": {
+      "behavior": "ipcidr",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Apple/Apple_IP.yaml"
+    },
+    "Cloudflare_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.yaml"
+    },
+    "Cloudflare_IPv4_Do_Resolve": {
+      "behavior": "ipcidr",
+      "format": "text",
+      "url": "https://www.cloudflare.com/ips-v4"
+    },
+    "Cloudflare_IPv6_Do_Resolve": {
+      "behavior": "ipcidr",
+      "format": "text",
+      "url": "https://www.cloudflare.com/ips-v6"
+    },
+    "AkamaiCloud_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloud/AkamaiCloud/AkamaiCloud.yaml"
+    },
+    "Fastly_IP_Do_Resolve": {
+      "behavior": "ipcidr",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Fastly/Fastly_IP.yaml"
+    },
+    "geosite:adobe": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/adobe.yaml"
+    },
+    "geosite:akamai": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/akamai.yaml"
+    },
+    "geosite:amazon": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/amazon.yaml"
+    },
+    "geosite:amazon@cn": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/amazon@cn.yaml"
+    },
+    "geosite:anthropic": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/anthropic.yaml"
+    },
+    "geosite:apple-intelligence": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/apple-intelligence.yaml"
+    },
+    "geosite:apple-tvplus": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/apple-tvplus.yaml"
+    },
+    "geosite:binance": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/binance.yaml"
+    },
+    "geosite:bing": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/bing.yaml"
+    },
+    "geosite:category-ai-!cn": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-ai-!cn.yaml"
+    },
+    "geosite:category-httpdns-cn": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-httpdns-cn.yaml"
+    },
+    "geosite:category-pt": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-pt.yaml"
+    },
+    "geosite:cloudflare": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/cloudflare.yaml"
+    },
+    "geosite:cloudflare-cn": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/cloudflare-cn.yaml"
+    },
+    "geosite:clubhouse": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/clubhouse.yaml"
+    },
+    "geosite:discord": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/discord.yaml"
+    },
+    "geosite:disney": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/disney.yaml"
+    },
+    "geosite:dropbox": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/dropbox.yaml"
+    },
+    "geosite:ea": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ea.yaml"
+    },
+    "geosite:ebay": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ebay.yaml"
+    },
+    "geosite:epicgames": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/epicgames.yaml"
+    },
+    "geosite:facebook": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/facebook.yaml"
+    },
+    "geosite:fastly": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/fastly.yaml"
+    },
+    "geosite:fox": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/fox.yaml"
+    },
+    "geosite:github": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/github.yaml"
+    },
+    "geosite:gog": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/gog.yaml"
+    },
+    "geosite:google": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google.yaml"
+    },
+    "geosite:google-gemini": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-gemini.yaml"
+    },
+    "geosite:hbo": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/hbo.yaml"
+    },
+    "geosite:imgur": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/imgur.yaml"
+    },
+    "geosite:instagram": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/instagram.yaml"
+    },
+    "geosite:line": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/line.yaml"
+    },
+    "geosite:linkedin": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/linkedin.yaml"
+    },
+    "geosite:mega": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/mega.yaml"
+    },
+    "geosite:netflix": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/netflix.yaml"
+    },
+    "geosite:nintendo": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/nintendo.yaml"
+    },
+    "geosite:notion": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/notion.yaml"
+    },
+    "geosite:okx": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/okx.yaml"
+    },
+    "geosite:onedrive": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/onedrive.yaml"
+    },
+    "geosite:ookla-speedtest": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ookla-speedtest.yaml"
+    },
+    "geosite:openai": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.yaml"
+    },
+    "geosite:origin": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/origin.yaml"
+    },
+    "geosite:patreon": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/patreon.yaml"
+    },
+    "geosite:paypal": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/paypal.yaml"
+    },
+    "geosite:pinterest": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/pinterest.yaml"
+    },
+    "geosite:playstation": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/playstation.yaml"
+    },
+    "geosite:pornhub": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/pornhub.yaml"
+    },
+    "geosite:primevideo": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/primevideo.yaml"
+    },
+    "geosite:private": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/private.yaml"
+    },
+    "geosite:reddit": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/reddit.yaml"
+    },
+    "geosite:rockstar": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/rockstar.yaml"
+    },
+    "geosite:signal": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/signal.yaml"
+    },
+    "geosite:spotify": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/spotify.yaml"
+    },
+    "geosite:steam": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/steam.yaml"
+    },
+    "geosite:synology": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/synology.yaml"
+    },
+    "geosite:telegram": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/telegram.yaml"
+    },
+    "geosite:tiktok": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/tiktok.yaml"
+    },
+    "geosite:twitch": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/twitch.yaml"
+    },
+    "geosite:twitter": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/twitter.yaml"
+    },
+    "geosite:ubisoft": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ubisoft.yaml"
+    },
+    "geosite:whatsapp": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/whatsapp.yaml"
+    },
+    "geosite:wise": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/wise.yaml"
+    },
+    "geosite:xai": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xai.yaml"
+    },
+    "geosite:xbox": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xbox.yaml"
+    },
+    "geosite:youtube": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/youtube.yaml"
+    }
+  },
+  "dns_provider": "GeositeCN_Domain",
+  "version": "2026.11.08",
+  "removed_groups": [
+    "AF-Auto",
+    "AF-FallBack",
+    "AU-Auto",
+    "AU-FallBack",
+    "Africa",
+    "Australia",
+    "CA-Auto",
+    "CA-FallBack",
+    "Canada",
+    "Download-MacAppUpdate",
+    "FR-Auto",
+    "FR-FallBack",
+    "France",
+    "KR-Auto",
+    "KR-FallBack",
+    "Korea",
+    "NL-Auto",
+    "NL-FallBack",
+    "Netherlands",
+    "OC-Auto",
+    "OC-FallBack",
+    "Oceania",
+    "SAM-Auto",
+    "SAM-FallBack",
+    "South.America",
+    "WA-Auto",
+    "WA-FallBack",
+    "West.Asia"
+  ],
+  "override_merge": {
+    "proxy-groups": "replace",
+    "rule-providers": "replace",
+    "rules": "replace"
+  },
+  "preserve_base_keys": [
+    "dns",
+    "hosts",
+    "proxies",
+    "proxy-providers"
+  ]
+}

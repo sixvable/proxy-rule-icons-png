@@ -1,0 +1,58 @@
+name: Compile public Stash rules
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - stash-universal/**
+      - .github/workflows/stash-rules.yml
+  schedule:
+    - cron: '17 22 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: publish-public-rules
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: stash-universal
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install YAML parser and verified rule compiler
+        shell: bash
+        run: |
+          set -euo pipefail
+          python -m pip install PyYAML==6.0.2
+          curl --fail --location --retry 2 -o /tmp/mihomo.gz https://github.com/MetaCubeX/mihomo/releases/download/v1.19.33/mihomo-linux-amd64-v1.19.33.gz
+          echo '132f6f3edf9a65e62f04853aed3358472e0b2b7666daa8419edfa2ddf5bb6323  /tmp/mihomo.gz' | sha256sum --check
+          gzip -d /tmp/mihomo.gz
+          chmod +x /tmp/mihomo
+      - name: Fetch public rules and compile
+        run: python build.py --refresh --cache .cache --out dist --mihomo /tmp/mihomo
+      - name: Verify rule files and references
+        run: python test_build.py --dist dist --mihomo /tmp/mihomo
+      - name: Publish only validated public artifacts
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p publish/rules
+          cp dist/rules/*.mrs publish/rules/
+          cp dist/rules/*.txt publish/rules/
+          cp dist/通用分流_保留机场DNS.stoverride dist/build-report.json publish/
+          cp 可选_开启IPv6.stoverride README.md publish/
+          cd publish
+          git init -b stash-release
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .
+          git commit -m 'Publish validated public Stash rules'
+          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git"
+          AUTH_HEADER=$(git -C ../.. config --local --get http.https://github.com/.extraheader)
+          git -c http.https://github.com/.extraheader="$AUTH_HEADER" push origin HEAD:stash-release --force

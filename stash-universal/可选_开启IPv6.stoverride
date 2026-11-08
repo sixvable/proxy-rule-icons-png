@@ -1,0 +1,7 @@
+name: 可选｜保留原 DNS 并开启 IPv6
+desc: 仅开启 IPv6，不替换 DNS 服务器、节点解析器或回退策略。网络需具备可用 IPv6；不包含字幕桥接或专用端口。
+category: 自用分流
+version: 2026.11.08
+ipv6: true
+dns:
+  ipv6: true

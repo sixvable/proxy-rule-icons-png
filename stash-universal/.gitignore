@@ -1,0 +1,5 @@
+.cache/
+dist/
+publish/
+__pycache__/
+*.pyc
