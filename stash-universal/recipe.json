@@ -2135,7 +2135,6 @@
     "RULE-SET,PreRepairEasyPrivacy_REJECT_Do_Resolve,REJECT-DROP",
     "RULE-SET,Kwai_Domain,ShortVideo-Kwai",
     "RULE-SET,GeositeCN_Domain,Country-China",
-    "GEOIP,CN,Country-China",
     "GEOSITE,cloudflare-cn,Country-China",
     "RULE-SET,CloudflareCN_Do_Resolve,Country-China",
     "GEOSITE,amazon@cn,Country-China",
@@ -2286,6 +2285,7 @@
     "RULE-SET,AkamaiCloud_Do_Resolve,Global-CDN",
     "GEOSITE,fastly,Global-CDN",
     "RULE-SET,Fastly_IP_Do_Resolve,Global-CDN",
+    "GEOIP,CN,Country-China",
     "MATCH,Final"
   ],
   "providers": {
@@ -3091,7 +3091,7 @@
     }
   },
   "dns_provider": "GeositeCN_Domain",
-  "version": "2026.11.08",
+  "version": "2026.11.08.1",
   "removed_groups": [
     "AF-Auto",
     "AF-FallBack",

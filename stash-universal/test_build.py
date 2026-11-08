@@ -25,6 +25,7 @@ def validate_dist(dist,mihomo):
  apple=next(i for i,r in enumerate(cfg['rules']) if ',Video-AppleTV' in r)
  china=next(i for i,r in enumerate(cfg['rules']) if ',Country-China' in r)
  assert apple<china
+ assert next(i for i,r in enumerate(cfg['rules']) if r=='GEOIP,CN,Country-China')>next(i for i,r in enumerate(cfg['rules']) if ',Video-YouTube' in r)
  assert next(g for g in cfg['proxy-groups'] if g['name']=='Video-AppleTV')['proxies'][0]=='DIRECT'
  raw=json.dumps(cfg,ensure_ascii=False)
  assert '18767' not in raw and '18768' not in raw and 'Apple TV 双语字幕' not in raw
