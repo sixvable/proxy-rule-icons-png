@@ -45,7 +45,7 @@ jobs:
           mkdir -p publish/rules-v2
           # Keep v1 rules available while older clients refresh their override.
           git fetch --no-tags --depth=1 origin stash-release
-          git archive FETCH_HEAD rules | tar -x -C publish
+          git -C .. archive FETCH_HEAD rules | tar -x -C publish
           cp dist/rules/*.mrs publish/rules-v2/
           cp dist/rules/*.txt publish/rules-v2/
           cp dist/通用分流_保留机场DNS.stoverride dist/universal.stoverride dist/build-report.json publish/
