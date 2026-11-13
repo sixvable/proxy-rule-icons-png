@@ -330,68 +330,15 @@
       "include-all": true
     },
     {
-      "name": "Speedtest",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
+      "name": "Video-AppleTV",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png",
       "type": "select",
       "proxies": [
         "DIRECT",
         "America",
+        "Proxy",
         "Japan",
         "UnitedKingdom",
-        "Proxy",
-        "REJECT-DROP",
-        "REJECT",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
-      "name": "DNS-Global-Auto",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png",
-      "type": "fallback",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:(🇭🇰|香港|Hong\\s*Kong|🇯🇵|日本|Japan|🇸🇬|新加坡|Singapore|🇺🇸|美国|美國|United\\s*States|\\bUS\\b)))[\\s\\S]+$",
-      "interval": 120,
-      "lazy": false,
-      "include-all": true
-    },
-    {
-      "name": "DNS-China",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
-      "type": "select",
-      "proxies": [
-        "DIRECT",
-        "REJECT-DROP",
-        "REJECT",
-        "Proxy",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Japan",
-        "Singapore",
-        "Southeast.Asia",
-        "America",
-        "UnitedKingdom",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
-      "name": "NTP-Global",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png",
-      "type": "select",
-      "proxies": [
-        "DIRECT",
-        "America",
-        "Japan",
-        "UnitedKingdom",
-        "Proxy",
         "REJECT",
         "REJECT-DROP",
         "Final",
@@ -405,13 +352,13 @@
       ]
     },
     {
-      "name": "NTP-China",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
+      "name": "Network-LAN",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/WiFi.png",
       "type": "select",
       "proxies": [
         "DIRECT",
-        "REJECT-DROP",
         "REJECT",
+        "REJECT-DROP",
         "Proxy",
         "Final",
         "HongKong",
@@ -471,8 +418,110 @@
       ]
     },
     {
-      "name": "Network-LAN",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/WiFi.png",
+      "name": "DNS-China",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "REJECT-DROP",
+        "REJECT",
+        "Proxy",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "America",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "DNS-Global",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png",
+      "include-all": true,
+      "filter": "(?i)^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$",
+      "proxies": [
+        "HongKong",
+        "America",
+        "Japan",
+        "Singapore",
+        "DIRECT"
+      ]
+    },
+    {
+      "name": "NTP-Global",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "Proxy",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "NTP-China",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "REJECT-DROP",
+        "REJECT",
+        "Proxy",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Japan",
+        "Singapore",
+        "Southeast.Asia",
+        "America",
+        "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "ShortVideo-Kwai",
+      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/70/4f/99704fd9-88e5-7e64-044b-4e268ccfaf5f/AppIcon-global-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Country-China",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
       "type": "select",
       "proxies": [
         "DIRECT",
@@ -487,6 +536,28 @@
         "Southeast.Asia",
         "America",
         "UnitedKingdom",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Speedtest",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Speedtest.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "Proxy",
+        "REJECT-DROP",
+        "REJECT",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
         "Germany",
         "Europe",
         "AllServer"
@@ -561,28 +632,6 @@
     {
       "name": "Drive-Dropbox",
       "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/drive-dropbox.png",
-      "type": "select",
-      "proxies": [
-        "Proxy",
-        "America",
-        "Japan",
-        "UnitedKingdom",
-        "DIRECT",
-        "REJECT",
-        "REJECT-DROP",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
-      "name": "Drive-GoogleDrive",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Drive.png",
       "type": "select",
       "proxies": [
         "Proxy",
@@ -1109,28 +1158,6 @@
       ]
     },
     {
-      "name": "Video-YouTube",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png",
-      "type": "select",
-      "proxies": [
-        "Proxy",
-        "America",
-        "Japan",
-        "UnitedKingdom",
-        "DIRECT",
-        "REJECT",
-        "REJECT-DROP",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
       "name": "Video-Netflix",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Netflix.png",
       "type": "select",
@@ -1153,8 +1180,8 @@
       ]
     },
     {
-      "name": "Video-PrimeVideo",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png",
+      "name": "Video-DisneyPlus",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney+.png",
       "type": "select",
       "proxies": [
         "Proxy",
@@ -1175,8 +1202,8 @@
       ]
     },
     {
-      "name": "Video-DisneyPlus",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Disney+.png",
+      "name": "Video-PrimeVideo",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Prime_Video.png",
       "type": "select",
       "proxies": [
         "Proxy",
@@ -1241,28 +1268,6 @@
       ]
     },
     {
-      "name": "Video-AppleTV",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple_TV.png",
-      "type": "select",
-      "proxies": [
-        "DIRECT",
-        "America",
-        "Proxy",
-        "Japan",
-        "UnitedKingdom",
-        "REJECT",
-        "REJECT-DROP",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
       "name": "Video-Adult",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Pornhub.png",
       "type": "select",
@@ -1287,28 +1292,6 @@
     {
       "name": "ShortVideo-TikTok",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/TikTok.png",
-      "type": "select",
-      "proxies": [
-        "Proxy",
-        "America",
-        "Japan",
-        "UnitedKingdom",
-        "DIRECT",
-        "REJECT",
-        "REJECT-DROP",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
-      "name": "ShortVideo-Kwai",
-      "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/99/70/4f/99704fd9-88e5-7e64-044b-4e268ccfaf5f/AppIcon-global-0-0-1x_U007epad-0-1-0-sRGB-85-220.png/512x512bb.jpg",
       "type": "select",
       "proxies": [
         "Proxy",
@@ -1395,28 +1378,6 @@
       ]
     },
     {
-      "name": "Audio-YouTubeMusic",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png",
-      "type": "select",
-      "proxies": [
-        "Proxy",
-        "America",
-        "Japan",
-        "UnitedKingdom",
-        "DIRECT",
-        "REJECT",
-        "REJECT-DROP",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
       "name": "Social-Facebook",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Facebook.png",
       "type": "select",
@@ -1431,28 +1392,6 @@
         "Final",
         "HongKong",
         "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
-      "name": "Social-Twitter",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/X.png",
-      "type": "select",
-      "proxies": [
-        "Proxy",
-        "America",
-        "Japan",
-        "UnitedKingdom",
-        "DIRECT",
-        "REJECT",
-        "REJECT-DROP",
-        "TaiWan",
-        "Final",
-        "HongKong",
         "Singapore",
         "Southeast.Asia",
         "Germany",
@@ -1725,6 +1664,28 @@
       ]
     },
     {
+      "name": "Social-Twitter",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/X.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "TaiWan",
+        "Final",
+        "HongKong",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
       "name": "AI-Claude",
       "icon": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/bd/6d/22/bd6d2240-8ddf-6cd4-f55a-fc74122c96a4/AppIcon-0-0-1x_U007epad-0-1-85-220.png/512x512bb.jpg",
       "type": "select",
@@ -1857,6 +1818,28 @@
       ]
     },
     {
+      "name": "Tool-BingEdge",
+      "icon": "https://cdn.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png",
+      "type": "select",
+      "proxies": [
+        "DIRECT",
+        "America",
+        "Proxy",
+        "UnitedKingdom",
+        "Japan",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
       "name": "Tool-Notion",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Notion.png",
       "type": "select",
@@ -1888,28 +1871,6 @@
         "UnitedKingdom",
         "Japan",
         "DIRECT",
-        "REJECT",
-        "REJECT-DROP",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
-      "name": "Tool-BingEdge",
-      "icon": "https://cdn.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/bing.png",
-      "type": "select",
-      "proxies": [
-        "DIRECT",
-        "America",
-        "Proxy",
-        "UnitedKingdom",
-        "Japan",
         "REJECT",
         "REJECT-DROP",
         "Final",
@@ -1967,6 +1928,72 @@
       ]
     },
     {
+      "name": "Drive-GoogleDrive",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google_Drive.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Video-YouTube",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
+      "name": "Audio-YouTubeMusic",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/YouTube_Music.png",
+      "type": "select",
+      "proxies": [
+        "Proxy",
+        "America",
+        "Japan",
+        "UnitedKingdom",
+        "DIRECT",
+        "REJECT",
+        "REJECT-DROP",
+        "Final",
+        "HongKong",
+        "TaiWan",
+        "Singapore",
+        "Southeast.Asia",
+        "Germany",
+        "Europe",
+        "AllServer"
+      ]
+    },
+    {
       "name": "Apps-Google",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Google.png",
       "type": "select",
@@ -1976,50 +2003,6 @@
         "UnitedKingdom",
         "Japan",
         "DIRECT",
-        "REJECT",
-        "REJECT-DROP",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
-      "name": "Apps-Microsoft",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png",
-      "type": "select",
-      "proxies": [
-        "DIRECT",
-        "America",
-        "Proxy",
-        "UnitedKingdom",
-        "Japan",
-        "REJECT",
-        "REJECT-DROP",
-        "Final",
-        "HongKong",
-        "TaiWan",
-        "Singapore",
-        "Southeast.Asia",
-        "Germany",
-        "Europe",
-        "AllServer"
-      ]
-    },
-    {
-      "name": "Apps-Apple",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png",
-      "type": "select",
-      "proxies": [
-        "DIRECT",
-        "America",
-        "Proxy",
-        "UnitedKingdom",
-        "Japan",
         "REJECT",
         "REJECT-DROP",
         "Final",
@@ -2055,40 +2038,40 @@
       ]
     },
     {
-      "name": "Country-China",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/China.png",
+      "name": "Apps-Apple",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Apple.png",
       "type": "select",
       "proxies": [
         "DIRECT",
+        "America",
+        "Proxy",
+        "UnitedKingdom",
+        "Japan",
         "REJECT",
         "REJECT-DROP",
-        "Proxy",
         "Final",
         "HongKong",
         "TaiWan",
-        "Japan",
         "Singapore",
         "Southeast.Asia",
-        "America",
-        "UnitedKingdom",
         "Germany",
         "Europe",
         "AllServer"
       ]
     },
     {
-      "name": "Global-CDN",
-      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Cloudflare.png",
+      "name": "Apps-Microsoft",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Microsoft.png",
       "type": "select",
       "proxies": [
-        "Final",
-        "Proxy",
-        "America",
-        "Japan",
-        "UnitedKingdom",
         "DIRECT",
+        "America",
+        "Proxy",
+        "UnitedKingdom",
+        "Japan",
         "REJECT",
         "REJECT-DROP",
+        "Final",
         "HongKong",
         "TaiWan",
         "Singapore",
@@ -2101,12 +2084,13 @@
   ],
   "rules": [
     "GEOIP,LAN,DIRECT,no-resolve",
-    "IP-CIDR,114.114.114.114/32,DIRECT,no-resolve",
-    "IP-CIDR,119.29.29.29/32,DIRECT,no-resolve",
-    "IP-CIDR,223.5.5.5/32,DIRECT,no-resolve",
-    "IP-CIDR,223.6.6.6/32,DIRECT,no-resolve",
-    "IP-CIDR,8.8.8.8/32,DNS-Global-Auto,no-resolve",
-    "IP-CIDR,1.1.1.1/32,DNS-Global-Auto,no-resolve",
+    "GEOSITE,private,Network-LAN",
+    "RULE-SET,Lan_Do_Resolve,Network-LAN,no-resolve",
+    "GEOSITE,category-httpdns-cn,Protection-HTTPDNS",
+    "RULE-SET,BlockHttpDNS_Do_Resolve,Protection-HTTPDNS,no-resolve",
+    "RULE-SET,Hijacking_Do_Resolve,Protection-Hijacking,no-resolve",
+    "RULE-SET,HijackingPlus_Do_Resolve,Protection-Hijacking,no-resolve",
+    "RULE-SET,PreRepairEasyPrivacy_REJECT_Do_Resolve,REJECT-DROP",
     "DOMAIN,uts-api.itunes.apple.com,Video-AppleTV",
     "DOMAIN,hls-amt.itunes.apple.com,Video-AppleTV",
     "GEOSITE,apple-tvplus,Video-AppleTV",
@@ -2115,24 +2099,13 @@
     "DOMAIN,linear.tv.apple.com,Video-AppleTV",
     "DOMAIN,ocvideo.apple.com,Video-AppleTV",
     "DOMAIN,hls-svod.itunes.apple.com,Video-AppleTV",
-    "DOMAIN,hls-svod-aoc-ve.itunes.g.aaplimg.com,Video-AppleTV",
-    "DOMAIN,hls-svod-ve.itunes.g.aaplimg.com,Video-AppleTV",
     "DOMAIN-SUFFIX,itunes.g.aaplimg.com,Video-AppleTV",
-    "AND,((OR,((DST-PORT,53),(DST-PORT,853))),(NOT,((GEOIP,CN)))),DNS-Global-Auto",
-    "RULE-SET,GlobalDNS_Domain,DNS-Global-Auto",
-    "RULE-SET,GlobalDNS_IP,DNS-Global-Auto",
-    "AND,((OR,((DST-PORT,53),(DST-PORT,853))),(GEOIP,CN)),DNS-China",
     "RULE-SET,ChinaDNS_Domain,DNS-China",
-    "RULE-SET,ChinaDNS_IP,DNS-China",
+    "RULE-SET,GlobalDNS_Domain,DNS-Global",
+    "RULE-SET,ChinaDNS_IP,DNS-China,no-resolve",
+    "RULE-SET,GlobalDNS_IP,DNS-Global,no-resolve",
     "AND,((NETWORK,udp),(DST-PORT,123),(NOT,((GEOIP,CN)))),NTP-Global",
     "AND,((NETWORK,udp),(DST-PORT,123),(GEOIP,CN)),NTP-China",
-    "GEOSITE,private,Network-LAN",
-    "RULE-SET,Lan_Do_Resolve,Network-LAN",
-    "GEOSITE,category-httpdns-cn,Protection-HTTPDNS",
-    "RULE-SET,BlockHttpDNS_Do_Resolve,Protection-HTTPDNS",
-    "RULE-SET,Hijacking_Do_Resolve,Protection-Hijacking",
-    "RULE-SET,HijackingPlus_Do_Resolve,Protection-Hijacking",
-    "RULE-SET,PreRepairEasyPrivacy_REJECT_Do_Resolve,REJECT-DROP",
     "RULE-SET,Kwai_Domain,ShortVideo-Kwai",
     "RULE-SET,GeositeCN_Domain,Country-China",
     "GEOSITE,cloudflare-cn,Country-China",
@@ -2147,7 +2120,6 @@
     "RULE-SET,AqaraGlobal_Do_Resolve,Home-Aqara",
     "GEOSITE,onedrive,Drive-OneDrive",
     "RULE-SET,OneDrive_Do_Resolve,Drive-OneDrive",
-    "DOMAIN-SUFFIX,onedrive.live.com,Drive-OneDrive",
     "DOMAIN-SUFFIX,events.data.microsoft.com,Drive-OneDrive",
     "DOMAIN-SUFFIX,ecs.office.com,Drive-OneDrive",
     "GEOSITE,dropbox,Drive-Dropbox",
@@ -2277,42 +2249,24 @@
     "RULE-SET,Apple_Domain,Apps-Apple",
     "RULE-SET,Apple_IP,Apps-Apple",
     "RULE-SET,MicrosoftAPPs_Domain,Apps-Microsoft",
-    "GEOSITE,cloudflare,Global-CDN",
-    "RULE-SET,Cloudflare_Do_Resolve,Global-CDN",
-    "RULE-SET,Cloudflare_IPv4_Do_Resolve,Global-CDN",
-    "RULE-SET,Cloudflare_IPv6_Do_Resolve,Global-CDN",
-    "GEOSITE,akamai,Global-CDN",
-    "RULE-SET,AkamaiCloud_Do_Resolve,Global-CDN",
-    "GEOSITE,fastly,Global-CDN",
-    "RULE-SET,Fastly_IP_Do_Resolve,Global-CDN",
     "GEOIP,CN,Country-China",
     "MATCH,Final"
   ],
   "providers": {
-    "GlobalDNS_Domain": {
-      "behavior": "domain",
+    "geosite:private": {
+      "behavior": "classical",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/GlobalDNS/GlobalDNS_Domain.yaml"
-    },
-    "GlobalDNS_IP": {
-      "behavior": "ipcidr",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/GlobalDNS/GlobalDNS_IP.yaml"
-    },
-    "ChinaDNS_Domain": {
-      "behavior": "domain",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/ChinaDNS/ChinaDNS_Domain.yaml"
-    },
-    "ChinaDNS_IP": {
-      "behavior": "ipcidr",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/ChinaDNS/ChinaDNS_IP.yaml"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/private.yaml"
     },
     "Lan_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Lan/Lan.yaml"
+    },
+    "geosite:category-httpdns-cn": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-httpdns-cn.yaml"
     },
     "BlockHttpDNS_Do_Resolve": {
       "behavior": "classical",
@@ -2334,25 +2288,80 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/PreRepairEasyPrivacy/PreRepairEasyPrivacy_REJECT.yaml"
     },
+    "geosite:apple-tvplus": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/apple-tvplus.yaml"
+    },
+    "AppleTV_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml"
+    },
+    "ChinaDNS_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/ChinaDNS/ChinaDNS_Domain.yaml"
+    },
+    "GlobalDNS_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/GlobalDNS/GlobalDNS_Domain.yaml"
+    },
+    "ChinaDNS_IP": {
+      "behavior": "ipcidr",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/ChinaDNS/ChinaDNS_IP.yaml"
+    },
+    "GlobalDNS_IP": {
+      "behavior": "ipcidr",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/GlobalDNS/GlobalDNS_IP.yaml"
+    },
+    "Kwai_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Kwai/Kwai_Domain.yaml"
+    },
     "GeositeCN_Domain": {
       "behavior": "domain",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/GeositeCN/GeositeCN_Domain.yaml"
+    },
+    "geosite:cloudflare-cn": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/cloudflare-cn.yaml"
     },
     "CloudflareCN_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflarecn/Cloudflarecn.yaml"
     },
+    "geosite:amazon@cn": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/amazon@cn.yaml"
+    },
     "AmazonCN_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AmazonCN/AmazonCN.yaml"
     },
+    "geosite:ookla-speedtest": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ookla-speedtest.yaml"
+    },
     "Speedtest_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.yaml"
+    },
+    "geosite:synology": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/synology.yaml"
     },
     "Synology_Do_Resolve": {
       "behavior": "classical",
@@ -2364,30 +2373,45 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Aqara/AqaraGlobal.yaml"
     },
+    "geosite:onedrive": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/onedrive.yaml"
+    },
     "OneDrive_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OneDrive/OneDrive.yaml"
+    },
+    "geosite:dropbox": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/dropbox.yaml"
     },
     "Dropbox_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Dropbox/Dropbox.yaml"
     },
+    "geosite:mega": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/mega.yaml"
+    },
     "MEGA_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/MEGA/MEGA.yaml"
     },
+    "geosite:imgur": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/imgur.yaml"
+    },
     "Imgur_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Imgur/Imgur.yaml"
-    },
-    "GoogleDrive_Do_Resolve": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.yaml"
     },
     "WaybackMachine_Domain": {
       "behavior": "domain",
@@ -2399,6 +2423,11 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/WaybackMachine/WaybackMachine_IP.yaml"
     },
+    "geosite:category-pt": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-pt.yaml"
+    },
     "PrivateTracker_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
@@ -2409,20 +2438,40 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/eMuleServer/eMuleServer_IP.yaml"
     },
+    "geosite:paypal": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/paypal.yaml"
+    },
     "Paypal_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/VirtualFinance/Paypal.yaml"
+    },
+    "geosite:wise": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/wise.yaml"
     },
     "Wise_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/VirtualFinance/Wise.yaml"
     },
+    "geosite:binance": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/binance.yaml"
+    },
     "Binance_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Binance/Binance.yaml"
+    },
+    "geosite:okx": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/okx.yaml"
     },
     "OKX_Do_Resolve": {
       "behavior": "classical",
@@ -2444,60 +2493,120 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/UnsupportVPN/UnsupportVPN.yaml"
     },
+    "geosite:ebay": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ebay.yaml"
+    },
     "eBay_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/eBay/eBay.yaml"
+    },
+    "geosite:patreon": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/patreon.yaml"
     },
     "Patreon_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Patreon/Patreon.yaml"
     },
+    "geosite:xbox": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xbox.yaml"
+    },
     "Xbox_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Xbox/Xbox.yaml"
+    },
+    "geosite:playstation": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/playstation.yaml"
     },
     "PlayStation_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PlayStation/PlayStation.yaml"
     },
+    "geosite:nintendo": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/nintendo.yaml"
+    },
     "Nintendo_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Nintendo/Nintendo.yaml"
+    },
+    "geosite:steam": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/steam.yaml"
     },
     "Steam_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Steam/Steam.yaml"
     },
+    "geosite:epicgames": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/epicgames.yaml"
+    },
     "EPIC_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Epic/Epic.yaml"
+    },
+    "geosite:gog": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/gog.yaml"
     },
     "GOG_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Gog/Gog.yaml"
     },
+    "geosite:rockstar": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/rockstar.yaml"
+    },
     "RockStar_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Rockstar/Rockstar.yaml"
+    },
+    "geosite:ea": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ea.yaml"
     },
     "EA_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/EA/EA.yaml"
     },
+    "geosite:origin": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/origin.yaml"
+    },
     "Origin_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Origin/Origin.yaml"
+    },
+    "geosite:ubisoft": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ubisoft.yaml"
     },
     "UBI_Do_Resolve": {
       "behavior": "classical",
@@ -2509,30 +2618,50 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Ubisoft/Ubisoft.yaml"
     },
-    "YouTube_Do_Resolve": {
+    "geosite:netflix": {
       "behavior": "classical",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/netflix.yaml"
     },
     "Netflix_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.yaml"
     },
+    "geosite:disney": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/disney.yaml"
+    },
     "Disney_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Disney/Disney.yaml"
+    },
+    "geosite:primevideo": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/primevideo.yaml"
     },
     "PrimeVideo_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/PrimeVideo/PrimeVideo.yaml"
     },
+    "geosite:hbo": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/hbo.yaml"
+    },
     "HBO_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/HBO/HBO.yaml"
+    },
+    "geosite:fox": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/fox.yaml"
     },
     "FOXPlus_Do_Resolve": {
       "behavior": "classical",
@@ -2544,85 +2673,130 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/FOXNOW/FOXNOW.yaml"
     },
-    "AppleTV_Do_Resolve": {
+    "geosite:pornhub": {
       "behavior": "classical",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AppleTV/AppleTV.yaml"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/pornhub.yaml"
     },
     "Pornhub_Domain": {
       "behavior": "domain",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Pornhub/Pornhub_Domain.yaml"
     },
+    "geosite:tiktok": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/tiktok.yaml"
+    },
     "TikTok_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TikTok/TikTok.yaml"
     },
-    "Kwai_Domain": {
-      "behavior": "domain",
+    "geosite:instagram": {
+      "behavior": "classical",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Kwai/Kwai_Domain.yaml"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/instagram.yaml"
     },
     "Instagram_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Instagram/Instagram.yaml"
     },
+    "geosite:twitch": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/twitch.yaml"
+    },
     "Twitch_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitch/Twitch.yaml"
+    },
+    "geosite:spotify": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/spotify.yaml"
     },
     "Spotify_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Spotify/Spotify.yaml"
     },
-    "YouTubeMusic_Do_Resolve": {
+    "geosite:facebook": {
       "behavior": "classical",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml"
-    },
-    "Twitter_Do_Resolve": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/facebook.yaml"
     },
     "Facebook_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml"
     },
-    "Telegram_Do_Resolve": {
+    "geosite:reddit": {
       "behavior": "classical",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
-    },
-    "Whatsapp_Do_Resolve": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml"
-    },
-    "Line_Do_Resolve": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Line/Line.yaml"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/reddit.yaml"
     },
     "Reddit_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Reddit/Reddit.yaml"
     },
+    "geosite:telegram": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/telegram.yaml"
+    },
+    "Telegram_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    },
+    "geosite:whatsapp": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/whatsapp.yaml"
+    },
+    "Whatsapp_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Whatsapp/Whatsapp.yaml"
+    },
+    "geosite:line": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/line.yaml"
+    },
+    "Line_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Line/Line.yaml"
+    },
+    "geosite:discord": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/discord.yaml"
+    },
     "Discord_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Discord/Discord.yaml"
     },
+    "geosite:linkedin": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/linkedin.yaml"
+    },
     "LinkedIn_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/LinkedIn/LinkedIn.yaml"
+    },
+    "geosite:clubhouse": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/clubhouse.yaml"
     },
     "Clubhouse_Do_Resolve": {
       "behavior": "classical",
@@ -2634,6 +2808,11 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ClubhouseIP/ClubhouseIP.yaml"
     },
+    "geosite:signal": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/signal.yaml"
+    },
     "Signal_Domain": {
       "behavior": "domain",
       "format": "yaml",
@@ -2644,55 +2823,100 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Wikipedia/Wikipedia.yaml"
     },
+    "geosite:apple-intelligence": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/apple-intelligence.yaml"
+    },
     "AppleAI_Domain": {
       "behavior": "domain",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/AppleAI/AppleAI_Domain.yaml"
+    },
+    "geosite:openai": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.yaml"
     },
     "OpenAI_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/OpenAI/OpenAI.yaml"
     },
+    "geosite:xai": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xai.yaml"
+    },
     "Grok_Domain": {
       "behavior": "domain",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Grok/Grok_Domain.yaml"
     },
-    "Gemini_Domain": {
-      "behavior": "domain",
+    "geosite:twitter": {
+      "behavior": "classical",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Gemini/Gemini_Domain.yaml"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/twitter.yaml"
+    },
+    "Twitter_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+    },
+    "geosite:anthropic": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/anthropic.yaml"
     },
     "Claude_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Claude/Claude.yaml"
     },
+    "geosite:google-gemini": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-gemini.yaml"
+    },
+    "Gemini_Domain": {
+      "behavior": "domain",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Gemini/Gemini_Domain.yaml"
+    },
     "Copilot_Domain": {
       "behavior": "domain",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Copilot/Copilot_Domain.yaml"
+    },
+    "geosite:category-ai-!cn": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-ai-!cn.yaml"
+    },
+    "geosite:adobe": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/adobe.yaml"
     },
     "Adobe_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Adobe/Adobe.yaml"
     },
+    "geosite:github": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/github.yaml"
+    },
     "GitHub_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GitHub/GitHub.yaml"
     },
-    "Notion_Do_Resolve": {
+    "geosite:bing": {
       "behavior": "classical",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.yaml"
-    },
-    "Pinterest_Do_Resolve": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pinterest/Pinterest.yaml"
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/bing.yaml"
     },
     "Bing_Do_Resolve": {
       "behavior": "classical",
@@ -2704,6 +2928,26 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/MicrosoftEdge/MicrosoftEdge.yaml"
     },
+    "geosite:notion": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/notion.yaml"
+    },
+    "Notion_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Notion/Notion.yaml"
+    },
+    "geosite:pinterest": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/pinterest.yaml"
+    },
+    "Pinterest_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Pinterest/Pinterest.yaml"
+    },
     "RustDesk_Domain": {
       "behavior": "domain",
       "format": "yaml",
@@ -2714,20 +2958,45 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Parsec/Parsec_Domain.yaml"
     },
+    "GoogleDrive_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleDrive/GoogleDrive.yaml"
+    },
+    "geosite:youtube": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/youtube.yaml"
+    },
+    "YouTube_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
+    },
+    "YouTubeMusic_Do_Resolve": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTubeMusic/YouTubeMusic.yaml"
+    },
+    "geosite:google": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google.yaml"
+    },
     "Google_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
     },
+    "geosite:amazon": {
+      "behavior": "classical",
+      "format": "yaml",
+      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/amazon.yaml"
+    },
     "Amazon_Do_Resolve": {
       "behavior": "classical",
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Amazon/Amazon.yaml"
-    },
-    "MicrosoftAPPs_Domain": {
-      "behavior": "domain",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/MicrosoftAPPs/MicrosoftAPPs_Domain.yaml"
     },
     "Apple_Domain": {
       "behavior": "domain",
@@ -2739,373 +3008,32 @@
       "format": "yaml",
       "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Apple/Apple_IP.yaml"
     },
-    "Cloudflare_Do_Resolve": {
-      "behavior": "classical",
+    "MicrosoftAPPs_Domain": {
+      "behavior": "domain",
       "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloudflare/Cloudflare.yaml"
-    },
-    "Cloudflare_IPv4_Do_Resolve": {
-      "behavior": "ipcidr",
-      "format": "text",
-      "url": "https://www.cloudflare.com/ips-v4"
-    },
-    "Cloudflare_IPv6_Do_Resolve": {
-      "behavior": "ipcidr",
-      "format": "text",
-      "url": "https://www.cloudflare.com/ips-v6"
-    },
-    "AkamaiCloud_Do_Resolve": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Cloud/AkamaiCloud/AkamaiCloud.yaml"
-    },
-    "Fastly_IP_Do_Resolve": {
-      "behavior": "ipcidr",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/Fastly/Fastly_IP.yaml"
-    },
-    "geosite:adobe": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/adobe.yaml"
-    },
-    "geosite:akamai": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/akamai.yaml"
-    },
-    "geosite:amazon": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/amazon.yaml"
-    },
-    "geosite:amazon@cn": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/amazon@cn.yaml"
-    },
-    "geosite:anthropic": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/anthropic.yaml"
-    },
-    "geosite:apple-intelligence": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/apple-intelligence.yaml"
-    },
-    "geosite:apple-tvplus": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/apple-tvplus.yaml"
-    },
-    "geosite:binance": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/binance.yaml"
-    },
-    "geosite:bing": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/bing.yaml"
-    },
-    "geosite:category-ai-!cn": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-ai-!cn.yaml"
-    },
-    "geosite:category-httpdns-cn": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-httpdns-cn.yaml"
-    },
-    "geosite:category-pt": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/category-pt.yaml"
-    },
-    "geosite:cloudflare": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/cloudflare.yaml"
-    },
-    "geosite:cloudflare-cn": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/cloudflare-cn.yaml"
-    },
-    "geosite:clubhouse": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/clubhouse.yaml"
-    },
-    "geosite:discord": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/discord.yaml"
-    },
-    "geosite:disney": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/disney.yaml"
-    },
-    "geosite:dropbox": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/dropbox.yaml"
-    },
-    "geosite:ea": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ea.yaml"
-    },
-    "geosite:ebay": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ebay.yaml"
-    },
-    "geosite:epicgames": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/epicgames.yaml"
-    },
-    "geosite:facebook": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/facebook.yaml"
-    },
-    "geosite:fastly": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/fastly.yaml"
-    },
-    "geosite:fox": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/fox.yaml"
-    },
-    "geosite:github": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/github.yaml"
-    },
-    "geosite:gog": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/gog.yaml"
-    },
-    "geosite:google": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google.yaml"
-    },
-    "geosite:google-gemini": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/google-gemini.yaml"
-    },
-    "geosite:hbo": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/hbo.yaml"
-    },
-    "geosite:imgur": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/imgur.yaml"
-    },
-    "geosite:instagram": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/instagram.yaml"
-    },
-    "geosite:line": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/line.yaml"
-    },
-    "geosite:linkedin": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/linkedin.yaml"
-    },
-    "geosite:mega": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/mega.yaml"
-    },
-    "geosite:netflix": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/netflix.yaml"
-    },
-    "geosite:nintendo": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/nintendo.yaml"
-    },
-    "geosite:notion": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/notion.yaml"
-    },
-    "geosite:okx": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/okx.yaml"
-    },
-    "geosite:onedrive": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/onedrive.yaml"
-    },
-    "geosite:ookla-speedtest": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ookla-speedtest.yaml"
-    },
-    "geosite:openai": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/openai.yaml"
-    },
-    "geosite:origin": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/origin.yaml"
-    },
-    "geosite:patreon": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/patreon.yaml"
-    },
-    "geosite:paypal": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/paypal.yaml"
-    },
-    "geosite:pinterest": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/pinterest.yaml"
-    },
-    "geosite:playstation": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/playstation.yaml"
-    },
-    "geosite:pornhub": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/pornhub.yaml"
-    },
-    "geosite:primevideo": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/primevideo.yaml"
-    },
-    "geosite:private": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/private.yaml"
-    },
-    "geosite:reddit": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/reddit.yaml"
-    },
-    "geosite:rockstar": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/rockstar.yaml"
-    },
-    "geosite:signal": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/signal.yaml"
-    },
-    "geosite:spotify": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/spotify.yaml"
-    },
-    "geosite:steam": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/steam.yaml"
-    },
-    "geosite:synology": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/synology.yaml"
-    },
-    "geosite:telegram": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/telegram.yaml"
-    },
-    "geosite:tiktok": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/tiktok.yaml"
-    },
-    "geosite:twitch": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/twitch.yaml"
-    },
-    "geosite:twitter": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/twitter.yaml"
-    },
-    "geosite:ubisoft": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/ubisoft.yaml"
-    },
-    "geosite:whatsapp": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/whatsapp.yaml"
-    },
-    "geosite:wise": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/wise.yaml"
-    },
-    "geosite:xai": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xai.yaml"
-    },
-    "geosite:xbox": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/xbox.yaml"
-    },
-    "geosite:youtube": {
-      "behavior": "classical",
-      "format": "yaml",
-      "url": "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/classical/youtube.yaml"
+      "url": "https://raw.githubusercontent.com/Accademia/Additional_Rule_For_Clash/main/MicrosoftAPPs/MicrosoftAPPs_Domain.yaml"
     }
   },
   "dns_provider": "GeositeCN_Domain",
-  "version": "2026.11.08.2",
+  "version": "2026.11.14.1",
   "removed_groups": [
     "AF-Auto",
     "AF-FallBack",
     "AU-Auto",
     "AU-FallBack",
     "Africa",
+    "Apple TV 双语字幕",
+    "AppleTV-Media-IPv6",
     "Australia",
     "CA-Auto",
     "CA-FallBack",
     "Canada",
+    "DNS-Global-Auto",
     "Download-MacAppUpdate",
     "FR-Auto",
     "FR-FallBack",
     "France",
+    "Global-CDN",
     "KR-Auto",
     "KR-FallBack",
     "Korea",
@@ -3132,5 +3060,13 @@
     "hosts",
     "proxies",
     "proxy-providers"
+  ],
+  "rule_directory": "rules-v2",
+  "cache_namespace": "universal-stash-v2",
+  "adaptation_notes": [
+    "Retain the existing iOS region menu selection; sync the relative order and business groups from the latest global override.",
+    "Preserve the entire subscription DNS and IPv6 configuration; no optional IPv6 override.",
+    "Keep GEOIP,CN after named applications to avoid early real-IP resolution overriding application routing.",
+    "Do not include Mac-only subtitle bridges, loopback ports or Mac application-update rules."
   ]
 }

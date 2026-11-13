@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse,ipaddress,json,re,subprocess,tempfile,unittest
 from pathlib import Path
-from build import minimized_domains,minimized_networks,graph_check,yaml_load,yaml_dump
+from build import Compiler,minimized_domains,minimized_networks,graph_check,yaml_load,yaml_dump
 
 class OptimizerTests(unittest.TestCase):
  def test_exact_domain_does_not_remove_subdomain(self):
@@ -15,16 +15,42 @@ class OptimizerTests(unittest.TestCase):
  def test_cycle_rejected(self):
   with self.assertRaises(AssertionError):graph_check([{'name':'A','proxies':['B']},{'name':'B','proxies':['A']}])
 
+ def test_embedded_reject_action_is_not_emitted_twice(self):
+  name='PreRepairEasyPrivacy_REJECT_Do_Resolve'
+  recipe={'providers':{name:{'behavior':'classical'}}}
+  sources={name:{'payload':['DOMAIN-KEYWORD,app-analytics,REJECT-DROP','DOMAIN-SUFFIX,example.invalid,REJECT-DROP']}}
+  compiler=Compiler(recipe,sources,Path('.'),'unused')
+  self.assertEqual(compiler.expand('RULE-SET,'+name,[]),[('DOMAIN-KEYWORD,app-analytics',()),('DOMAIN-SUFFIX,example.invalid',())])
+ def test_region_filter_matches_real_names_and_excludes_metadata(self):
+  recipe=json.loads(Path(__file__).with_name('recipe.json').read_text())
+  groups={g['name']:g for g in recipe['groups']}
+  for name,samples in {'HongKong':['🇭🇰 香港1 | [x1] HK','Hong Kong 01'],'America':['🇺🇸 美国01','US LAX 01'],'TaiWan':['Taiwan 01','🇹🇼 台湾1']}.items():
+   regex=re.compile(groups[name]['filter'])
+   for sample in samples:self.assertIsNotNone(regex.search(sample),sample)
+   self.assertIsNone(regex.search('官网 '+samples[0]))
+ def test_latest_rule_priorities_and_removed_groups(self):
+  recipe=json.loads(Path(__file__).with_name('recipe.json').read_text())
+  rules=recipe['rules'];names=[g['name'] for g in recipe['groups']]
+  self.assertEqual(len(names),112);self.assertEqual(len(rules),168)
+  self.assertLess(names.index('All-FallBack'),names.index('Video-AppleTV'))
+  self.assertLess(names.index('Video-AppleTV'),names.index('Network-LAN'))
+  self.assertLess(rules.index('GEOSITE,private,Network-LAN'),rules.index('GEOSITE,apple-tvplus,Video-AppleTV'))
+  self.assertLess(rules.index('RULE-SET,ChinaDNS_Domain,DNS-China'),rules.index('RULE-SET,GlobalDNS_IP,DNS-Global,no-resolve'))
+  self.assertFalse(set(names)&{'Global-CDN','DNS-Global-Auto','AppleTV-Media-IPv6','Apple TV 双语字幕'})
+  self.assertFalse(any('DST-PORT,53' in r or 'DST-PORT,853' in r for r in rules))
+  self.assertFalse(any('DOMAIN-SUFFIX,onedrive.live.com,' in r for r in rules))
+
 def validate_dist(dist,mihomo):
  cfg=yaml_load((dist/'通用分流_保留机场DNS.stoverride').read_text());report=json.loads((dist/'build-report.json').read_text())
  text=(dist/'通用分流_保留机场DNS.stoverride').read_text()
  assert text.splitlines()[0]=='#SUBSCRIBED https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride'
  assert (dist/'universal.stoverride').read_text()==text
- optional=Path(__file__).with_name('可选_开启IPv6.stoverride').read_text()
- assert optional.splitlines()[0]=='#SUBSCRIBED https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/ipv6.stoverride'
- assert not {'dns','proxies','proxy-providers','hosts','listeners','port','socks-port','mixed-port','http','script'}&set(cfg)
+ assert not Path(__file__).with_name('可选_开启IPv6.stoverride').exists()
+ assert not {'dns','ipv6','proxies','proxy-providers','hosts','listeners','port','socks-port','mixed-port','http','script'}&set(cfg)
  assert len(cfg['rules'])<500
  assert not any(p['behavior']=='classical' for p in cfg['rule-providers'].values())
+ assert all('/rules-v2/' in p['url'] and '/universal-stash-v2/' in p['path'] for p in cfg['rule-providers'].values())
+ assert not any(',REJECT-DROP,REJECT-DROP' in r for r in cfg['rules'])
  graph_check(cfg['proxy-groups'])
  assert cfg['rules'][0]=='GEOIP,LAN,DIRECT,no-resolve'
  apple=next(i for i,r in enumerate(cfg['rules']) if ',Video-AppleTV' in r)

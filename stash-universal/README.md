@@ -1,55 +1,65 @@
 # 通用 Stash 分流覆写
 
-直接使用机场提供的原始配置或订阅，额外启用一份通用分流覆写。覆写不包含机场节点、密码、UUID、订阅地址或机场专用 DNS。
+直接使用机场原始订阅，再启用一份通用分流覆写。当前版本按最新 Clash Verge 分流同步，同时保留原有 iOS 适配：不写入机场节点、凭据、订阅地址或 DNS，不接入 Mac 本机字幕工具。
 
-## 安装
+## 安装与升级
 
-适用于 iOS Stash 3.6 及更新版本。
+适用于 iOS / tvOS Stash 3.6+。只需一份主覆写：
 
-1. 直接在 Stash 导入或选择机场原始订阅。
-2. 从以下地址导入覆写并启用：
-   `https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride`
-3. 关闭其它会完整替换 DNS、策略组或分流的旧覆写。然后重新连接。
-4. 普通 Apple TV 媒体策略 `Video-AppleTV` 默认直连；若有历史选择，请确认选择 `DIRECT`。
+`https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride`
 
-两个覆写均在首行写入 `#SUBSCRIBED`，记录各自的 GitHub 更新来源；本地 iCloud 副本也可以保留这一来源标记。标记不是普通 YAML 更新间隔字段。
+[一键导入通用覆写](https://link.stash.ws/install-override/raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride)
 
-[一键导入通用覆写](https://link.stash.ws/install-override/raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride) · [一键导入可选 IPv6 覆写](https://link.stash.ws/install-override/raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/ipv6.stoverride)
+1. 选择机场原始订阅，启用“通用分流｜保留机场 DNS”。
+2. 更新已有同名主覆写，避免同时启用新旧两份完整分流。
+3. **停用并移除旧的“可选｜保留原 DNS 并开启 IPv6”覆写。** 本次停止提供独立 IPv6 覆写，主覆写也不设置 `ipv6` 或 `dns.ipv6`。实际 IPv6 行为由机场原配置、Stash 及当前网络决定；移除强制开启不表示强制关闭 IPv6。
+4. 关闭其它完整分流覆写，重新连接，核对 `Video-AppleTV`、`DNS-Global` 与 `Proxy` 的选择。客户端可能保留此前选择。
 
-本覆写对 `proxy-groups`、`rule-providers`、`rules` 使用 `#!replace`，不累加旧机场的大型分流列表。节点由 `include-all: true` 从当前主配置动态获取，机场原有的订阅更新机制继续工作。
+主覆写保留原 GitHub 更新地址和首行 `#SUBSCRIBED`。iCloud 本地副本沿用 `通用分流_保留机场DNS.stoverride`，不必另外添加一个主覆写条目。远端移除 IPv6 文件不会替用户删除手机或 iCloud 中已经保存的副本，需要在设备上停用或移除。
 
-`dns`、`hosts`、`proxies`、`proxy-providers` 完全由主配置保留。机场 DNS 若原本关闭 IPv6，这一状态也会保留。需要时可另行导入同目录的 `可选_开启IPv6.stoverride`；它仅开启 IPv6，不更换 DNS 服务器。Stash 的双栈连接不等于每次强制选择 IPv6。
+## 本次同步
 
-一次性订阅仍应仅按机场方式导入一次。本覆写不读取、不转换、不自动重试任何机场订阅。
+- `DNS-Global-Auto` 改为手动选择组 `DNS-Global`；移除 `Global-CDN` 及其宽泛 CDN 分流。
+- `Proxy`、`Final`、地区及自动测速/回退组放在最上方，`Video-AppleTV` 紧接其后；业务组按最新版相对顺序排列。
+- 局域网、HTTPDNS、防劫持规则提前；同步 Apple TV、OneDrive、DNS 的精简规则。
+- DNS 服务分流采用域名在前、IP 在后，IP 规则使用 `no-resolve`；移除按 53/853 端口与 GEOIP 宽泛分类的旧规则。
+- Apple TV 播放接口、清单与媒体进入 `Video-AppleTV`。不含 Mac 字幕拦截、18767/18768 端口、`AppleTV-Media-IPv6` 或地址族优先设置。
+- 修正公开规则中重复的 REJECT-DROP 动作，避免生成带两个动作字段的规则；修正地区筛选正则中的重复转义。
 
-## 减少规则负担的方法
+保留原先适用于三家机场的地区菜单，其它地区节点可在 `AllServer` 中选择。Stash 将空策略组当作 DIRECT，因此没有照搬全部桌面地区组。Mac 应用更新与字幕工具的菜单仍不加入。
 
-- 将公开的混合规则拆成 `domain` 和 `ipcidr` 集合，并编译为 MRS；不再在手机加载大型 `classical` 集合。
-- 将原有 GEOSITE 分流展开为可检查的公开规则，与相邻同策略规则合并；精确域名、后缀与网段去重，CIDR 按地址族合并。
-- 国内 IP 兜底排在具体应用之后，避免国内 DNS 给出的地址让 YouTube、AI 等明确的应用规则失去优先权。国内域名列表仍单独保留。
-- 少量关键词、正则和 ASN 匹配继续保留为普通规则。不能编码为 MRS 的嵌入式通配符转换为原生正则，避免静默丢弃规则。
-- 移除 iOS 不生效的进程规则、Mac 应用更新专用菜单、字幕工具策略与专用端口。保留普通 Apple TV、视频、AI、社交、游戏和工具分流。
-- 保留当前三机场都有节点的地区菜单。其它地区节点仍在 `AllServer`，避免选择当前机场没有节点、在 Stash 中可能按 DIRECT 处理的空策略组。
-- DNS 池不按 RLT 名称排除节点。覆写不改变任何节点协议参数，也不能为客户端添加原本不支持的协议。
+## DNS 保留逻辑
 
-主分流行数与全部匹配条目数不同；MRS 并不是把所有条目变成零。优化来自索引结构、去重和减少顺序匹配，不能仅凭文件大小推算 iPhone 内存，更不能保证所有设备的启动问题已经消失。
+**整个 `dns`、`hosts`、`proxies`、`proxy-providers` 都由机场主配置保留。**
 
-## 更新与验证
+- 机场提供专用 `proxy-server-nameserver`，继续使用原值。
+- 机场没有这一项，继续按原有 DNS 配置与 Stash 行为处理；本覆写不会改普通 `nameserver`，也不会自动补入阿里 DNS。
+- 普通 Stash YAML 覆写不执行 Clash Verge 的 `main(config)` 条件脚本。
+- `DNS-Global` 控制命中对应分流的 DNS 服务连接；本覆写不改变 `dns.follow-rule`，不承诺 Stash 内部 DNS 查询会随这个组切换。
+- Stash 内部 DNS 默认直接出站；主配置开启 `follow-rule` 后，常规 DNS 查询才按代理规则转发。`proxy-server-nameserver` 使用独立解析链路。
 
-`main/stash-universal` 保存通用配置生成器；`stash-release` 保存已校验的覆写和规则。GitHub Actions 按计划每日北京时间 06:17 重新读取公开上游，编译并检查后再发布；GitHub 调度可能延迟。下载或校验失败时，保留上一次成功发布的规则。只有公开规则会进入仓库和工作流，不需要机场订阅凭据或额外账户密钥。
+普通 Apple TV 视频可选择 DIRECT；F1 可选择 America。**仅切换 DNS-Global 不等于改变 Stash 内部解析出口。** 本次沿用原 Stash 版本“保留机场 DNS”的约定，不复制 Mihomo 的 `#DNS-Global` 写法。
 
-Stash 中的规则集合配置为每 24 小时更新，实际执行时机取决于客户端运行状态。覆写本身通过首行的 GitHub 来源更新，更新检查时机由 Stash 的覆写设置与运行状态控制。不要将规则集合的 `interval: 86400` 理解成覆写自身的更新间隔；iCloud 本身只负责同步文件。同步后可在覆写页手动更新一次，确认版本及来源已被识别；若旧条目仍显示为本地，使用上面的官方一键远程导入链接替换同名条目。离线缓存可以复制到 Stash 的 `resources/ruleset/universal-stash-v1/` 目录。
+## 规则、缓存与更新
 
-本地和自动检查包括规则覆盖、引用关系、循环、规则文件格式和 MRS 实际解析。MRS 由 Mihomo 工具编译与检查，仅用于验证文件，不接入用户流量；这不等于 iPhone 上的 Stash 已完成加载或连接实测。
+公开混合规则按域名和 IP 拆分、去重并编译为 MRS；关键词、正则等保留为普通规则，不在手机加载大型 classical 集合。GEOSITE 数据展开成可检查的公开规则并验证覆盖。
 
-完整数据量与生成来源见 `stash-release/build-report.json`。源规则列表见 `recipe.json`，文本规则与 MRS 同时发布，便于检查。
+保留 Stash 适配：`GEOIP,CN` 兜底放在具体应用之后，避免过早真实解析而抢先匹配应用分流。
 
-## 来源与说明
+新版规则发布在 `rules-v2/`，本地缓存位于 `./ruleset/universal-stash-v2/`。旧 `rules/` 保留，供尚未更新主覆写的设备过渡；新版不会读取同编号旧缓存。
 
-公开规则来源：[Accademia/Additional_Rule_For_Clash](https://github.com/Accademia/Additional_Rule_For_Clash)、[blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)、[MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat) 及 [Cloudflare 官方 IP 列表](https://www.cloudflare.com/ips/)。上游规则遵循各自的许可；本仓库列明来源，转换不表示这些站点或服务提供商背书。
+`proxy-groups`、`rule-providers`、`rules` 使用 `#!replace` 整体替换。节点由 `include-all` 从机场原始配置动态获取，机场订阅更新继续工作。
 
-Stash 官方文档：[覆写及替换语法](https://stash.wiki/configuration/override)、[规则集合与 MRS](https://stash.wiki/rules/rule-set)、[高效配置](https://stash.wiki/faq/effective-stash)、[动态引用节点](https://stash.wiki/proxy-protocols/proxy-groups)、[DNS](https://stash.wiki/features/dns-server)。
+`main/stash-universal` 保存生成器与公开来源，`stash-release` 保存验证通过的发布文件。原 GitHub Actions 每日北京时间 06:17 获取公开上游，编译和检查成功后发布；调度可能延迟，失败保留上次发布。独立 IPv6 覆写不再生成或发布。
 
-注意：Stash 文档中的覆写参数和 `pre-matching` 目前标注为 3.7 Beta 功能，本配置不依赖这些功能。普通 YAML 覆写也不会自动识别机场后执行三套条件分支；跨机场通用的办法是保留原始 DNS，而非在覆写里硬编码三套 DNS。
+规则集合的 `interval: 86400` 不是主覆写更新间隔。主覆写更新时机由 Stash 决定，iCloud 只负责同步文件。
 
-更新机制依据：[Stash 托管来源标记](https://stash.wiki/features/service-provider-subscription)、[官方远程覆写导入方式](https://stash.wiki/faq/url-schema)。当前环境已观察到已有远程 `.stoverride` 使用同样的 `#SUBSCRIBED` 首行。手机端是否已经识别，以及自动刷新是否实际执行，需要在 Stash 中确认；这里不把主配置文档的默认 12 小时间隔直接套用到覆写。
+## 验证范围
+
+检查包含策略组引用和循环、规则顺序、地区正则、域名及网段覆盖、无 DNS/IPv6 覆盖、重复拒绝动作及 MRS 实际解析。MRS 使用 Mihomo 在隔离配置中验证，不接入用户流量；不能替代 iPhone 上的 Stash 加载、DNS 或播放测速。未声称完成手机实测。
+
+## 来源
+
+公开规则来自 [Accademia/Additional_Rule_For_Clash](https://github.com/Accademia/Additional_Rule_For_Clash)、[blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)、[MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat)，遵循各自许可。完整来源和生成统计见 `recipe.json`、`build-report.json`。
+
+官方文档：[覆写合并](https://stash.wiki/configuration/override)、[规则集合与 MRS](https://stash.wiki/rules/rule-set)、[策略组](https://stash.wiki/proxy-protocols/proxy-groups)、[DNS](https://stash.wiki/features/dns-server)、[高效配置](https://stash.wiki/faq/effective-stash)。

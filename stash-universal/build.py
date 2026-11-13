@@ -97,6 +97,10 @@ class Compiler:
     else:
      rule=normalized(raw);parts=rule.split(',');extra=[]
      while parts[-1] in {'no-resolve','no-track'}:extra.insert(0,parts.pop())
+     # This source embeds REJECT-DROP in its payload; the routing rule supplies it.
+     if name=='PreRepairEasyPrivacy_REJECT_Do_Resolve' and len(parts)==3 and parts[-1]=='REJECT-DROP':
+      before=','.join(parts);parts.pop()
+      self.repairs.append({'kind':'embedded_reject_action','before':before,'after':','.join(parts)})
      result.append((','.join(parts),tuple(sorted(set(options+extra)))))
    return result
   return [(predicate,tuple(options))]
@@ -108,7 +112,11 @@ class Compiler:
   run=subprocess.run([self.mihomo,'convert-ruleset',behavior,'text',str(p),str(m)],text=True,capture_output=True)
   assert run.returncode==0 and m.exists() and m.stat().st_size>4,f'MRS conversion failed: {name}: {run.stderr[:180]}'
   assert not re.search(r'level=(warning|error|fatal)',run.stdout+run.stderr,re.I),f'MRS conversion rejected data: {name}'
-  self.providers[name]={'behavior':behavior,'format':'mrs','url':f'https://raw.githubusercontent.com/{self.recipe["repository"]}/stash-release/rules/{name}.mrs','path':f'./ruleset/universal-stash-v1/{name}.mrs','interval':86400}
+  rule_directory=self.recipe.get('rule_directory','rules')
+  cache_namespace=self.recipe.get('cache_namespace','universal-stash-v1')
+  assert re.fullmatch(r'[a-zA-Z0-9_-]+',rule_directory)
+  assert re.fullmatch(r'[a-zA-Z0-9_-]+',cache_namespace)
+  self.providers[name]={'behavior':behavior,'format':'mrs','url':f'https://raw.githubusercontent.com/{self.recipe["repository"]}/stash-release/{rule_directory}/{name}.mrs','path':f'./ruleset/{cache_namespace}/{name}.mrs','interval':86400}
   self.stats.append({'name':name,'behavior':behavior,'entries':len(values),'text_bytes':p.stat().st_size,'mrs_bytes':m.stat().st_size,'sha256':hashlib.sha256(m.read_bytes()).hexdigest()})
   return name
  def emit(self,target,atoms,label=None):
@@ -176,7 +184,7 @@ class Compiler:
    if pred.startswith('RULE-SET,'):assert pred.split(',')[1] in self.providers
   assert self.rules[-1]=='MATCH,Final'
   assert not any(r.startswith(('GEOSITE,','PROCESS-')) for r in self.rules)
-  cfg={'name':'通用分流｜保留机场 DNS','desc':'直接使用机场原始订阅。替换策略组与分流，保留原配置 DNS、节点和订阅更新。适用于 Stash 3.6+；请关闭其它完整分流覆写。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
+  cfg={'name':'通用分流｜保留机场 DNS','desc':'按最新分流同步策略组与规则，完整保留机场 DNS、IPv6、节点和订阅更新。仅需这一份覆写；停用旧的可选开启 IPv6 覆写。适用于 Stash 3.6+。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
   source_url=f'https://raw.githubusercontent.com/{self.recipe["repository"]}/stash-release/universal.stoverride'
   text='#SUBSCRIBED '+source_url+'\n'+yaml_dump(cfg)
   for key in ('proxy-groups','rule-providers','rules'):text=re.sub('^'+key+r':\s*$',key+': #!replace',text,flags=re.M)

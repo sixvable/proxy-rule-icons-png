@@ -42,12 +42,14 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p publish/rules
-          cp dist/rules/*.mrs publish/rules/
-          cp dist/rules/*.txt publish/rules/
+          mkdir -p publish/rules-v2
+          # Keep v1 rules available while older clients refresh their override.
+          git fetch --no-tags --depth=1 origin stash-release
+          git archive FETCH_HEAD rules | tar -x -C publish
+          cp dist/rules/*.mrs publish/rules-v2/
+          cp dist/rules/*.txt publish/rules-v2/
           cp dist/通用分流_保留机场DNS.stoverride dist/universal.stoverride dist/build-report.json publish/
-          cp 可选_开启IPv6.stoverride README.md publish/
-          cp 可选_开启IPv6.stoverride publish/ipv6.stoverride
+          cp README.md publish/
           cd publish
           git init -b stash-release
           git config user.name github-actions[bot]
