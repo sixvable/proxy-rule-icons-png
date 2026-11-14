@@ -1,0 +1,748 @@
+{
+  "providers": [
+    {
+      "name": "001-Network-LAN-domain",
+      "behavior": "domain",
+      "entries": 134,
+      "text_bytes": 2756,
+      "mrs_bytes": 792,
+      "sha256": "140655622382786738e0f8a1d559d7b5e21b7a57ec3fa0602d539cae7a7c8f25"
+    },
+    {
+      "name": "001-Network-LAN-ip0",
+      "behavior": "ipcidr",
+      "entries": 18,
+      "text_bytes": 224,
+      "mrs_bytes": 155,
+      "sha256": "076ea1da10b442f01c6fb3b86a66411727a15df69d70e8d600a8a458b07a8bb0"
+    },
+    {
+      "name": "002-Protection-HTTPDNS-domain",
+      "behavior": "domain",
+      "entries": 50,
+      "text_bytes": 1209,
+      "mrs_bytes": 772,
+      "sha256": "f4652bf149f4f65f9ed1498238abb7967423274939761c4e1d5a46068a4f4bbb"
+    },
+    {
+      "name": "002-Protection-HTTPDNS-ip0",
+      "behavior": "ipcidr",
+      "entries": 41,
+      "text_bytes": 777,
+      "mrs_bytes": 276,
+      "sha256": "6b5cbc7384e07d7d60c46c96c99ab543062ec5267b949de752a1dcd0e0c52c37"
+    },
+    {
+      "name": "003-Protection-Hijacking-domain",
+      "behavior": "domain",
+      "entries": 208,
+      "text_bytes": 3172,
+      "mrs_bytes": 1869,
+      "sha256": "ed225d88a643336ed42aeaa334fb09db49f2e0866d28514d4dbd37d06a2887c1"
+    },
+    {
+      "name": "003-Protection-Hijacking-ip0",
+      "behavior": "ipcidr",
+      "entries": 44,
+      "text_bytes": 769,
+      "mrs_bytes": 234,
+      "sha256": "8c7ae859ac139758a607c15bf40d1869cfa63476eca7e6f613beb71c23af5c5d"
+    },
+    {
+      "name": "004-REJECT-DROP-domain",
+      "behavior": "domain",
+      "entries": 7,
+      "text_bytes": 129,
+      "mrs_bytes": 143,
+      "sha256": "c902901f6b3f6e6657cfc7076d25110f7794777d0666e585a8570fc1e5348441"
+    },
+    {
+      "name": "005-Video-AppleTV-domain",
+      "behavior": "domain",
+      "entries": 12,
+      "text_bytes": 268,
+      "mrs_bytes": 175,
+      "sha256": "b7f06f42fcef770b69611c76fe6e29f6d90e0d8c3a6473a9c926c09cfa0f0741"
+    },
+    {
+      "name": "006-DNS-China-domain",
+      "behavior": "domain",
+      "entries": 24,
+      "text_bytes": 309,
+      "mrs_bytes": 208,
+      "sha256": "5e7913018c82b668c9194d3a88c8faaa2b2f78689c11180067f390a1f3afd9c3"
+    },
+    {
+      "name": "007-DNS-Global-domain",
+      "behavior": "domain",
+      "entries": 147,
+      "text_bytes": 2749,
+      "mrs_bytes": 1648,
+      "sha256": "e4e78eaa0c6e38b70c2408f46d315337be80b339940ff0f8c069719b8b978d7d"
+    },
+    {
+      "name": "008-DNS-China-ip0",
+      "behavior": "ipcidr",
+      "entries": 42,
+      "text_bytes": 717,
+      "mrs_bytes": 276,
+      "sha256": "b63dcc0052451418f5150bbfe254f9dfa89884daf8b8f060580ec40ece400b49"
+    },
+    {
+      "name": "009-DNS-Global-ip0",
+      "behavior": "ipcidr",
+      "entries": 373,
+      "text_bytes": 7355,
+      "mrs_bytes": 1898,
+      "sha256": "a8da26d33506caf89db1a4b0cfb9791f8d9a8f47dd26da80252de1ae2a080fd4"
+    },
+    {
+      "name": "010-ShortVideo-Kwai-domain",
+      "behavior": "domain",
+      "entries": 12,
+      "text_bytes": 210,
+      "mrs_bytes": 229,
+      "sha256": "4f45f145ad503239d5d981ce1cc4e3f22eb4a796b076bf1fcc9781b96fc0536b"
+    },
+    {
+      "name": "GeositeCN_Domain",
+      "behavior": "domain",
+      "entries": 4513,
+      "text_bytes": 67489,
+      "mrs_bytes": 29709,
+      "sha256": "c9ab068c072dbcd74089cc2a2302f20e4d6de31b02c6f7de87dad346bab07a51"
+    },
+    {
+      "name": "012-Country-China-domain",
+      "behavior": "domain",
+      "entries": 8,
+      "text_bytes": 205,
+      "mrs_bytes": 198,
+      "sha256": "d93787316eef2b4a92e873d55cfe85db446c437ce0ae0dff0b5eeb08a1820e06"
+    },
+    {
+      "name": "013-Speedtest-domain",
+      "behavior": "domain",
+      "entries": 12,
+      "text_bytes": 184,
+      "mrs_bytes": 201,
+      "sha256": "c2f4ad3bfb2eee15189953136a71abda0ef48cd84b584db242e1415c49607590"
+    },
+    {
+      "name": "014-NAS-Synology-domain",
+      "behavior": "domain",
+      "entries": 20,
+      "text_bytes": 293,
+      "mrs_bytes": 274,
+      "sha256": "071eb19e601b0d164f6eda61fce6f05345be8a343717cc2921f14b86c3bb6bee"
+    },
+    {
+      "name": "015-Home-Aqara-domain",
+      "behavior": "domain",
+      "entries": 36,
+      "text_bytes": 815,
+      "mrs_bytes": 321,
+      "sha256": "2f001453a586d6d47727146f1c78b843a46b199f69e25c597920c9664e26329a"
+    },
+    {
+      "name": "015-Home-Aqara-ip0",
+      "behavior": "ipcidr",
+      "entries": 3,
+      "text_bytes": 49,
+      "mrs_bytes": 58,
+      "sha256": "64f718786642e8440fabde773bc1ab415a7b85e1f9bf8baaa9965ebcbada2e1f"
+    },
+    {
+      "name": "016-Drive-OneDrive-domain",
+      "behavior": "domain",
+      "entries": 11,
+      "text_bytes": 235,
+      "mrs_bytes": 224,
+      "sha256": "44d5abd63d10db82b89f0c600d4d171d9c07978555ba6661825b25d4a2b5ba5c"
+    },
+    {
+      "name": "017-Drive-Dropbox-domain",
+      "behavior": "domain",
+      "entries": 25,
+      "text_bytes": 472,
+      "mrs_bytes": 380,
+      "sha256": "2862f79b5af8af79fbf9962dc7f1d43adda47f2a9573d391bdfcc693cc955afe"
+    },
+    {
+      "name": "018-Drive-MEGA-domain",
+      "behavior": "domain",
+      "entries": 7,
+      "text_bytes": 85,
+      "mrs_bytes": 128,
+      "sha256": "df4664ec4c451b853fd762446e91d3c543c75433d1338e70f04e8091c0234ed6"
+    },
+    {
+      "name": "018-Drive-MEGA-ip0",
+      "behavior": "ipcidr",
+      "entries": 10,
+      "text_bytes": 158,
+      "mrs_bytes": 123,
+      "sha256": "470818aa8f6a21bb94943c5f6fd05ae69f5f9e91818421cd106bfac66781b43a"
+    },
+    {
+      "name": "019-Drive-Imgur-domain",
+      "behavior": "domain",
+      "entries": 3,
+      "text_bytes": 38,
+      "mrs_bytes": 81,
+      "sha256": "cfb8079ed4e20d2d432c44bb59cc70b9f5744fe2307bd6767acb60b18bc5318e"
+    },
+    {
+      "name": "020-Drive-InternetArchive-ip0",
+      "behavior": "ipcidr",
+      "entries": 6,
+      "text_bytes": 98,
+      "mrs_bytes": 90,
+      "sha256": "0a3a35ae7e042779426a096370bd9b2ac1649efaf365c0acf5e92012595cd643"
+    },
+    {
+      "name": "021-P2P-PT-domain",
+      "behavior": "domain",
+      "entries": 255,
+      "text_bytes": 4097,
+      "mrs_bytes": 2674,
+      "sha256": "5e9797e77f4a98bd8cc6fb77b946f31a6a23d16e8fbbb5b14b478a6ad8f39bf6"
+    },
+    {
+      "name": "022-P2P-eMule-ip0",
+      "behavior": "ipcidr",
+      "entries": 55,
+      "text_bytes": 936,
+      "mrs_bytes": 280,
+      "sha256": "e13df0b93cd7a187121cca2212c7736d15b36cb0b286d2ddf2c56901858fd4b8"
+    },
+    {
+      "name": "023-Finance-PayPal-domain",
+      "behavior": "domain",
+      "entries": 74,
+      "text_bytes": 1256,
+      "mrs_bytes": 840,
+      "sha256": "31de2001a07247b4e44824e729ed33c3499e3cc3385f7a643170f32d8aa6492e"
+    },
+    {
+      "name": "025-Crypto-Binance-domain",
+      "behavior": "domain",
+      "entries": 47,
+      "text_bytes": 725,
+      "mrs_bytes": 532,
+      "sha256": "7a00d1bfb63df86f7853db96cd9742955bfb480899ea83448be177a41aadf236"
+    },
+    {
+      "name": "026-Crypto-OKX-domain",
+      "behavior": "domain",
+      "entries": 10,
+      "text_bytes": 140,
+      "mrs_bytes": 176,
+      "sha256": "5c11f4e6eda0a93d7c400ccd851541541d12d45565e4ebce5a618fe2556864a4"
+    },
+    {
+      "name": "030-Shopping-eBay-domain",
+      "behavior": "domain",
+      "entries": 329,
+      "text_bytes": 5414,
+      "mrs_bytes": 3149,
+      "sha256": "cae985d7d085e642937752ea3f1571b9e782f9a62012993612d5720ae9ab6d0a"
+    },
+    {
+      "name": "031-Shopping-Patreon-domain",
+      "behavior": "domain",
+      "entries": 4,
+      "text_bytes": 101,
+      "mrs_bytes": 142,
+      "sha256": "543458dbc61e075919c25038df85bc06bb2d26891c8b224f13a9132d0cd3e493"
+    },
+    {
+      "name": "032-Game-Xbox-domain",
+      "behavior": "domain",
+      "entries": 48,
+      "text_bytes": 842,
+      "mrs_bytes": 603,
+      "sha256": "0a32dc4c90d93ed88de5884529682f348658a222eed8e54c2f78642b43517e5d"
+    },
+    {
+      "name": "033-Game-PlayStation-domain",
+      "behavior": "domain",
+      "entries": 5,
+      "text_bytes": 106,
+      "mrs_bytes": 144,
+      "sha256": "f8fe8b6a4cc5db5d97271bd30d7f771020ac88c7b9e8ce74e5cd262a09173833"
+    },
+    {
+      "name": "034-Game-Nintendo-domain",
+      "behavior": "domain",
+      "entries": 115,
+      "text_bytes": 2207,
+      "mrs_bytes": 1416,
+      "sha256": "6fbe81a4fc53865866111d4dea4e20c72ac2a93d3a1cb34c29f75de938aa71c6"
+    },
+    {
+      "name": "035-Game-Steam-domain",
+      "behavior": "domain",
+      "entries": 56,
+      "text_bytes": 1266,
+      "mrs_bytes": 842,
+      "sha256": "ec2b9d62c05e65cd934b0f5c1afcd1f2b5c732dfec030d7c757e2ced236bb596"
+    },
+    {
+      "name": "035-Game-Steam-ip0",
+      "behavior": "ipcidr",
+      "entries": 12,
+      "text_bytes": 191,
+      "mrs_bytes": 141,
+      "sha256": "62cb1cf9b4304bc890a3e9b4ead674ab905f6ee53ec128f51854665eca64d696"
+    },
+    {
+      "name": "036-Game-Epic-domain",
+      "behavior": "domain",
+      "entries": 31,
+      "text_bytes": 546,
+      "mrs_bytes": 420,
+      "sha256": "bab3c8fcb173b220f26d54b712c8857ec19696a66038ff44069afb6aad78e5bb"
+    },
+    {
+      "name": "037-Game-GOG-domain",
+      "behavior": "domain",
+      "entries": 8,
+      "text_bytes": 157,
+      "mrs_bytes": 187,
+      "sha256": "e5932082117dac2189aee15cbafdbf547af5a78f15dcaac43306eb88c5215a20"
+    },
+    {
+      "name": "038-Game-Rockstar-domain",
+      "behavior": "domain",
+      "entries": 7,
+      "text_bytes": 187,
+      "mrs_bytes": 167,
+      "sha256": "17985704c1dca473e7faf4db205c556efd985aacb357583933ccd332e6c08383"
+    },
+    {
+      "name": "039-Game-EA-Origin-domain",
+      "behavior": "domain",
+      "entries": 163,
+      "text_bytes": 3131,
+      "mrs_bytes": 1866,
+      "sha256": "a10bd95e07819d7cf49f3c71a62e9146e62422078ea19389dde6a04b260efaa3"
+    },
+    {
+      "name": "040-Game-Ubisoft-domain",
+      "behavior": "domain",
+      "entries": 31,
+      "text_bytes": 818,
+      "mrs_bytes": 313,
+      "sha256": "5d02f1130862752c80d9e86be1c19d018702ffa28a00a61547bc354074b59123"
+    },
+    {
+      "name": "041-Video-Netflix-domain",
+      "behavior": "domain",
+      "entries": 20,
+      "text_bytes": 364,
+      "mrs_bytes": 324,
+      "sha256": "50542177c827958913b2ed0b814e7d65c9ad818b07f240527f2f7d44557d440d"
+    },
+    {
+      "name": "042-Video-DisneyPlus-domain",
+      "behavior": "domain",
+      "entries": 233,
+      "text_bytes": 4280,
+      "mrs_bytes": 2627,
+      "sha256": "5bfa471241aac5997c5e9bfd8d82a04776e2ced82f74987cf41f2d5f1eaf90c5"
+    },
+    {
+      "name": "043-Video-PrimeVideo-domain",
+      "behavior": "domain",
+      "entries": 28,
+      "text_bytes": 629,
+      "mrs_bytes": 439,
+      "sha256": "9144a86c512cb0261f1a568a754fcdeab65b8a2c3bcc3f2b90fc4d4af6b55b3b"
+    },
+    {
+      "name": "044-Video-HBO-domain",
+      "behavior": "domain",
+      "entries": 88,
+      "text_bytes": 1503,
+      "mrs_bytes": 1014,
+      "sha256": "974aa64e5517050c3ab2b0065aba53a213fe0c792e3eb35945e7472d55a30f57"
+    },
+    {
+      "name": "045-Video-FOX-domain",
+      "behavior": "domain",
+      "entries": 252,
+      "text_bytes": 4510,
+      "mrs_bytes": 2682,
+      "sha256": "021c0614e3988500471700af6b787060ca86926ee45cc3c4b3326f05782058fe"
+    },
+    {
+      "name": "046-Video-Adult-domain",
+      "behavior": "domain",
+      "entries": 28,
+      "text_bytes": 422,
+      "mrs_bytes": 347,
+      "sha256": "047967db161ec757cca8fe1471b320f0266a1b1fabb353d7679b12efcfc0a00e"
+    },
+    {
+      "name": "047-ShortVideo-TikTok-domain",
+      "behavior": "domain",
+      "entries": 22,
+      "text_bytes": 381,
+      "mrs_bytes": 322,
+      "sha256": "221c4b6edd1e94686d1b1835a9dd53d2e6fb6b0de727702a03d56f9172530cc0"
+    },
+    {
+      "name": "048-ShortVideo-Instagram-domain",
+      "behavior": "domain",
+      "entries": 36,
+      "text_bytes": 581,
+      "mrs_bytes": 383,
+      "sha256": "823719f97c413e79a8a83911dfeb3d36745af39811e2e1109bc7f01c4c2341c8"
+    },
+    {
+      "name": "049-Live-Twitch-domain",
+      "behavior": "domain",
+      "entries": 35,
+      "text_bytes": 934,
+      "mrs_bytes": 485,
+      "sha256": "22da37bace84237a5a451f0054446860705b1cdccff29a759f8b48a8c99998c6"
+    },
+    {
+      "name": "049-Live-Twitch-ip0",
+      "behavior": "ipcidr",
+      "entries": 12,
+      "text_bytes": 186,
+      "mrs_bytes": 147,
+      "sha256": "5ac77e03b59e2480ab57482e4640dcc413e28f5c765c2f5464ea05fec835db82"
+    },
+    {
+      "name": "050-Audio-Spotify-domain",
+      "behavior": "domain",
+      "entries": 4,
+      "text_bytes": 49,
+      "mrs_bytes": 96,
+      "sha256": "35a070e10d9cb13dd4f92ded27e3f938d5ddf3b020b1eff3e8d1baba3062bbd8"
+    },
+    {
+      "name": "050-Audio-Spotify-ip0",
+      "behavior": "ipcidr",
+      "entries": 2,
+      "text_bytes": 36,
+      "mrs_bytes": 53,
+      "sha256": "ef3759ae86dec78701db94ee76c57151a710f142d4bc6abe78a8fa54fd6c561b"
+    },
+    {
+      "name": "051-Social-Facebook-domain",
+      "behavior": "domain",
+      "entries": 295,
+      "text_bytes": 4635,
+      "mrs_bytes": 2297,
+      "sha256": "b905ddc33a150da7d14d6c6fa6ac3ea0ca9c41ec315c7cde6828bc7fc154e233"
+    },
+    {
+      "name": "051-Social-Facebook-ip0",
+      "behavior": "ipcidr",
+      "entries": 23,
+      "text_bytes": 389,
+      "mrs_bytes": 182,
+      "sha256": "8ed8441ec5a6653ae5a789a137a69506d2faf02f02d16173a651ce3d8a19b94c"
+    },
+    {
+      "name": "052-Social-Reddit-domain",
+      "behavior": "domain",
+      "entries": 14,
+      "text_bytes": 265,
+      "mrs_bytes": 245,
+      "sha256": "715852b8c5cecccd2c2cbbf03d9713341ca212d061f5a915caa51e3a61f60469"
+    },
+    {
+      "name": "053-Social-Telegram-domain",
+      "behavior": "domain",
+      "entries": 27,
+      "text_bytes": 381,
+      "mrs_bytes": 337,
+      "sha256": "52835b7410ba838fa24baadeef0379291b498ea5f4467336353bb026fc63ca5a"
+    },
+    {
+      "name": "053-Social-Telegram-ip0",
+      "behavior": "ipcidr",
+      "entries": 10,
+      "text_bytes": 168,
+      "mrs_bytes": 143,
+      "sha256": "4bf7ab72e61586ba31270c5bf9dfd0e7a8e4e3b23444e3e6ff0eca5677bb3c83"
+    },
+    {
+      "name": "054-Social-WhatsApp-ip0",
+      "behavior": "ipcidr",
+      "entries": 11,
+      "text_bytes": 182,
+      "mrs_bytes": 170,
+      "sha256": "952389e1e2969b3b004b3021f7e19070b138f00764dd0c9b3646a9f288476b66"
+    },
+    {
+      "name": "055-Social-LINE-domain",
+      "behavior": "domain",
+      "entries": 20,
+      "text_bytes": 311,
+      "mrs_bytes": 293,
+      "sha256": "f6d8e30ecfacc20d28292449636bf3297c149be0e8e3bcf117e2274e3f0a888a"
+    },
+    {
+      "name": "055-Social-LINE-ip0",
+      "behavior": "ipcidr",
+      "entries": 15,
+      "text_bytes": 248,
+      "mrs_bytes": 143,
+      "sha256": "06e352b5fe9669d09310ea909f08394b3492197101c33bb2c4cbf620eeb66879"
+    },
+    {
+      "name": "056-Social-Discord-domain",
+      "behavior": "domain",
+      "entries": 29,
+      "text_bytes": 570,
+      "mrs_bytes": 471,
+      "sha256": "c5a3fdd464cffdb513b8814609b7687ac8cdd2bc3d9b5c354ed79046f2047e17"
+    },
+    {
+      "name": "057-Social-LinkedIn-domain",
+      "behavior": "domain",
+      "entries": 9,
+      "text_bytes": 166,
+      "mrs_bytes": 189,
+      "sha256": "5d8b5be0f4d926ec9477978e1fe442e6373583f9cb6fcc5c78f4ba28bb78b63c"
+    },
+    {
+      "name": "058-Social-Clubhouse-domain",
+      "behavior": "domain",
+      "entries": 9,
+      "text_bytes": 196,
+      "mrs_bytes": 183,
+      "sha256": "b30df76ab8dbf882efdf287e5038a0cb8f39158ba948f172a9ac5be72f1c27c8"
+    },
+    {
+      "name": "058-Social-Clubhouse-ip0",
+      "behavior": "ipcidr",
+      "entries": 84,
+      "text_bytes": 1454,
+      "mrs_bytes": 280,
+      "sha256": "c65db5d8799e47006e835953aebc23ae76a16ef841e1085caf522d35d7f214fe"
+    },
+    {
+      "name": "059-Social-Signal-domain",
+      "behavior": "domain",
+      "entries": 8,
+      "text_bytes": 120,
+      "mrs_bytes": 156,
+      "sha256": "b251dfa83e4442944dfb92f36be1462071d727d2e012100432cc9b7885c98f59"
+    },
+    {
+      "name": "060-News-Wikipedia-domain",
+      "behavior": "domain",
+      "entries": 12,
+      "text_bytes": 195,
+      "mrs_bytes": 175,
+      "sha256": "37ecdd90875e3c8ab41fb73223fe25e666f026a2ff62223c314de78e72736585"
+    },
+    {
+      "name": "061-AI-AppleAI-domain",
+      "behavior": "domain",
+      "entries": 8,
+      "text_bytes": 186,
+      "mrs_bytes": 174,
+      "sha256": "aa0be4f85ce8a30e5dc29074406afdbfb3d16cfc1da5d6e087e01f12db259394"
+    },
+    {
+      "name": "062-AI-OpenAI-domain",
+      "behavior": "domain",
+      "entries": 28,
+      "text_bytes": 488,
+      "mrs_bytes": 387,
+      "sha256": "0a84c3ef15636cf56397d1459bdcd8025f7ca030edc0f23f5a76fdbc862aa8ad"
+    },
+    {
+      "name": "062-AI-OpenAI-ip0",
+      "behavior": "ipcidr",
+      "entries": 2,
+      "text_bytes": 34,
+      "mrs_bytes": 53,
+      "sha256": "f395f8f030637bbc9fea291f99ab25d4249522ae2c744e976ac6bd65267c6564"
+    },
+    {
+      "name": "063-AI-Grok-domain",
+      "behavior": "domain",
+      "entries": 7,
+      "text_bytes": 104,
+      "mrs_bytes": 149,
+      "sha256": "803a70d5c64bfe63b21766ae874d07d39b573ba26e67fabda9ccda5456315765"
+    },
+    {
+      "name": "064-Social-Twitter-domain",
+      "behavior": "domain",
+      "entries": 16,
+      "text_bytes": 207,
+      "mrs_bytes": 209,
+      "sha256": "b9d96360bda7ff181b10645ed6ae5db66f566633b9f1fa561569435d762f87f1"
+    },
+    {
+      "name": "064-Social-Twitter-ip0",
+      "behavior": "ipcidr",
+      "entries": 6,
+      "text_bytes": 97,
+      "mrs_bytes": 96,
+      "sha256": "37225a5d4545dce6311703418edc3414afdee77283ffb639ae9d57018148f320"
+    },
+    {
+      "name": "065-AI-Claude-domain",
+      "behavior": "domain",
+      "entries": 21,
+      "text_bytes": 379,
+      "mrs_bytes": 337,
+      "sha256": "9d064f39f4a75a803d8cb02eb6f82da9fcc257ca1f9eeca5d6b2a8e8b24b96f4"
+    },
+    {
+      "name": "066-AI-Gemini-domain",
+      "behavior": "domain",
+      "entries": 101,
+      "text_bytes": 2481,
+      "mrs_bytes": 1146,
+      "sha256": "ef497b760677eba38fc03a3f52584a4bb6ea1300e36d4f896d5f37afe945086b"
+    },
+    {
+      "name": "067-AI-Copilot-domain",
+      "behavior": "domain",
+      "entries": 13,
+      "text_bytes": 344,
+      "mrs_bytes": 267,
+      "sha256": "f79267e4e9695204ca2df31b0031bad7ac202715a5951b9c49abff2157e6cfcc"
+    },
+    {
+      "name": "068-AI-GlobalAI-domain",
+      "behavior": "domain",
+      "entries": 116,
+      "text_bytes": 1945,
+      "mrs_bytes": 1289,
+      "sha256": "613f026c5759efcc35d64eca8f9a556adbfb0c0cc2d0f7866adbbd5fc2dcb88b"
+    },
+    {
+      "name": "069-Tool-Adobe-domain",
+      "behavior": "domain",
+      "entries": 94,
+      "text_bytes": 1571,
+      "mrs_bytes": 968,
+      "sha256": "dadffe4590b8fb8e2460c88e54c04a0237bb74fdeebc476cb1d43b0c9fbd0dae"
+    },
+    {
+      "name": "070-Tool-GitHub-domain",
+      "behavior": "domain",
+      "entries": 34,
+      "text_bytes": 1051,
+      "mrs_bytes": 332,
+      "sha256": "e924150d6bf7d87f8cf5eb7c5518684f69ad1c98b2a382049069885d2cf09b7e"
+    },
+    {
+      "name": "071-Tool-BingEdge-domain",
+      "behavior": "domain",
+      "entries": 33,
+      "text_bytes": 683,
+      "mrs_bytes": 510,
+      "sha256": "1c5b49a41b517b19a9a1ab27c3da2beac4a0a0b23f14e45c4b779c8ffedcce0e"
+    },
+    {
+      "name": "072-Tool-Notion-domain",
+      "behavior": "domain",
+      "entries": 8,
+      "text_bytes": 151,
+      "mrs_bytes": 166,
+      "sha256": "4a295bccff3606d724967563a6c44caa300ad6897d4cc2e113f73950b1401827"
+    },
+    {
+      "name": "073-Tool-Pinterest-domain",
+      "behavior": "domain",
+      "entries": 52,
+      "text_bytes": 866,
+      "mrs_bytes": 596,
+      "sha256": "10eec315ff8c0ea34b8c2f2aedac160840d4b5721a37f0cdba1cf48c46e68803"
+    },
+    {
+      "name": "074-Remote-RustDesk-domain",
+      "behavior": "domain",
+      "entries": 3,
+      "text_bytes": 63,
+      "mrs_bytes": 91,
+      "sha256": "2e30ea09d8ed88adcef6fc5a5e2521f247f35207da65b95f8b5e642f3e61be51"
+    },
+    {
+      "name": "076-Drive-GoogleDrive-domain",
+      "behavior": "domain",
+      "entries": 4,
+      "text_bytes": 79,
+      "mrs_bytes": 116,
+      "sha256": "130844b6425ff176f82a9c85a1bdd8e47230cfe6f80fb68f282e4736ef55ca48"
+    },
+    {
+      "name": "077-Video-YouTube-domain",
+      "behavior": "domain",
+      "entries": 8,
+      "text_bytes": 102,
+      "mrs_bytes": 140,
+      "sha256": "c829150e6a634279c4ab21e60bef0bdc32eaa34b5887ee8965bed639764a4377"
+    },
+    {
+      "name": "077-Video-YouTube-ip0",
+      "behavior": "ipcidr",
+      "entries": 3,
+      "text_bytes": 50,
+      "mrs_bytes": 77,
+      "sha256": "cae1e3dce31a1e3ed69c5533b091d4b37b064d17bfdaf71439c21e42b6bc7749"
+    },
+    {
+      "name": "079-Apps-Google-domain",
+      "behavior": "domain",
+      "entries": 353,
+      "text_bytes": 5626,
+      "mrs_bytes": 3371,
+      "sha256": "a7c49d3dc41a66e47647d22a142cd24d19279a8c347e436a17bb5217f8f79726"
+    },
+    {
+      "name": "079-Apps-Google-ip0",
+      "behavior": "ipcidr",
+      "entries": 2,
+      "text_bytes": 29,
+      "mrs_bytes": 61,
+      "sha256": "84c06aa57a3b55f10f7aec81083f756ca364541c37131db6a281c1fb049e21d6"
+    },
+    {
+      "name": "080-Apps-Amazon-domain",
+      "behavior": "domain",
+      "entries": 176,
+      "text_bytes": 3018,
+      "mrs_bytes": 1880,
+      "sha256": "0274a1c0c662f14ca5ce14225560958c88cac70eb5ce22a57afcc8eef948d0e1"
+    },
+    {
+      "name": "080-Apps-Amazon-ip0",
+      "behavior": "ipcidr",
+      "entries": 14,
+      "text_bytes": 191,
+      "mrs_bytes": 150,
+      "sha256": "93fda7e4588c7acced45eb1a51460392c18601c8a66e433480af4bd57fa43f67"
+    },
+    {
+      "name": "081-Apps-Apple-domain",
+      "behavior": "domain",
+      "entries": 57,
+      "text_bytes": 1039,
+      "mrs_bytes": 483,
+      "sha256": "88fd1dd6d4441f1f8698148a33aeb465346a11a8687604e56d94b8cecb9d9667"
+    },
+    {
+      "name": "082-Apps-Microsoft-domain",
+      "behavior": "domain",
+      "entries": 171,
+      "text_bytes": 3489,
+      "mrs_bytes": 1351,
+      "sha256": "98839748b90f0487da0ea5896a4ce7476363dfedfe46a715a34e44694e9c1699"
+    }
+  ]
+}

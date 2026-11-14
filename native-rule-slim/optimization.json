@@ -1,0 +1,26 @@
+{
+  "routing_rows_before": 206,
+  "routing_rows_after": 200,
+  "providers_before": 104,
+  "providers_after": 93,
+  "entries_before": 11440,
+  "entries_after": 9672,
+  "single_entry_providers_inlined": [
+    "020-Drive-InternetArchive-domain",
+    "021-P2P-PT-ip0",
+    "024-Finance-Wise-domain",
+    "027-Finance-Monzo-domain",
+    "029-Protection-NoVPN-domain",
+    "034-Game-Nintendo-ip0",
+    "054-Social-WhatsApp-domain",
+    "075-Remote-Parsec-domain",
+    "081-Apps-Apple-ip0"
+  ],
+  "protected_dns_sets": [
+    "GeositeCN_Domain"
+  ],
+  "removed_entries": 1759,
+  "mrs_bytes_after": 82936,
+  "mrs_bytes_before": 100674,
+  "on_device_memory_tested": false
+}

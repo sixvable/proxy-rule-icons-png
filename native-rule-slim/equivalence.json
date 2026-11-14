@@ -1,0 +1,8 @@
+{
+  "hostname_cases": 40715,
+  "cidr_boundary_cases": 2431,
+  "differential_results_equal": true,
+  "unchanged_opaque_rule_sequence": true,
+  "dns_policy_payload_unchanged": true,
+  "is_stash_runtime_test": false
+}
