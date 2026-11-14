@@ -88,7 +88,7 @@ def provider_variant(cfg):
  # runtime. Use an explicitly named provider to combine nodes and subgroups.
  result=copy.deepcopy(cfg)
  result['name']='通用分流｜节点池版'
- result['desc']='配合各机场的节点池入口使用。地区组内同时选择 Auto、Fallback 和具体节点；保留入口 DNS。请勿与旧通用分流覆写同时启用。'
+ result['desc']='配合本地静态 Airport 节点池使用，不请求机场订阅链接。地区组内选择 Auto、Fallback 和具体节点，保留入口 DNS。请勿与旧通用分流同时启用。'
  for group in result['proxy-groups']:
   if group.pop('include-all',False):group['use']=['Airport']
  graph_check(result['proxy-groups'])
@@ -205,7 +205,7 @@ class Compiler:
    if pred.startswith('RULE-SET,'):assert pred.split(',')[1] in self.providers
   assert self.rules[-1]=='MATCH,Final'
   assert not any(r.startswith(('GEOSITE,','PROCESS-')) for r in self.rules)
-  cfg={'name':'通用分流｜保留机场 DNS','desc':'兼容原生机场配置，保留机场 DNS 和订阅更新。地区组使用 include-all，仅显示具体节点；需要 Auto、Fallback 与节点同层显示，请迁移到节点池版。适用于 Stash 3.6+。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
+  cfg={'name':'通用分流｜保留机场 DNS','desc':'兼容原生机场配置，保留机场 DNS；一次性订阅需另行解除原生更新关联。地区组使用 include-all，仅显示具体节点；需要 Auto、Fallback 与节点同层显示，请迁移到节点池版。适用于 Stash 3.6+。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
   source_url=f'https://raw.githubusercontent.com/{self.recipe["repository"]}/stash-release/universal.stoverride'
   text='#SUBSCRIBED '+source_url+'\n'+yaml_dump(cfg)
   for key in ('proxy-groups','rule-providers','rules'):text=re.sub('^'+key+r':\s*$',key+': #!replace',text,flags=re.M)

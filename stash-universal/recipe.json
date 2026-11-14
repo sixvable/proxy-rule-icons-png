@@ -3014,7 +3014,7 @@
     }
   },
   "dns_provider": "GeositeCN_Domain",
-  "version": "2026.11.14.4",
+  "version": "2026.11.14.5",
   "removed_groups": [
     "AF-Auto",
     "AF-FallBack",
@@ -3066,6 +3066,7 @@
     "Retain the existing iOS region menu selection; sync the relative order and business groups from the latest global override.",
     "Preserve the entire subscription DNS and IPv6 configuration; no optional IPv6 override.",
     "Keep GEOIP,CN after named applications to avoid early real-IP resolution overriding application routing.",
-    "Do not include Mac-only subtitle bridges, loopback ports or Mac application-update rules."
+    "Do not include Mac-only subtitle bridges, loopback ports or Mac application-update rules.",
+    "Airport uses a local static path only: never reuse single-use subscription URLs or schedule node downloads."
   ]
 }

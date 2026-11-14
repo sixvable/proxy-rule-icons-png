@@ -25,16 +25,37 @@ rules:
             self.assertEqual(source[key], result[key])
         self.assertEqual(parse_yaml(cache)['proxies'], source['proxies'])
         self.assertEqual(count, 1)
-        self.assertEqual(result['proxy-providers']['Airport']['url'],
-                         'https://example.invalid/subscription?token=PRIVATE_EXAMPLE')
+        self.assertEqual(set(result['proxy-providers']['Airport']), {'path'})
+        self.assertNotIn('PRIVATE_EXAMPLE', profile + cache)
         self.assertEqual(result['proxy-providers']['Airport']['path'], './proxy-providers/Airport-test.yaml')
         self.assertNotIn('#SUBSCRIBED', profile)
         self.assertNotIn('proxies', result)
         self.assertEqual(result['proxy-groups'][0]['use'], ['Airport'])
 
-    def test_does_not_invent_missing_subscription(self):
-        with self.assertRaises(ValueError):
-            prepare('proxies: []\n', 'Airport-test.yaml')
+    def test_local_nodes_work_without_any_subscription_link(self):
+        original = 'dns: {nameserver: [192.0.2.53]}\nproxies:\n  - {name: HK-1, type: http, server: example.invalid, port: 443}\n'
+        profile, cache, count = prepare(original, 'Airport-test.yaml')
+        self.assertEqual(count, 1)
+        self.assertEqual(parse_yaml(profile)['proxy-providers']['Airport'],
+                         {'path': './proxy-providers/Airport-test.yaml'})
+        self.assertEqual(parse_yaml(cache)['proxies'], parse_yaml(original)['proxies'])
+
+    def test_duplicate_expired_directives_never_survive_in_profile_or_cache(self):
+        original = ('#SUBSCRIBED https://example.invalid/consumed-token-1\n'
+                    'dns: {nameserver: [192.0.2.53]}\n'
+                    '#SUBSCRIBED https://example.invalid/consumed-token-2\n'
+                    'proxies:\n  - {name: HK-1, type: http, server: example.invalid, port: 443}\n'
+                    ' #subscribed https://example.invalid/consumed-token-3\n')
+        profile, cache, count = prepare(original, 'Airport-test.yaml')
+        self.assertEqual(count, 1)
+        self.assertNotIn('consumed-token', profile + cache)
+        self.assertNotIn('#subscribed', (profile + cache).lower())
+        self.assertEqual(set(parse_yaml(profile)['proxy-providers']['Airport']), {'path'})
+
+    def test_empty_cache_fails_without_remote_fallback(self):
+        for original in ['proxies: []\n', '#SUBSCRIBED https://example.invalid/single-use\nproxies: []\n']:
+            with self.assertRaisesRegex(ValueError, 'no usable node'):
+                prepare(original, 'Airport-test.yaml')
 
     def test_rejects_cache_path_escape(self):
         with self.assertRaises(ValueError):
