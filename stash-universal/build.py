@@ -83,6 +83,24 @@ def graph_check(groups):
  for n in names:visit(n,set())
  return names
 
+def provider_variant(cfg):
+ # Stash include-all ignores explicitly listed subgroups on the tested iOS
+ # runtime. Use an explicitly named provider to combine nodes and subgroups.
+ result=copy.deepcopy(cfg)
+ result['name']='通用分流｜节点池版'
+ result['desc']='配合各机场的节点池入口使用。地区组内同时选择 Auto、Fallback 和具体节点；保留入口 DNS。请勿与旧通用分流覆写同时启用。'
+ for group in result['proxy-groups']:
+  if group.pop('include-all',False):group['use']=['Airport']
+ graph_check(result['proxy-groups'])
+ assert not any(g.get('include-all') for g in result['proxy-groups'])
+ return result
+
+def override_text(cfg,source_url):
+ text='#SUBSCRIBED '+source_url+'\n'+yaml_dump(cfg)
+ for key in ('proxy-groups','rule-providers','rules'):text=re.sub('^'+key+r':\s*$',key+': #!replace',text,flags=re.M)
+ assert yaml_load(text)==cfg
+ return text
+
 class Compiler:
  def __init__(self,recipe,sources,out,mihomo):
   self.recipe=recipe;self.sources=sources;self.out=out;self.mihomo=mihomo
@@ -187,7 +205,7 @@ class Compiler:
    if pred.startswith('RULE-SET,'):assert pred.split(',')[1] in self.providers
   assert self.rules[-1]=='MATCH,Final'
   assert not any(r.startswith(('GEOSITE,','PROCESS-')) for r in self.rules)
-  cfg={'name':'通用分流｜保留机场 DNS','desc':'地区组内直接选择 Auto、Fallback 或具体节点，DNS-Global 可选地区组。完整保留机场 DNS、IPv6、节点和订阅更新。仅需这一份覆写；停用旧的可选开启 IPv6 覆写。适用于 Stash 3.6+。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
+  cfg={'name':'通用分流｜保留机场 DNS','desc':'兼容原生机场配置，保留机场 DNS 和订阅更新。地区组使用 include-all，仅显示具体节点；需要 Auto、Fallback 与节点同层显示，请迁移到节点池版。适用于 Stash 3.6+。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
   source_url=f'https://raw.githubusercontent.com/{self.recipe["repository"]}/stash-release/universal.stoverride'
   text='#SUBSCRIBED '+source_url+'\n'+yaml_dump(cfg)
   for key in ('proxy-groups','rule-providers','rules'):text=re.sub('^'+key+r':\s*$',key+': #!replace',text,flags=re.M)
@@ -196,6 +214,9 @@ class Compiler:
   assert all(key+': #!replace' in text for key in ('proxy-groups','rule-providers','rules'))
   (self.out/'通用分流_保留机场DNS.stoverride').write_text(text)
   (self.out/'universal.stoverride').write_text(text)
+  provider_cfg=provider_variant(cfg)
+  provider_text=override_text(provider_cfg,source_url.replace('/universal.stoverride','/universal-provider.stoverride'))
+  for filename in ('universal-provider.stoverride','通用分流_节点池版.stoverride'):(self.out/filename).write_text(provider_text)
   (self.out/'config.json').write_text(json.dumps(cfg,ensure_ascii=False,indent=2)+'\n')
   report={'groups':len(cfg['proxy-groups']),'routing_rows':len(self.rules),'mrs_providers':len(self.providers),'classical_providers':0,'geosite_routing_rows':0,'expanded_public_atoms':self.expanded_count,'process_rules_removed':self.dropped_process,'residual_rule_rows':self.residual,'indexed_entries':sum(p['entries'] for p in self.stats),'text_bytes':sum(p['text_bytes'] for p in self.stats),'mrs_bytes':sum(p['mrs_bytes'] for p in self.stats),'dns_untouched':True,'node_and_subscription_fields_untouched':True,'coverage_assertions_passed':True,'ios_runtime_tested':False,'sources':{n:{k:v for k,v in x.items() if k!='payload'} for n,x in self.sources.items()},'providers':self.stats,'segments':self.coverage}
   report['source_notation_repairs']=self.repairs

@@ -37,7 +37,9 @@ jobs:
       - name: Fetch public rules and compile
         run: python build.py --refresh --cache .cache --out dist --mihomo /tmp/mihomo
       - name: Verify rule files and references
-        run: python test_build.py --dist dist --mihomo /tmp/mihomo
+        run: |
+          python test_build.py --dist dist --mihomo /tmp/mihomo
+          python -m unittest test_provider_profile.py
       - name: Publish only validated public artifacts
         shell: bash
         run: |
@@ -49,6 +51,7 @@ jobs:
           cp dist/rules/*.mrs publish/rules-v2/
           cp dist/rules/*.txt publish/rules-v2/
           cp dist/通用分流_保留机场DNS.stoverride dist/universal.stoverride dist/build-report.json publish/
+          cp dist/通用分流_节点池版.stoverride dist/universal-provider.stoverride publish/
           cp README.md publish/
           cd publish
           git init -b stash-release

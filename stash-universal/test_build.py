@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse,ipaddress,json,re,subprocess,tempfile,unittest
 from pathlib import Path
-from build import Compiler,minimized_domains,minimized_networks,graph_check,yaml_load,yaml_dump
+from build import Compiler,minimized_domains,minimized_networks,graph_check,yaml_load,yaml_dump,provider_variant
 
 class OptimizerTests(unittest.TestCase):
  def test_exact_domain_does_not_remove_subdomain(self):
@@ -44,7 +44,7 @@ class OptimizerTests(unittest.TestCase):
   with self.assertRaisesRegex(AssertionError,'Filter excludes menu choice'):
    graph_check([{'name':'A','type':'select','include-all':True,'filter':'HK','proxies':['DIRECT']}])
   self.assertEqual(graph_check([{'name':'A','type':'select','include-all':True,'filter':'HK|^DIRECT$','proxies':['DIRECT']}]),{'A'})
- def test_flat_region_menus_and_dns_region_choices(self):
+ def test_legacy_include_all_structure_and_dns_region_choices(self):
   recipe=json.loads(Path(__file__).with_name('recipe.json').read_text())
   graph_check(recipe['groups'])
   groups={g['name']:g for g in recipe['groups']}
@@ -72,11 +72,31 @@ class OptimizerTests(unittest.TestCase):
   hk=re.compile(groups['HongKong']['filter'])
   self.assertEqual([n for n in samples if hk.search(n)],['香港 01','HK 02'])
 
+ def test_provider_mode_preserves_rules_and_uses_a_single_airport_pool(self):
+  recipe=json.loads(Path(__file__).with_name('recipe.json').read_text())
+  original={'proxy-groups':recipe['groups'],'rules':recipe['rules'],'version':recipe['version']}
+  variant=provider_variant(original)
+  self.assertEqual(variant['rules'],original['rules'])
+  self.assertEqual(len(variant['proxy-groups']),112)
+  changed=[g for g in variant['proxy-groups'] if 'use' in g]
+  self.assertEqual(len(changed),30)
+  self.assertTrue(all(g['use']==['Airport'] for g in changed))
+  self.assertFalse(any('include-all' in g for g in variant['proxy-groups']))
+  original_by_name={g['name']:g for g in original['proxy-groups']}
+  for group in variant['proxy-groups']:
+   self.assertEqual(group.get('proxies'),original_by_name[group['name']].get('proxies'))
+   self.assertEqual(group.get('filter'),original_by_name[group['name']].get('filter'))
+  self.assertTrue(any(g.get('include-all') for g in original['proxy-groups']))
+
 def validate_dist(dist,mihomo):
  cfg=yaml_load((dist/'通用分流_保留机场DNS.stoverride').read_text());report=json.loads((dist/'build-report.json').read_text())
  text=(dist/'通用分流_保留机场DNS.stoverride').read_text()
  assert text.splitlines()[0]=='#SUBSCRIBED https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride'
  assert (dist/'universal.stoverride').read_text()==text
+ provider_text=(dist/'universal-provider.stoverride').read_text()
+ assert provider_text==(dist/'通用分流_节点池版.stoverride').read_text()
+ assert provider_text.splitlines()[0]=='#SUBSCRIBED https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal-provider.stoverride'
+ assert yaml_load(provider_text)==provider_variant(cfg)
  assert not Path(__file__).with_name('可选_开启IPv6.stoverride').exists()
  assert not {'dns','ipv6','proxies','proxy-providers','hosts','listeners','port','socks-port','mixed-port','http','script'}&set(cfg)
  assert len(cfg['rules'])<500

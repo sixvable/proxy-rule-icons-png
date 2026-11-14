@@ -1,85 +1,54 @@
 # 通用 Stash 分流覆写
 
-直接使用机场原始订阅，再启用一份通用分流覆写。当前版本按最新 Clash Verge 分流同步，同时保留原有 iOS 适配：不写入机场节点、凭据、订阅地址或 DNS，不接入 Mac 本机字幕工具。
+## 节点池版修复（待完成原生菜单验收）
 
-## 安装与升级
+2026-11-14 已在 iPhone 的 Stash 中确认：`include-all` 开启后，显式 `proxies` 中的 HK-Auto、HK-FallBack、DIRECT 没有出现在地区菜单；关闭它后，三个选项正常出现。单独保留 `filter` 不会导致这个问题。
 
-适用于 iOS / tvOS Stash 3.6+。只需一份主覆写：
+节点池版改为 `proxies` 引用子组、`use: [Airport]` 引用当前机场的节点池。全部地区、AllServer、Auto、Fallback 共用当前入口的一个 Airport，不混用不同机场。没有独立的 Manual 组。
 
-`https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride`
-
-[一键导入通用覆写](https://link.stash.ws/install-override/raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal.stoverride)
-
-1. 选择机场原始订阅，启用“通用分流｜保留机场 DNS”。
-2. 更新已有同名主覆写，避免同时启用新旧两份完整分流。
-3. **停用并移除旧的“可选｜保留原 DNS 并开启 IPv6”覆写。** 本次停止提供独立 IPv6 覆写，主覆写也不设置 `ipv6` 或 `dns.ipv6`。实际 IPv6 行为由机场原配置、Stash 及当前网络决定；移除强制开启不表示强制关闭 IPv6。
-4. 关闭其它完整分流覆写，重新连接，核对 `Video-AppleTV`、`DNS-Global` 与 `Proxy` 的选择。客户端可能保留此前选择。
-
-主覆写保留原 GitHub 更新地址和首行 `#SUBSCRIBED`。iCloud 本地副本沿用 `通用分流_保留机场DNS.stoverride`，不必另外添加一个主覆写条目。远端移除 IPv6 文件不会替用户删除手机或 iCloud 中已经保存的副本，需要在设备上停用或移除。
-
-## 本次同步
-
-- `DNS-Global-Auto` 改为手动选择组 `DNS-Global`；移除 `Global-CDN` 及其宽泛 CDN 分流。
-- `Proxy`、`Final`、地区及自动测速/回退组放在最上方，`Video-AppleTV` 紧接其后；业务组按最新版相对顺序排列。
-- 局域网、HTTPDNS、防劫持规则提前；同步 Apple TV、OneDrive、DNS 的精简规则。
-- DNS 服务分流采用域名在前、IP 在后，IP 规则使用 `no-resolve`；移除按 53/853 端口与 GEOIP 宽泛分类的旧规则。
-- Apple TV 播放接口、清单与媒体进入 `Video-AppleTV`。不含 Mac 字幕拦截、18767/18768 端口、`AppleTV-Media-IPv6` 或地址族优先设置。
-- 修正公开规则中重复的 REJECT-DROP 动作，避免生成带两个动作字段的规则；修正地区筛选正则中的重复转义。
-
-保留原先适用于三家机场的地区菜单，其它地区节点可在 `AllServer` 中选择。Stash 将空策略组当作 DIRECT，因此没有照搬全部桌面地区组。Mac 应用更新与字幕工具的菜单仍不加入。
-
-## 地区组直接选节点（2026.11.14.3）
-
-地区组内同时列出自动选择、故障回退和当前机场的具体节点，删除所有独立的 `*-Manual` 组。
-
-| 菜单 | 可选项 |
+| 文件 | 对主配置的要求 |
 | --- | --- |
-| HongKong | HK-Auto、HK-FallBack、DIRECT，以及全部符合香港筛选条件的节点 |
-| America | US-Auto、US-FallBack、DIRECT，以及全部符合美国筛选条件的节点 |
-| 其它地区组 | 对应 Auto、FallBack、DIRECT，以及该地区的节点 |
-| AllServer | All-Auto、All-FallBack、DIRECT，以及全部有效节点 |
-| DNS-Global | HongKong、America、Japan、Singapore、AllServer、DIRECT |
+| universal-provider.stoverride | 提供名为 Airport 的 proxy-provider |
+| universal.stoverride | 兼容原生机场配置；include-all 菜单仅保证具体节点 |
 
-在 `HongKong` 内直接点选某个香港节点即可固定使用它，不需要先选择另一个手动组。选择 `HK-Auto` 时按延迟自动选择，选择 `HK-FallBack` 时按节点顺序回退。
+旧订阅地址继续可用，避免尚未迁移的设备因缺少 Airport 而无法加载。不要同时启用两份完整分流。
 
-地区组用 `include-all` 动态收集节点，同时在 `proxies` 明确引用 Auto、FallBack、DIRECT。筛选表达式额外精确放行这三个选项，避免只匹配节点地名而丢掉菜单项；Auto / FallBack 设置为可见。节点筛选和订阅自动更新仍使用机场原配置。
+## 私人入口与启动缓存
 
-DNS-Global 使用明确的地区组列表；需要选择其它地区或具体节点时可进入 AllServer。此菜单变化不改变 Stash 内部 DNS 的解析出口，仍以主配置的 `dns.follow-rule` 等设置为准。
+在本机运行：
 
-本版撤回上一版额外引入的 Manual 层级及禁止 `include-all` 与 `proxies` 同用的验证断言；该禁用断言并非 Stash 官方要求。验证改为检查明确菜单项不会被正则过滤、地区节点仍被正确收集、组引用没有循环、没有遗留 Manual 组。未连接 iPhone，不把这些检查等同于 Stash 界面实测。
+```bash
+python3 prepare_provider_profile.py '/path/to/机场.yaml' --out '/private/output'
+```
 
-## DNS 保留逻辑
+输出：
 
-**整个 `dns`、`hosts`、`proxies`、`proxy-providers` 都由机场主配置保留。**
+- `profiles/机场_节点池.yaml`：保留 DNS、hosts、IPv6 和其它非分流基础设置，Airport 使用原订阅 URL。
+- `resources/proxy-providers/Airport-*.yaml`：从当前原生配置提取的启动缓存。
 
-- 机场提供专用 `proxy-server-nameserver`，继续使用原值。
-- 机场没有这一项，继续按原有 DNS 配置与 Stash 行为处理；本覆写不会改普通 `nameserver`，也不会自动补入阿里 DNS。
-- 普通 Stash YAML 覆写不执行 Clash Verge 的 `main(config)` 条件脚本。
-- `DNS-Global` 控制命中对应分流的 DNS 服务连接；本覆写不改变 `dns.follow-rule`，不承诺 Stash 内部 DNS 查询会随这个组切换。
-- Stash 内部 DNS 默认直接出站；主配置开启 `follow-rule` 后，常规 DNS 查询才按代理规则转发。`proxy-server-nameserver` 使用独立解析链路。
+将入口放入 Stash 的配置目录，将缓存按相同相对路径放入 Stash 的 resources 目录。保留原生机场配置，选择节点池入口，停用旧通用分流，再启用节点池版。节点池每 3600 秒尝试更新。
 
-普通 Apple TV 视频可选择 DIRECT；F1 可选择 America。**仅切换 DNS-Global 不等于改变 Stash 内部解析出口。** 本次沿用原 Stash 版本“保留机场 DNS”的约定，不复制 Mihomo 的 `#DNS-Global` 写法。
+**输出含私人订阅链接或节点凭据，不可上传公共仓库。公共构建仅生成公开覆写与规则，不读取私人配置。**
 
-## 规则、缓存与更新
+缓存能帮助订阅暂不可用时启动，但不代表订阅更新成功。入口不会被机场的完整配置自动覆盖；机场修改 DNS 等基础设置时，需要先更新原生配置，再重新生成入口。
 
-公开混合规则按域名和 IP 拆分、去重并编译为 MRS；关键词、正则等保留为普通规则，不在手机加载大型 classical 集合。GEOSITE 数据展开成可检查的公开规则并验证覆盖。
+## 分流与 DNS
 
-保留 Stash 适配：`GEOIP,CN` 兜底放在具体应用之后，避免过早真实解析而抢先匹配应用分流。
+- 保持当前 Proxy、Final、地区、Video-AppleTV 与业务组顺序。
+- 保持局域网、HTTPDNS、防劫持优先，以及已精简的 Apple TV、OneDrive、DNS 规则。
+- DNS-Global 可选 HongKong、America、Japan、Singapore、AllServer、DIRECT。
+- 主覆写不写入 DNS、hosts、IPv6、机场节点或订阅 URL。
+- DNS-Global 只控制匹配它的连接，内部 DNS 是否按规则转发仍取决于入口的 dns.follow-rule 等设置。
+- 不包含 Mac 字幕桥接端口、AppleTV-Media-IPv6 或单独的 IPv6 覆写。
 
-新版规则发布在 `rules-v2/`，本地缓存位于 `./ruleset/universal-stash-v2/`。旧 `rules/` 保留，供尚未更新主覆写的设备过渡；新版不会读取同编号旧缓存。
+## 构建与验证边界
 
-`proxy-groups`、`rule-providers`、`rules` 使用 `#!replace` 整体替换。节点由 `include-all` 从机场原始配置动态获取，机场订阅更新继续工作。
+GitHub Actions 编译公开 MRS 规则并生成两种覆写，共用 rules-v2 和现有缓存命名空间。节点池版使用独立订阅地址：
 
-`main/stash-universal` 保存生成器与公开来源，`stash-release` 保存验证通过的发布文件。原 GitHub Actions 每日北京时间 06:17 获取公开上游，编译和检查成功后发布；调度可能延迟，失败保留上次发布。独立 IPv6 覆写不再生成或发布。
+`https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/stash-release/universal-provider.stoverride`
 
-规则集合的 `interval: 86400` 不是主覆写更新间隔。主覆写更新时机由 Stash 决定，iCloud 只负责同步文件。
+配置、节点池转换和 MRS 检查不能代替 Stash 实机菜单检查。本分支的节点池版仍待完成原生验收，不作为已验证版本发布。
 
-## 验证范围
+公开规则来源：[Accademia](https://github.com/Accademia/Additional_Rule_For_Clash)、[blackmatrix7](https://github.com/blackmatrix7/ios_rule_script)、[MetaCubeX](https://github.com/MetaCubeX/meta-rules-dat)。完整来源与统计见 recipe.json、build-report.json。
 
-检查包含策略组引用和循环、规则顺序、地区正则、域名及网段覆盖、无 DNS/IPv6 覆盖、重复拒绝动作及 MRS 实际解析。MRS 使用 Mihomo 在隔离配置中验证，不接入用户流量；不能替代 iPhone 上的 Stash 加载、DNS 或播放测速。未声称完成手机实测。
-
-## 来源
-
-公开规则来自 [Accademia/Additional_Rule_For_Clash](https://github.com/Accademia/Additional_Rule_For_Clash)、[blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script)、[MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat)，遵循各自许可。完整来源和生成统计见 `recipe.json`、`build-report.json`。
-
-官方文档：[覆写合并](https://stash.wiki/configuration/override)、[规则集合与 MRS](https://stash.wiki/rules/rule-set)、[策略组](https://stash.wiki/proxy-protocols/proxy-groups)、[DNS](https://stash.wiki/features/dns-server)、[高效配置](https://stash.wiki/faq/effective-stash)。
+官方说明：[策略组](https://stash.wiki/proxy-protocols/proxy-groups)、[代理集](https://stash.wiki/proxy-protocols/proxy-providers)、[覆写](https://stash.wiki/configuration/override)。
