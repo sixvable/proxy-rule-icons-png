@@ -24,14 +24,14 @@ class OptimizerTests(unittest.TestCase):
  def test_region_filter_matches_real_names_and_excludes_metadata(self):
   recipe=json.loads(Path(__file__).with_name('recipe.json').read_text())
   groups={g['name']:g for g in recipe['groups']}
-  for name,samples in {'HongKong':['🇭🇰 香港1 | [x1] HK','Hong Kong 01'],'America':['🇺🇸 美国01','US LAX 01'],'TaiWan':['Taiwan 01','🇹🇼 台湾1']}.items():
+  for name,samples in {'HK-Manual':['🇭🇰 香港1 | [x1] HK','Hong Kong 01'],'US-Manual':['🇺🇸 美国01','US LAX 01'],'TW-Manual':['Taiwan 01','🇹🇼 台湾1']}.items():
    regex=re.compile(groups[name]['filter'])
    for sample in samples:self.assertIsNotNone(regex.search(sample),sample)
    self.assertIsNone(regex.search('官网 '+samples[0]))
  def test_latest_rule_priorities_and_removed_groups(self):
   recipe=json.loads(Path(__file__).with_name('recipe.json').read_text())
   rules=recipe['rules'];names=[g['name'] for g in recipe['groups']]
-  self.assertEqual(len(names),112);self.assertEqual(len(rules),168)
+  self.assertEqual(len(names),122);self.assertEqual(len(rules),168)
   self.assertLess(names.index('All-FallBack'),names.index('Video-AppleTV'))
   self.assertLess(names.index('Video-AppleTV'),names.index('Network-LAN'))
   self.assertLess(rules.index('GEOSITE,private,Network-LAN'),rules.index('GEOSITE,apple-tvplus,Video-AppleTV'))
@@ -39,6 +39,39 @@ class OptimizerTests(unittest.TestCase):
   self.assertFalse(set(names)&{'Global-CDN','DNS-Global-Auto','AppleTV-Media-IPv6','Apple TV 双语字幕'})
   self.assertFalse(any('DST-PORT,53' in r or 'DST-PORT,853' in r for r in rules))
   self.assertFalse(any('DOMAIN-SUFFIX,onedrive.live.com,' in r for r in rules))
+
+ def test_dynamic_node_collection_cannot_replace_explicit_menu(self):
+  with self.assertRaisesRegex(AssertionError,'Mixed node collection and menu'):
+   graph_check([{'name':'A','type':'select','include-all':True,'proxies':['DIRECT']}])
+  with self.assertRaisesRegex(AssertionError,'Filter on explicit menu'):
+   graph_check([{'name':'A','type':'select','filter':'HK','proxies':['DIRECT']}])
+ def test_region_and_dns_menus_keep_all_selection_modes(self):
+  recipe=json.loads(Path(__file__).with_name('recipe.json').read_text())
+  graph_check(recipe['groups'])
+  groups={g['name']:g for g in recipe['groups']}
+  regions={'HongKong':'HK','TaiWan':'TW','Japan':'JP','Singapore':'SG','Southeast.Asia':'SEA','America':'US','UnitedKingdom':'UK','Germany':'DE','Europe':'EU','AllServer':'All'}
+  for name,prefix in regions.items():
+   with self.subTest(region=name):
+    menu=groups[name]
+    self.assertEqual(menu['proxies'],[prefix+'-Auto',prefix+'-FallBack',prefix+'-Manual','DIRECT'])
+    self.assertNotIn('include-all',menu)
+    self.assertNotIn('filter',menu)
+    manual=groups[prefix+'-Manual']
+    self.assertEqual(manual['type'],'select')
+    self.assertTrue(manual['include-all'])
+    self.assertFalse(manual.get('hidden',False))
+    self.assertFalse(manual.get('proxies'))
+    for suffix,kind in [('-Auto','url-test'),('-FallBack','fallback')]:
+     worker=groups[prefix+suffix]
+     self.assertEqual(worker['type'],kind)
+     self.assertEqual(worker['filter'],manual['filter'])
+     self.assertTrue(worker['include-all'])
+  self.assertEqual(groups['DNS-Global']['proxies'],['HongKong','America','Japan','Singapore','All-Manual','DIRECT'])
+  self.assertNotIn('include-all',groups['DNS-Global'])
+  self.assertNotIn('filter',groups['DNS-Global'])
+  samples=['香港 01','HK 02','美国 01','官网 香港','Hong Kong 03']
+  hk=re.compile(groups['HK-Manual']['filter'])
+  self.assertEqual([n for n in samples if hk.search(n)],['香港 01','HK 02','Hong Kong 03'])
 
 def validate_dist(dist,mihomo):
  cfg=yaml_load((dist/'通用分流_保留机场DNS.stoverride').read_text());report=json.loads((dist/'build-report.json').read_text())

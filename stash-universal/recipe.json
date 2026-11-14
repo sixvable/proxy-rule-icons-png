@@ -33,120 +33,180 @@
       "name": "HongKong",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:港|香港|🇭🇰|\\bHK\\b|\\bHKG\\b|Hong\\s*Kong|HongKong|Hong))[\\s\\S]+$",
       "proxies": [
         "HK-Auto",
         "HK-FallBack",
+        "HK-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "TaiWan",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:台|台湾|台灣|臺灣|湾|灣|🇹🇼|\\bTW\\b|\\bTWN\\b|Taiwan|Taipei|Hinet|CHT))[\\s\\S]+$",
       "proxies": [
         "TW-Auto",
         "TW-FallBack",
+        "TW-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "Japan",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:日本|东京|東京|大阪|🇯🇵|\\bJP\\b|\\bJPN\\b|Japan|Tokyo|Osaka|\\bTYO\\b|\\bNRT\\b|\\bKIX\\b))[\\s\\S]+$",
       "proxies": [
         "JP-Auto",
         "JP-FallBack",
+        "JP-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "Singapore",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:新加坡|坡|狮城|獅城|🇸🇬|\\bSG\\b|\\bSGP\\b|Singapore|Singa))[\\s\\S]+$",
       "proxies": [
         "SG-Auto",
         "SG-FallBack",
+        "SG-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "Southeast.Asia",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/region-asean.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:东南亚|東南亞|东南亞|東南亚|新马泰|新馬泰|马来|馬來|马来西亚|馬來西亞|吉隆坡|泰国|泰國|曼谷|越南|胡志明|河内|河內|印尼|印度尼西亚|印度尼西亞|雅加达|雅加達|菲律宾|菲律賓|马尼拉|馬尼拉|柬埔寨|金边|金邊|老挝|老撾|寮国|寮國|缅甸|緬甸|仰光|文莱|汶萊|新加坡|狮城|獅城|🇸🇬|🇲🇾|🇹🇭|🇻🇳|🇮🇩|🇵🇭|🇰🇭|🇱🇦|🇲🇲|🇧🇳|\\bSG\\b|\\bSGP\\b|\\bMY\\b|\\bMYS\\b|\\bTH\\b|\\bTHA\\b|\\bVN\\b|\\bVNM\\b|\\bID\\b|\\bIDN\\b|\\bPH\\b|\\bPHL\\b|\\bKH\\b|\\bKHM\\b|\\bLAO\\b|\\bMM\\b|\\bMMR\\b|\\bBN\\b|\\bBRN\\b|Singapore|Malaysia|Kuala\\s*Lumpur|Thailand|Bangkok|Vietnam|Ho\\s*Chi\\s*Minh|Hanoi|Indonesia|Jakarta|Philippines|Manila|Cambodia|Phnom\\s*Penh|Laos|Myanmar|Burma|Yangon|Brunei|Southeast\\s*Asia|South\\s*East\\s*Asia|SE\\s*Asia))[\\s\\S]+$",
       "proxies": [
         "SEA-Auto",
         "SEA-FallBack",
+        "SEA-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "America",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:美|美国|美國|美西|美东|美東|🇺🇸|🇺🇲|\\bUS\\b|\\bUSA\\b|United\\s*States|America|\\bLAX\\b|\\bSJC\\b|\\bSFO\\b|\\bNYC\\b|\\bSEA\\b|\\bIAD\\b))[\\s\\S]+$",
       "proxies": [
         "US-Auto",
         "US-FallBack",
+        "US-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "UnitedKingdom",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_Kingdom.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:英国|英國|🇬🇧|\\bUK\\b|\\bGB\\b|\\bGBR\\b|United\\s*Kingdom|Britain|London|\\bLHR\\b))[\\s\\S]+$",
       "proxies": [
         "UK-Auto",
         "UK-FallBack",
+        "UK-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "Germany",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Germany.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:德国|德國|🇩🇪|\\bDE\\b|\\bDEU\\b|Germany|Frankfurt|Berlin|\\bFRA\\b))[\\s\\S]+$",
       "proxies": [
         "DE-Auto",
         "DE-FallBack",
+        "DE-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "Europe",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png",
-      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:欧洲|歐洲|欧盟|歐盟|🇪🇺|🇬🇧|🇩🇪|🇳🇱|🇫🇷|🇨🇭|🇸🇪|🇳🇴|🇫🇮|🇩🇰|🇮🇸|🇮🇪|🇪🇸|🇵🇹|🇮🇹|🇦🇹|🇧🇪|🇱🇺|🇨🇿|🇵🇱|🇭🇺|🇷🇴|🇧🇬|🇬🇷|\\bEU\\b|\\bEUR\\b|Europe|European|英国|英國|德国|德國|法国|法國|荷兰|荷蘭|瑞士|瑞典|挪威|芬兰|芬蘭|丹麦|丹麥|冰岛|冰島|爱尔兰|愛爾蘭|西班牙|葡萄牙|意大利|奥地利|奧地利|比利时|比利時|卢森堡|盧森堡|捷克|波兰|波蘭|匈牙利|罗马尼亚|羅馬尼亞|保加利亚|保加利亞|希腊|希臘|\\bUK\\b|\\bGB\\b|\\bGBR\\b|\\bDE\\b|\\bDEU\\b|\\bNL\\b|\\bNLD\\b|\\bFR\\b|\\bFRA\\b|\\bCH\\b|\\bCHE\\b|\\bSE\\b|\\bSWE\\b|\\bNO\\b|\\bNOR\\b|\\bFI\\b|\\bFIN\\b|\\bDK\\b|\\bDNK\\b|\\bIS\\b|\\bISL\\b|\\bIE\\b|\\bIRL\\b|\\bES\\b|\\bESP\\b|\\bPT\\b|\\bPRT\\b|\\bIT\\b|\\bITA\\b|\\bAT\\b|\\bAUT\\b|\\bBE\\b|\\bBEL\\b|\\bLU\\b|\\bLUX\\b|\\bCZ\\b|\\bCZE\\b|\\bPL\\b|\\bPOL\\b|\\bHU\\b|\\bHUN\\b|\\bRO\\b|\\bROU\\b|\\bBG\\b|\\bBGR\\b|\\bGR\\b|\\bGRC\\b|United\\s*Kingdom|Britain|Germany|Netherlands|Holland|France|Switzerland|Sweden|Norway|Finland|Denmark|Iceland|Ireland|Spain|Portugal|Italy|Austria|Belgium|Luxembourg|Czech|Poland|Hungary|Romania|Bulgaria|Greece|London|Frankfurt|Berlin|Amsterdam|Paris|Zurich|Stockholm|Oslo|Helsinki|Copenhagen|Dublin|Madrid|Milan|Vienna|Brussels|Warsaw|Prague|\\bLHR\\b|\\bFRA\\b|\\bAMS\\b|\\bCDG\\b|\\bZRH\\b))[\\s\\S]+$",
       "proxies": [
         "EU-Auto",
         "EU-FallBack",
+        "EU-Manual",
         "DIRECT"
-      ],
-      "include-all": true
+      ]
     },
     {
       "name": "AllServer",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png",
-      "filter": "(?i)^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$",
       "proxies": [
         "All-Auto",
         "All-FallBack",
+        "All-Manual",
         "DIRECT"
-      ],
+      ]
+    },
+    {
+      "name": "HK-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Hong_Kong.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:港|香港|🇭🇰|\\bHK\\b|\\bHKG\\b|Hong\\s*Kong|HongKong|Hong))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "TW-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Taiwan.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:台|台湾|台灣|臺灣|湾|灣|🇹🇼|\\bTW\\b|\\bTWN\\b|Taiwan|Taipei|Hinet|CHT))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "JP-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Japan.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:日本|东京|東京|大阪|🇯🇵|\\bJP\\b|\\bJPN\\b|Japan|Tokyo|Osaka|\\bTYO\\b|\\bNRT\\b|\\bKIX\\b))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "SG-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Singapore.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:新加坡|坡|狮城|獅城|🇸🇬|\\bSG\\b|\\bSGP\\b|Singapore|Singa))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "SEA-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/sixvable/proxy-rule-icons-png@main/icons/region-asean.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:东南亚|東南亞|东南亞|東南亚|新马泰|新馬泰|马来|馬來|马来西亚|馬來西亞|吉隆坡|泰国|泰國|曼谷|越南|胡志明|河内|河內|印尼|印度尼西亚|印度尼西亞|雅加达|雅加達|菲律宾|菲律賓|马尼拉|馬尼拉|柬埔寨|金边|金邊|老挝|老撾|寮国|寮國|缅甸|緬甸|仰光|文莱|汶萊|新加坡|狮城|獅城|🇸🇬|🇲🇾|🇹🇭|🇻🇳|🇮🇩|🇵🇭|🇰🇭|🇱🇦|🇲🇲|🇧🇳|\\bSG\\b|\\bSGP\\b|\\bMY\\b|\\bMYS\\b|\\bTH\\b|\\bTHA\\b|\\bVN\\b|\\bVNM\\b|\\bID\\b|\\bIDN\\b|\\bPH\\b|\\bPHL\\b|\\bKH\\b|\\bKHM\\b|\\bLAO\\b|\\bMM\\b|\\bMMR\\b|\\bBN\\b|\\bBRN\\b|Singapore|Malaysia|Kuala\\s*Lumpur|Thailand|Bangkok|Vietnam|Ho\\s*Chi\\s*Minh|Hanoi|Indonesia|Jakarta|Philippines|Manila|Cambodia|Phnom\\s*Penh|Laos|Myanmar|Burma|Yangon|Brunei|Southeast\\s*Asia|South\\s*East\\s*Asia|SE\\s*Asia))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "US-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_States.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:美|美国|美國|美西|美东|美東|🇺🇸|🇺🇲|\\bUS\\b|\\bUSA\\b|United\\s*States|America|\\bLAX\\b|\\bSJC\\b|\\bSFO\\b|\\bNYC\\b|\\bSEA\\b|\\bIAD\\b))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "UK-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/United_Kingdom.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:英国|英國|🇬🇧|\\bUK\\b|\\bGB\\b|\\bGBR\\b|United\\s*Kingdom|Britain|London|\\bLHR\\b))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "DE-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Germany.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:德国|德國|🇩🇪|\\bDE\\b|\\bDEU\\b|Germany|Frankfurt|Berlin|\\bFRA\\b))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "EU-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Europe_Map.png",
+      "filter": "(?i)^(?=(?:^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$))(?=[\\s\\S]*(?:欧洲|歐洲|欧盟|歐盟|🇪🇺|🇬🇧|🇩🇪|🇳🇱|🇫🇷|🇨🇭|🇸🇪|🇳🇴|🇫🇮|🇩🇰|🇮🇸|🇮🇪|🇪🇸|🇵🇹|🇮🇹|🇦🇹|🇧🇪|🇱🇺|🇨🇿|🇵🇱|🇭🇺|🇷🇴|🇧🇬|🇬🇷|\\bEU\\b|\\bEUR\\b|Europe|European|英国|英國|德国|德國|法国|法國|荷兰|荷蘭|瑞士|瑞典|挪威|芬兰|芬蘭|丹麦|丹麥|冰岛|冰島|爱尔兰|愛爾蘭|西班牙|葡萄牙|意大利|奥地利|奧地利|比利时|比利時|卢森堡|盧森堡|捷克|波兰|波蘭|匈牙利|罗马尼亚|羅馬尼亞|保加利亚|保加利亞|希腊|希臘|\\bUK\\b|\\bGB\\b|\\bGBR\\b|\\bDE\\b|\\bDEU\\b|\\bNL\\b|\\bNLD\\b|\\bFR\\b|\\bFRA\\b|\\bCH\\b|\\bCHE\\b|\\bSE\\b|\\bSWE\\b|\\bNO\\b|\\bNOR\\b|\\bFI\\b|\\bFIN\\b|\\bDK\\b|\\bDNK\\b|\\bIS\\b|\\bISL\\b|\\bIE\\b|\\bIRL\\b|\\bES\\b|\\bESP\\b|\\bPT\\b|\\bPRT\\b|\\bIT\\b|\\bITA\\b|\\bAT\\b|\\bAUT\\b|\\bBE\\b|\\bBEL\\b|\\bLU\\b|\\bLUX\\b|\\bCZ\\b|\\bCZE\\b|\\bPL\\b|\\bPOL\\b|\\bHU\\b|\\bHUN\\b|\\bRO\\b|\\bROU\\b|\\bBG\\b|\\bBGR\\b|\\bGR\\b|\\bGRC\\b|United\\s*Kingdom|Britain|Germany|Netherlands|Holland|France|Switzerland|Sweden|Norway|Finland|Denmark|Iceland|Ireland|Spain|Portugal|Italy|Austria|Belgium|Luxembourg|Czech|Poland|Hungary|Romania|Bulgaria|Greece|London|Frankfurt|Berlin|Amsterdam|Paris|Zurich|Stockholm|Oslo|Helsinki|Copenhagen|Dublin|Madrid|Milan|Vienna|Brussels|Warsaw|Prague|\\bLHR\\b|\\bFRA\\b|\\bAMS\\b|\\bCDG\\b|\\bZRH\\b))[\\s\\S]+$",
+      "include-all": true
+    },
+    {
+      "name": "All-Manual",
+      "type": "select",
+      "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Airport.png",
+      "filter": "(?i)^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$",
       "include-all": true
     },
     {
@@ -443,13 +503,12 @@
       "name": "DNS-Global",
       "type": "select",
       "icon": "https://cdn.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/World_Map.png",
-      "include-all": true,
-      "filter": "(?i)^(?=.*(.))(?!.*(群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\\b(USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author|Reset|Refresh)\\b|(\\d{4}-\\d{2}-\\d{2}|\\d+G)))).*$",
       "proxies": [
         "HongKong",
         "America",
         "Japan",
         "Singapore",
+        "All-Manual",
         "DIRECT"
       ]
     },
@@ -3015,7 +3074,7 @@
     }
   },
   "dns_provider": "GeositeCN_Domain",
-  "version": "2026.11.14.1",
+  "version": "2026.11.14.2",
   "removed_groups": [
     "AF-Auto",
     "AF-FallBack",

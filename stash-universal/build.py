@@ -72,6 +72,9 @@ def graph_check(groups):
  names={g['name'] for g in groups};assert len(names)==len(groups)
  edges={g['name']:set(g.get('proxies',[]))&names for g in groups}
  for g in groups:
+  # Keep explicit menus separate from automatic node collection in Stash.
+  assert not (g.get('include-all') and g.get('proxies')),f"Mixed node collection and menu: {g['name']}"
+  assert not (g.get('proxies') and g.get('filter')),f"Filter on explicit menu: {g['name']}"
   assert set(g.get('proxies',[]))<=names|{'DIRECT','REJECT','REJECT-DROP'}
   if 'filter' in g:re.compile(g['filter'])
  def visit(n,path):
@@ -184,7 +187,7 @@ class Compiler:
    if pred.startswith('RULE-SET,'):assert pred.split(',')[1] in self.providers
   assert self.rules[-1]=='MATCH,Final'
   assert not any(r.startswith(('GEOSITE,','PROCESS-')) for r in self.rules)
-  cfg={'name':'通用分流｜保留机场 DNS','desc':'按最新分流同步策略组与规则，完整保留机场 DNS、IPv6、节点和订阅更新。仅需这一份覆写；停用旧的可选开启 IPv6 覆写。适用于 Stash 3.6+。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
+  cfg={'name':'通用分流｜保留机场 DNS','desc':'地区组保留 Auto、Fallback 和 Manual 入口，DNS-Global 可选地区组。完整保留机场 DNS、IPv6、节点和订阅更新。仅需这一份覆写；停用旧的可选开启 IPv6 覆写。适用于 Stash 3.6+。','category':'自用分流','version':self.recipe['version'],'mode':'rule','proxy-groups':self.recipe['groups'],'rule-providers':self.providers,'rules':self.rules}
   source_url=f'https://raw.githubusercontent.com/{self.recipe["repository"]}/stash-release/universal.stoverride'
   text='#SUBSCRIBED '+source_url+'\n'+yaml_dump(cfg)
   for key in ('proxy-groups','rule-providers','rules'):text=re.sub('^'+key+r':\s*$',key+': #!replace',text,flags=re.M)
