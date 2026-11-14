@@ -87,8 +87,8 @@ def provider_variant(cfg):
  # Stash include-all ignores explicitly listed subgroups on the tested iOS
  # runtime. Use an explicitly named provider to combine nodes and subgroups.
  result=copy.deepcopy(cfg)
- result['name']='通用分流｜节点池版'
- result['desc']='配合本地静态 Airport 节点池使用，不请求机场订阅链接。地区组内选择 Auto、Fallback 和具体节点，保留入口 DNS。请勿与旧通用分流同时启用。'
+ result['name']='通用分流｜本地节点池'
+ result['desc']='配合任意机场离线适配后的本地节点池入口使用。地区组同时提供 Auto、Fallback、DIRECT 和该机场节点；保留机场 DNS。切换机场只需选择对应入口。原生订阅需先适配，节点仅使用本地快照，不自动更新。'
  for group in result['proxy-groups']:
   if group.pop('include-all',False):group['use']=['Airport']
  graph_check(result['proxy-groups'])

@@ -39,7 +39,7 @@ jobs:
       - name: Verify rule files and references
         run: |
           python test_build.py --dist dist --mihomo /tmp/mihomo
-          python -m unittest test_provider_profile.py
+          python -m unittest test_provider_profile.py test_generic_airport.py
       - name: Publish only validated public artifacts
         shell: bash
         run: |
