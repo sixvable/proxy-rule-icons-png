@@ -1,0 +1,93 @@
+{
+  "groups": 139,
+  "rules": 200,
+  "rule_providers": 93,
+  "version": "2026.11.14.10",
+  "sha256": "2f5fde2cca5e8f1513e8e813d23844cce7095ade74dddc48308fce1c14dafc0e",
+  "node_source": "native subscription unchanged",
+  "proxy_server_nameserver": "inherited unchanged when present; not invented when absent",
+  "public_rules_commit": "a554a3ac4381d1a8e220c9ca3517832f08836c80",
+  "source_clash_sha256": "e4563a17b86525700b28f43cd056dc906f9784649dcae4df9f2afa91e2395ccc",
+  "ios_full_runtime_tested": false,
+  "subscription_requests": 0,
+  "active_device_configuration_modified": false,
+  "rule_optimization": {
+    "routing_rows_before": 206,
+    "routing_rows_after": 200,
+    "providers_before": 104,
+    "providers_after": 93,
+    "entries_before": 11440,
+    "entries_after": 9672,
+    "single_entry_providers_inlined": [
+      "020-Drive-InternetArchive-domain",
+      "021-P2P-PT-ip0",
+      "024-Finance-Wise-domain",
+      "027-Finance-Monzo-domain",
+      "029-Protection-NoVPN-domain",
+      "034-Game-Nintendo-ip0",
+      "054-Social-WhatsApp-domain",
+      "075-Remote-Parsec-domain",
+      "081-Apps-Apple-ip0"
+    ],
+    "protected_dns_sets": [
+      "GeositeCN_Domain"
+    ],
+    "removed_entries": 1759,
+    "mrs_bytes_after": 82936,
+    "mrs_bytes_before": 100674,
+    "on_device_memory_tested": false
+  },
+  "unit_tests_passed": 22,
+  "non_rule_settings_equal_v8": true,
+  "local_audit": {
+    "profiles": [
+      {
+        "sample": 1,
+        "inline_nodes": 66,
+        "proxy_providers": 0,
+        "node_dns_present": false,
+        "node_dns_preserved": true,
+        "original_file_unchanged": true,
+        "merge_and_dependency_check": "passed"
+      },
+      {
+        "sample": 2,
+        "inline_nodes": 31,
+        "proxy_providers": 0,
+        "node_dns_present": false,
+        "node_dns_preserved": true,
+        "original_file_unchanged": true,
+        "merge_and_dependency_check": "passed"
+      },
+      {
+        "sample": 3,
+        "inline_nodes": 21,
+        "proxy_providers": 0,
+        "node_dns_present": true,
+        "node_dns_preserved": true,
+        "original_file_unchanged": true,
+        "merge_and_dependency_check": "passed"
+      }
+    ],
+    "private_values_in_public_files": false,
+    "subscription_requests": 0
+  },
+  "equivalence": {
+    "hostname_cases": 40715,
+    "cidr_boundary_cases": 2431,
+    "differential_results_equal": true,
+    "unchanged_opaque_rule_sequence": true,
+    "dns_policy_payload_unchanged": true,
+    "is_stash_runtime_test": false
+  },
+  "mrs_validation": {
+    "count": 93,
+    "engine": "isolated Mihomo file-only parser",
+    "passed": true,
+    "is_stash_runtime_test": false
+  },
+  "remote_assets_sampled": 2,
+  "remote_assets_match_local_hash": true,
+  "ios_installed_version_observed": "2026.11.14.9",
+  "device_network_modified": false
+}

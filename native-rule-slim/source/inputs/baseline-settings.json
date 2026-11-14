@@ -1,0 +1,31 @@
+{
+  "dns": {
+    "ipv6": true,
+    "skip-cert-verify": false,
+    "follow-rule": true,
+    "default-nameserver": [
+      "https://223.5.5.5/dns-query",
+      "https://223.6.6.6/dns-query"
+    ],
+    "nameserver": [
+      "https://8.8.8.8/dns-query",
+      "https://1.1.1.1/dns-query"
+    ],
+    "nameserver-policy": {
+      "geosite:private": [
+        "system"
+      ],
+      "rule-set:GeositeCN_Domain": [
+        "https://223.5.5.5/dns-query",
+        "https://223.6.6.6/dns-query"
+      ]
+    },
+    "fallback": [],
+    "fallback-filter": {},
+    "fake-ip-range": "198.18.0.1/16",
+    "fake-ip-filter": [
+      "*"
+    ]
+  },
+  "proxy_groups_sha256": "7083a159af136297d34ff7a1aee81abd66c199924edf4eca83e3fd8fdaf1cfff"
+}
