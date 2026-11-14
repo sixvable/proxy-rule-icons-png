@@ -1,0 +1,7 @@
++.api.xsj.wasu.tv,REJECT-DROP
++.bgg.baidu.com,REJECT-DROP
++.fclog.baidu.com,REJECT-DROP
++.hector.baidu.com,REJECT-DROP
++.hectorstatic.baidu.com,REJECT-DROP
++.hm.baidu.com,REJECT-DROP
++.tcbox.baidu.com,REJECT-DROP

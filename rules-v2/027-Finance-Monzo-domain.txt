@@ -1,0 +1,3 @@
++.monzo.com
++.monzo.statuspage.io
++.ws-eu.pusher.com
