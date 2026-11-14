@@ -28,24 +28,25 @@
 
 保留原先适用于三家机场的地区菜单，其它地区节点可在 `AllServer` 中选择。Stash 将空策略组当作 DIRECT，因此没有照搬全部桌面地区组。Mac 应用更新与字幕工具的菜单仍不加入。
 
-## 策略组菜单修复（2026.11.14.2）
+## 地区组直接选节点（2026.11.14.3）
 
-之前的 11 个组同时使用 `include-all: true` 和显式 `proxies`。虽然 YAML 中写有子组选项，用户在 Stash 中实际看不到地区组的 Auto / Fallback，也看不到 DNS-Global 的地区选项。本版将显式菜单与节点收集拆开，避免依赖两者在不同客户端中的合并行为。
+地区组内同时列出自动选择、故障回退和当前机场的具体节点，删除所有独立的 `*-Manual` 组。
 
 | 菜单 | 可选项 |
 | --- | --- |
-| HongKong | HK-Auto、HK-FallBack、HK-Manual、DIRECT |
-| America | US-Auto、US-FallBack、US-Manual、DIRECT |
-| 其它地区组 / AllServer | 对应的 Auto、FallBack、Manual、DIRECT |
-| DNS-Global | HongKong、America、Japan、Singapore、All-Manual、DIRECT |
+| HongKong | HK-Auto、HK-FallBack、DIRECT，以及全部符合香港筛选条件的节点 |
+| America | US-Auto、US-FallBack、DIRECT，以及全部符合美国筛选条件的节点 |
+| 其它地区组 | 对应 Auto、FallBack、DIRECT，以及该地区的节点 |
+| AllServer | All-Auto、All-FallBack、DIRECT，以及全部有效节点 |
+| DNS-Global | HongKong、America、Japan、Singapore、AllServer、DIRECT |
 
-Auto 自动选低延迟节点；FallBack 按节点顺序选择可用节点；Manual 是手动选择具体节点的列表。若要固定香港的某个节点，先在 `HK-Manual` 选择节点，再将 `HongKong` 选择为 `HK-Manual`。该操作会被所有引用 HongKong 的业务组共同使用。
+在 `HongKong` 内直接点选某个香港节点即可固定使用它，不需要先选择另一个手动组。选择 `HK-Auto` 时按延迟自动选择，选择 `HK-FallBack` 时按节点顺序回退。
 
-地区菜单与 DNS-Global 只写 `proxies`，不带 `include-all` 或 `filter`；Manual、Auto、FallBack 只负责按原地区正则收集机场节点。机场订阅更新后，这些节点列表继续自动更新。为保留跨机场通用性，具体节点不硬编码在覆写中。
+地区组用 `include-all` 动态收集节点，同时在 `proxies` 明确引用 Auto、FallBack、DIRECT。筛选表达式额外精确放行这三个选项，避免只匹配节点地名而丢掉菜单项；Auto / FallBack 设置为可见。节点筛选和订阅自动更新仍使用机场原配置。
 
-Manual 组放在地区菜单之后、自动测速组之前，保持可见便于选节点；Auto / FallBack 延续隐藏顶层列表的设置，仍通过地区菜单引用。相比 Clash Verge，手动固定节点多一层 Manual 选择，这是本版明确保留的 Stash 适配差异。
+DNS-Global 使用明确的地区组列表；需要选择其它地区或具体节点时可进入 AllServer。此菜单变化不改变 Stash 内部 DNS 的解析出口，仍以主配置的 `dns.follow-rule` 等设置为准。
 
-本次不改分流规则或 DNS 设置。已检查所有 11 处混合写法、组间循环引用及各地区节点筛选；未连接 iPhone，不能把结构验证等同于 Stash 界面实测。
+本版撤回上一版额外引入的 Manual 层级及禁止 `include-all` 与 `proxies` 同用的验证断言；该禁用断言并非 Stash 官方要求。验证改为检查明确菜单项不会被正则过滤、地区节点仍被正确收集、组引用没有循环、没有遗留 Manual 组。未连接 iPhone，不把这些检查等同于 Stash 界面实测。
 
 ## DNS 保留逻辑
 
