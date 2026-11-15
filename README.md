@@ -2,6 +2,20 @@
 
 PNG icon assets converted from SVG sources for Clash Verge Rev and Stash proxy rule configurations.
 
+## 桌面 Clash 全局覆写
+
+[下载 Clash_rules_desktop.js](https://raw.githubusercontent.com/sixvable/proxy-rule-icons-png/main/Clash_rules_desktop.js) · [查看源码](Clash_rules_desktop.js)
+
+2026-11-15 桌面版：保留原机场节点、provider 和节点 DNS，使用统一 DNS、地区策略组及分流。仅当节点 DNS 缺失时补齐阿里 DoH；必要的机场依赖会保留为隐藏组。
+
+1. 保留原机场订阅，将 JS 全文粘贴到 Clash Verge Rev 的“全局扩展脚本”。
+2. 将“全局扩展配置”设为 `{}`，清理会再次覆盖它的旧订阅扩展，不叠加旧完整覆写。
+3. 保存并重新加载本地配置，核对运行配置与联网。无需重新获取机场节点；一次性订阅不能刷新或重复拉取。
+
+这是公开覆写文件，不包含机场链接或节点凭据。粘贴的脚本不会自行更新，后续使用上面的固定地址获取新版。字幕专用端口 `18767` 固定 DIRECT；字幕桥接需另外启动字幕工具及完成本机证书设置。普通 `DNS-Global` 不会自动跟随每个业务策略组，应按需要自行选择。
+
+本次只更新桌面 JS。手机配置未随此次发布调整；自动测试不代表实机播放、速度或内存表现。
+
 ## jsDelivr
 
 ```text
