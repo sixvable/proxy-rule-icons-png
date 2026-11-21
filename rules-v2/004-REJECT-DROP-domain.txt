@@ -1,0 +1,7 @@
++.api.xsj.wasu.tv
++.bgg.baidu.com
++.fclog.baidu.com
++.hector.baidu.com
++.hectorstatic.baidu.com
++.hm.baidu.com
++.tcbox.baidu.com

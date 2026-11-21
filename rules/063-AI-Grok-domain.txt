@@ -1,0 +1,7 @@
++.featureassets.org
++.grok.com
++.grok.x.com
++.grokbot.com
++.grokipedia.com
++.x.ai
++.xai.chronosphere.io
